@@ -1,7 +1,11 @@
 'use client';
 
+import ConfidenceSection from '@/components/confidence-section';
+import Dreams from '@/components/dreams';
+import EducationalFeatures from '@/components/educational-features';
 import { Navbar } from '@/components/navbar';
 import { Button } from '@/components/ui/button';
+import WhyChooseSection from '@/components/why-choose-section';
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
 
@@ -93,6 +97,26 @@ export default function HomePage() {
           </div>
         </div>
       )}
+      <section className='py-20 bg-gray-100'>
+        <div>
+          <div className='container mx-auto py-10 px-4 text-center'>
+            <h2 className='text-4xl font-bold mb-6 text-gray-800'>
+              Welcome to Our School
+            </h2>
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed'>
+              At Our School, we are committed to providing a nurturing and
+              stimulating environment where students can excel academically and
+              personally. Our dedicated faculty and staff work tirelessly to
+              ensure that every student has the opportunity to reach their full
+              potential.
+            </p>
+          </div>
+        </div>
+      </section>
+      <Dreams />
+      <ConfidenceSection />
+      <EducationalFeatures />
+      <WhyChooseSection />
     </div>
   );
 }

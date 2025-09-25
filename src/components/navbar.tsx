@@ -112,8 +112,8 @@ export function Navbar() {
             <div className='flex items-center justify-between py-2'>
               <Link href='/' className='flex items-center'>
                 <Image
-                  src='/images/highgrove-logo.png'
-                  alt='Highgrove Education'
+                  src='/images/logo.png'
+                  alt='ripple'
                   width={240}
                   height={60}
                   className='h-14 w-auto'
@@ -272,8 +272,8 @@ export function Navbar() {
           <div className='flex items-center justify-between py-3'>
             <Link href='/' className='flex items-center'>
               <Image
-                src='/images/highgrove-logo.png'
-                alt='Highgrove Education'
+                src='/images/logo.png'
+                alt='ripple'
                 width={180}
                 height={45}
                 className='h-10 w-auto'
