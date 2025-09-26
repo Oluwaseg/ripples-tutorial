@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <div className='min-h-screen bg-white'>
+    <div className='min-h-screen bg-[radial-gradient(at_top_left,_#FA61661C_0%,_#FFFFFF_92%)]'>
       <main className='container mx-auto px-6 py-16'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
           {/* Left Content */}

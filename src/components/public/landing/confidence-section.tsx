@@ -2,7 +2,7 @@ import { assets } from '@/assets';
 import Image from 'next/image';
 export default function ConfidenceSection() {
   return (
-    <section className='py-20 bg-gray-50'>
+    <section className='py-20 bg-white'>
       <div className='container mx-auto px-6'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -21,7 +21,7 @@ export default function ConfidenceSection() {
         </div>
 
         <div className='mb-20'>
-          <div className='relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 max-w-5xl mx-auto group'>
+          <div className='relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 max-w-4xl mx-auto group cursor-pointer'>
             <Image
               src={assets.onlineTuition}
               alt='Online tuition teacher with student'
@@ -31,32 +31,35 @@ export default function ConfidenceSection() {
         </div>
 
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
-          <div className='text-center group cursor-pointer'>
-            <div className='text-4xl md:text-6xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
+          <div className='bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300'>
+            <div className='text-4xl md:text-4xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
               4,000+
             </div>
             <div className='text-red-500 font-semibold text-sm tracking-wider group-hover:text-red-600 transition-colors duration-300'>
               ACTIVE LEARNERS
             </div>
           </div>
-          <div className='text-center group cursor-pointer'>
-            <div className='text-4xl md:text-6xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
+
+          <div className='bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300'>
+            <div className='text-4xl md:text-4xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
               96%
             </div>
             <div className='text-red-500 font-semibold text-sm tracking-wider group-hover:text-red-600 transition-colors duration-300'>
               USER SATISFACTION
             </div>
           </div>
-          <div className='text-center group cursor-pointer'>
-            <div className='text-4xl md:text-6xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
+
+          <div className='bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300'>
+            <div className='text-4xl md:text-4xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
               3,679+
             </div>
             <div className='text-red-500 font-semibold text-sm tracking-wider group-hover:text-red-600 transition-colors duration-300'>
               REGISTRATION
             </div>
           </div>
-          <div className='text-center group cursor-pointer'>
-            <div className='text-4xl md:text-6xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
+
+          <div className='bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300'>
+            <div className='text-4xl md:text-4xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300'>
               10+
             </div>
             <div className='text-red-500 font-semibold text-sm tracking-wider group-hover:text-red-600 transition-colors duration-300'>

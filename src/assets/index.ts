@@ -9,6 +9,12 @@ import cta from '@/assets/images/serious-man.jpg';
 import testimonials from '@/assets/images/testimonials.jpg';
 import whyUs from '@/assets/images/why-ripples.jpg';
 
+// SVGs
+import flexibleIcon from '@/assets/svg/flexible.svg';
+import pcIcon from '@/assets/svg/pc.svg';
+import supportIcon from '@/assets/svg/support.svg';
+import understandingIcon from '@/assets/svg/understand.svg';
+
 export const assets = {
   author,
   girl,
@@ -21,4 +27,8 @@ export const assets = {
   whyUs,
   hero: '/videos/hero-video.mp4',
   cta,
+  understandingIcon,
+  flexibleIcon,
+  supportIcon,
+  pcIcon,
 };
