@@ -16,12 +16,12 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const socialIcons = [
-  { name: 'Facebook', icon: <Facebook className='w-4 h-4' />, href: '#' },
-  { name: 'YouTube', icon: <Youtube className='w-4 h-4' />, href: '#' },
-  { name: 'Instagram', icon: <Instagram className='w-4 h-4' />, href: '#' },
-  { name: 'LinkedIn', icon: <Linkedin className='w-4 h-4' />, href: '#' },
-  { name: 'TikTok', icon: <Music className='w-4 h-4' />, href: '#' },
-  { name: 'X', icon: <X className='w-4 h-4' />, href: '#' },
+  { name: 'Facebook', icon: <Facebook className='w-6 h-6' />, href: '#' },
+  { name: 'YouTube', icon: <Youtube className='w-6 h-6' />, href: '#' },
+  { name: 'Instagram', icon: <Instagram className='w-6 h-6' />, href: '#' },
+  { name: 'LinkedIn', icon: <Linkedin className='w-6 h-6' />, href: '#' },
+  { name: 'TikTok', icon: <Music className='w-6 h-6' />, href: '#' },
+  { name: 'X', icon: <X className='w-6 h-6' />, href: '#' },
 ];
 
 const navigationItems = [
@@ -107,9 +107,12 @@ export function Navbar() {
       }`}
     >
       <div className='container mx-auto px-2'>
+        {/* NON-SCROLLED STATE - Shows when page is at top */}
         {!isScrolled ? (
           <>
+            {/* TOP ROW - Logo and Action Buttons */}
             <div className='flex items-center justify-between py-2'>
+              {/* LOGO - Shared across all devices */}
               <Link href='/' className='flex items-center'>
                 <Image
                   src='/images/logo.png'
@@ -121,13 +124,14 @@ export function Navbar() {
                 />
               </Link>
 
+              {/* DESKTOP ONLY - Social icons and action buttons (hidden on mobile) */}
               <div className='hidden lg:flex items-center gap-3'>
                 <div className='flex items-center gap-1.5'>
                   {socialIcons.map((social) => (
                     <Link
                       key={social.name}
                       href={social.href}
-                      className='w-9 h-9 rounded-full bg-orange-400 flex items-center justify-center text-white hover:bg-amber-600 transition-colors'
+                      className='w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-orange-500/20 transition-colors'
                       aria-label={social.name}
                     >
                       {social.icon}
@@ -136,18 +140,19 @@ export function Navbar() {
                 </div>
 
                 <div className='flex items-center gap-2 ml-2'>
-                  <Button className='bg-purple-700 hover:bg-purple-800 text-white px-6 py-2.5 rounded font-bold text-sm tracking-wide'>
-                    BOOK A CALL
+                  <Button className='bg-orange-500 hover:bg-orange-600/50 text-white px-6 py-2.5 rounded font-bold text-sm tracking-wide'>
+                    GET STARTED
                   </Button>
                   <Button className='bg-green-700 hover:bg-green-800 text-white px-6 py-2.5 rounded font-bold text-sm tracking-wide'>
-                    OPEN EVENTS
+                    DONATE
                   </Button>
                 </div>
               </div>
 
+              {/* MOBILE ONLY - Action button and hamburger menu (hidden on desktop) */}
               <div className='lg:hidden flex items-center gap-3'>
-                <Button className='bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded font-bold text-xs'>
-                  BOOK A CALL
+                <Button className='bg-orange-500 hover:bg-orange-600/50 text-white px-4 py-2 rounded font-bold text-xs'>
+                  GET STARTED
                 </Button>
 
                 <Button
@@ -164,6 +169,7 @@ export function Navbar() {
                   <span className='sr-only'>Toggle menu</span>
                 </Button>
 
+                {/* MOBILE ONLY - Full screen overlay menu */}
                 {isOpen && (
                   <div className='fixed inset-0 top-16 bg-white z-50 shadow-xl transform transition-transform duration-300'>
                     <div className='flex flex-col space-y-0 p-0'>
@@ -200,6 +206,7 @@ export function Navbar() {
                                 </Button>
                               )}
                             </div>
+                            {/* MOBILE ONLY - Expandable dropdown items */}
                             {item.hasDropdown &&
                               item.dropdownItems &&
                               expandedMobileItem === item.name && (
@@ -225,6 +232,7 @@ export function Navbar() {
               </div>
             </div>
 
+            {/* DESKTOP ONLY - Main navigation menu (hidden on mobile) */}
             <div className='hidden lg:block'>
               <nav className='flex items-center justify-end py-3'>
                 <div className='flex items-center space-x-4'>
@@ -240,6 +248,7 @@ export function Navbar() {
                             {item.name}
                             <ChevronDown className='h-3 w-3' />
                           </button>
+                          {/* DESKTOP ONLY - Hover dropdown menu */}
                           {hoveredItem === item.name && (
                             <div className='absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border z-50'>
                               {item.dropdownItems?.map((dropdownItem) => (
@@ -269,7 +278,9 @@ export function Navbar() {
             </div>
           </>
         ) : (
+          /* SCROLLED STATE - Compact header when page is scrolled */
           <div className='flex items-center justify-between py-3'>
+            {/* LOGO - Shared across all devices (smaller when scrolled) */}
             <Link href='/' className='flex items-center'>
               <Image
                 src='/images/logo.png'
@@ -281,6 +292,7 @@ export function Navbar() {
               />
             </Link>
 
+            {/* DESKTOP ONLY - Compact navigation menu (hidden on mobile) */}
             <div className='hidden lg:flex items-center'>
               <nav className='flex items-center space-x-8'>
                 {navigationItems.map((item) => (
@@ -295,6 +307,7 @@ export function Navbar() {
                           {item.name}
                           <ChevronDown className='h-3 w-3' />
                         </button>
+                        {/* DESKTOP ONLY - Hover dropdown menu (scrolled state) */}
                         {hoveredItem === item.name && (
                           <div className='absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border z-50'>
                             {item.dropdownItems?.map((dropdownItem) => (
@@ -322,6 +335,7 @@ export function Navbar() {
               </nav>
             </div>
 
+            {/* MOBILE ONLY - Compact action button and hamburger menu (hidden on desktop) */}
             <div className='lg:hidden flex items-center gap-3'>
               <Button className='bg-purple-700 hover:bg-purple-800 text-white px-3 py-1.5 rounded font-bold text-xs'>
                 BOOK A CALL
@@ -341,6 +355,7 @@ export function Navbar() {
                 <span className='sr-only'>Toggle menu</span>
               </Button>
 
+              {/* MOBILE ONLY - Full screen overlay menu (scrolled state) */}
               {isOpen && (
                 <div className='fixed inset-0 top-16 bg-white z-50 shadow-xl transform transition-transform duration-300'>
                   <div className='flex flex-col space-y-0 p-0'>
@@ -377,6 +392,7 @@ export function Navbar() {
                               </Button>
                             )}
                           </div>
+                          {/* MOBILE ONLY - Expandable dropdown items (scrolled state) */}
                           {item.hasDropdown &&
                             item.dropdownItems &&
                             expandedMobileItem === item.name && (

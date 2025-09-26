@@ -1,4 +1,5 @@
-import { Navbar } from "@/components/navbar";
+
+import { Navbar } from "@/components/public/navbar";
 import React from "react";
 
 interface PublicLayoutProps {
