@@ -1,5 +1,6 @@
+import { assets } from '@/assets';
 import { Facebook, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
-
+import Image from 'next/image';
 export function Footer() {
   return (
     <footer className='bg-[#1a2332] text-white'>
@@ -8,8 +9,8 @@ export function Footer() {
           {/* Brand Section */}
           <div className='space-y-6'>
             <div className='flex items-center'>
-              <img
-                src='/images/logo.png'
+              <Image
+                src={assets.logo}
                 alt='Ripples Tutorials'
                 className='h-8 w-auto'
               />

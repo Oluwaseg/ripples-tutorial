@@ -1,5 +1,7 @@
+import { assets } from '@/assets';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -32,26 +34,32 @@ export default function HomePage() {
           <div className='border border-gray-200 rounded-3xl p-4 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300'>
             <div className='space-y-4'>
               <div className='rounded-2xl overflow-hidden group cursor-pointer'>
-                <img
-                  src='/images/LMS-1.jpg'
+                <Image
+                  src={assets.bigDream}
                   alt='Child with goggles looking at holographic display'
                   className='w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105'
+                  width={600}
+                  height={300}
                 />
               </div>
 
               <div className='grid grid-cols-2 gap-4'>
                 <div className='rounded-2xl overflow-hidden group cursor-pointer'>
-                  <img
-                    src='/images/LMS-2.jpg'
+                  <Image
+                    src={assets.bigDream2}
                     alt='Student studying in library'
                     className='w-full h-[150px] object-cover transition-transform duration-300 group-hover:scale-105'
+                    width={600}
+                    height={300}
                   />
                 </div>
                 <div className='rounded-2xl overflow-hidden group cursor-pointer'>
-                  <img
-                    src='/images/LMS-3.jpg'
+                  <Image
+                    src={assets.bigDream3}
                     alt='Student reading at home'
                     className='w-full h-[150px] object-cover transition-transform duration-300 group-hover:scale-105'
+                    width={600}
+                    height={300}
                   />
                 </div>
               </div>

@@ -1,6 +1,5 @@
-
-import { Navbar } from "@/components/public/navbar";
-import React from "react";
+import { Navbar } from '@/components/public/common/navbar';
+import React from 'react';
 
 interface PublicLayoutProps {
   children: React.ReactNode;

@@ -1,5 +1,6 @@
 'use client';
 
+import { assets } from '@/assets';
 import { Button } from '@/components/ui/button';
 import {
   ChevronDown,
@@ -115,10 +116,8 @@ export function Navbar() {
               {/* LOGO - Shared across all devices */}
               <Link href='/' className='flex items-center'>
                 <Image
-                  src='/images/logo.png'
+                  src={assets.logo}
                   alt='ripple'
-                  width={240}
-                  height={60}
                   className='h-14 w-auto'
                   priority
                 />
@@ -283,10 +282,8 @@ export function Navbar() {
             {/* LOGO - Shared across all devices (smaller when scrolled) */}
             <Link href='/' className='flex items-center'>
               <Image
-                src='/images/logo.png'
+                src={assets.logo}
                 alt='ripple'
-                width={180}
-                height={45}
                 className='h-10 w-auto'
                 priority
               />

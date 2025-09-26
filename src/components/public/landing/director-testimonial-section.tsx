@@ -1,6 +1,8 @@
 'use client';
 
+import { assets } from '@/assets';
 import { Quote } from 'lucide-react';
+import Image from 'next/image';
 
 export default function DirectorTestimonialSection() {
   return (
@@ -11,9 +13,11 @@ export default function DirectorTestimonialSection() {
             {/* Left - Director Image */}
             <div className='relative'>
               <div className='w-80 h-80 mx-auto lg:mx-0 rounded-full overflow-hidden '>
-                <img
-                  src='/images/MR-T.png'
+                <Image
+                  src={assets.author}
                   alt='MR. T. ABRAHAM'
+                  width={320}
+                  height={320}
                   className='w-full h-full object-cover'
                 />
               </div>

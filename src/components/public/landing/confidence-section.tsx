@@ -1,3 +1,5 @@
+import { assets } from '@/assets';
+import Image from 'next/image';
 export default function ConfidenceSection() {
   return (
     <section className='py-20 bg-gray-50'>
@@ -20,8 +22,8 @@ export default function ConfidenceSection() {
 
         <div className='mb-20'>
           <div className='relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 max-w-5xl mx-auto group'>
-            <img
-              src='/images/LMS-4.png'
+            <Image
+              src={assets.onlineTuition}
               alt='Online tuition teacher with student'
               className='w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500'
             />

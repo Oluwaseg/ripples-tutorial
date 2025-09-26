@@ -1,7 +1,9 @@
 'use client';
 
+import { assets } from '@/assets';
 import { Card } from '@/components/ui/card';
 import { ChevronRight, Star } from 'lucide-react';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const parentTestimonials = [
@@ -11,7 +13,7 @@ const parentTestimonials = [
     content:
       'Master every subject with expert guidance and proven strategies to achieve top grades',
     rating: 5,
-    image: '/images/TESTIMONIAL.jpg',
+    image: assets.testimonials,
   },
   {
     id: 2,
@@ -19,7 +21,7 @@ const parentTestimonials = [
     content:
       'Master every subject with expert guidance and proven strategies to achieve top grades',
     rating: 5,
-    image: '/images/TESTIMONIAL.jpg',
+    image: assets.testimonials,
   },
   {
     id: 3,
@@ -27,7 +29,7 @@ const parentTestimonials = [
     content:
       'Master every subject with expert guidance and proven strategies to achieve top grades',
     rating: 5,
-    image: '/images/TESTIMONIAL.jpg',
+    image: assets.testimonials,
   },
   {
     id: 4,
@@ -35,7 +37,7 @@ const parentTestimonials = [
     content:
       'The personalized approach at Ripples Tutorials made all the difference for my daughter. She went from struggling to achieving top grades.',
     rating: 5,
-    image: '/images/TESTIMONIAL.jpg',
+    image: assets.testimonials,
   },
   {
     id: 5,
@@ -43,7 +45,7 @@ const parentTestimonials = [
     content:
       "Exceptional tutoring service that truly cares about each student's success. Highly recommend to all parents.",
     rating: 5,
-    image: '/images/TESTIMONIAL.jpg',
+    image: assets.testimonials,
   },
 ];
 
@@ -138,7 +140,7 @@ export default function ParentTestimonialsSection() {
 
                     {/* Profile */}
                     <div className='flex items-center mb-4'>
-                      <img
+                      <Image
                         src={testimonial.image || '/placeholder.svg'}
                         alt={testimonial.name}
                         className='w-12 h-12 rounded-full object-cover mr-4'

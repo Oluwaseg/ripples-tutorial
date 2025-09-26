@@ -1,13 +1,14 @@
 'use client';
 
-import ConfidenceSection from '@/components/public/confidence-section';
-import DirectorTestimonialSection from '@/components/public/director-testimonial-section';
-import Dreams from '@/components/public/dreams';
-import EducationalFeatures from '@/components/public/educational-features';
-import { Footer } from '@/components/public/footer';
-import ParentTestimonialsSection from '@/components/public/parent-testimonials-section';
-import PopularCoursesSection from '@/components/public/popular-courses-section';
-import WhyChooseSection from '@/components/public/why-choose-section';
+import { assets } from '@/assets';
+import { Footer } from '@/components/public/common/footer';
+import ConfidenceSection from '@/components/public/landing/confidence-section';
+import DirectorTestimonialSection from '@/components/public/landing/director-testimonial-section';
+import Dreams from '@/components/public/landing/dreams';
+import EducationalFeatures from '@/components/public/landing/educational-features';
+import ParentTestimonialsSection from '@/components/public/landing/parent-testimonials-section';
+import PopularCoursesSection from '@/components/public/landing/popular-courses-section';
+import WhyChooseSection from '@/components/public/landing/why-choose-section';
 import { Button } from '@/components/ui/button';
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
@@ -17,8 +18,6 @@ export default function HomePage() {
 
   return (
     <div className='min-h-screen'>
-      
-
       {/* Hero Section with Video Background */}
       <section className='relative h-screen overflow-hidden'>
         {/* Video Background */}
@@ -29,7 +28,7 @@ export default function HomePage() {
           playsInline
           className='absolute inset-0 w-full h-full object-cover'
         >
-          <source src='/videos/hero-video.mp4' type='video/mp4' />
+          <source src={assets.hero} type='video/mp4' />
           {/* Fallback image if video doesn't load */}
           <div className='absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900' />
         </video>
@@ -92,7 +91,7 @@ export default function HomePage() {
 
             {/* Full Video */}
             <video controls autoPlay className='w-full h-full'>
-              <source src='/videos/hero-video.mp4' type='video/mp4' />
+              <source src={assets.hero} type='video/mp4' />
               <p className='text-white p-8'>
                 Your browser does not support the video tag.
               </p>

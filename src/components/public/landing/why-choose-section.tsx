@@ -1,6 +1,7 @@
+import { assets } from '@/assets';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
-
+import Image from 'next/image';
 const features = [
   'Everything Online',
   'Real Results',
@@ -19,8 +20,8 @@ export default function WhyChooseSection() {
           <div className='relative'>
             <div className='absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 rounded-full opacity-80 z-0'></div>
             <div className='relative z-10 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group'>
-              <img
-                src='/images/LMS-5.jpg'
+              <Image
+                src={assets.whyUs}
                 alt='Students collaborating in classroom'
                 className='w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500'
               />
