@@ -1,9 +1,13 @@
 'use client';
 
 import ConfidenceSection from '@/components/confidence-section';
+import DirectorTestimonialSection from '@/components/director-testimonial-section';
 import Dreams from '@/components/dreams';
 import EducationalFeatures from '@/components/educational-features';
+import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
+import ParentTestimonialsSection from '@/components/parent-testimonials-section';
+import PopularCoursesSection from '@/components/popular-courses-section';
 import { Button } from '@/components/ui/button';
 import WhyChooseSection from '@/components/why-choose-section';
 import { Play, X } from 'lucide-react';
@@ -117,6 +121,10 @@ export default function HomePage() {
       <ConfidenceSection />
       <EducationalFeatures />
       <WhyChooseSection />
+      <PopularCoursesSection />
+      <DirectorTestimonialSection />
+      <ParentTestimonialsSection />
+      <Footer />
     </div>
   );
 }
