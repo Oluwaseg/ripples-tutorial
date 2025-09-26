@@ -14,7 +14,7 @@ export default function HomePage() {
 
   return (
     <div className='min-h-screen'>
-      <Navbar />
+      
 
       {/* Hero Section with Video Background */}
       <section className='relative h-screen overflow-hidden'>
