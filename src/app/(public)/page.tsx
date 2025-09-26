@@ -5,7 +5,6 @@ import DirectorTestimonialSection from '@/components/public/director-testimonial
 import Dreams from '@/components/public/dreams';
 import EducationalFeatures from '@/components/public/educational-features';
 import { Footer } from '@/components/public/footer';
-import { Navbar } from '@/components/public/navbar';
 import ParentTestimonialsSection from '@/components/public/parent-testimonials-section';
 import PopularCoursesSection from '@/components/public/popular-courses-section';
 import WhyChooseSection from '@/components/public/why-choose-section';
@@ -18,7 +17,7 @@ export default function HomePage() {
 
   return (
     <div className='min-h-screen'>
-      <Navbar />
+      
 
       {/* Hero Section with Video Background */}
       <section className='relative h-screen overflow-hidden'>

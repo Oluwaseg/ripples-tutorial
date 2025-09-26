@@ -1,11 +1,18 @@
-import React from 'react'
 
-const layout = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+import { Navbar } from "@/components/public/navbar";
+import React from "react";
+
+interface PublicLayoutProps {
+  children: React.ReactNode;
 }
 
-export default layout
+const PublicLayout = ({ children }: PublicLayoutProps) => {
+  return (
+    <div>
+      <Navbar />
+      {children}
+    </div>
+  );
+};
+
+export default PublicLayout;
