@@ -243,7 +243,7 @@ export function Navbar() {
                           onMouseEnter={() => setHoveredItem(item.name)}
                           onMouseLeave={() => setHoveredItem(null)}
                         >
-                          <button className='flex items-center gap-1  font-semibold text-sm tracking-wide transition-colors uppercase'>
+                          <button className='flex items-center gap-1 text-white font-semibold text-sm tracking-wide transition-colors uppercase'>
                             {item.name}
                             <ChevronDown className='h-3 w-3' />
                           </button>

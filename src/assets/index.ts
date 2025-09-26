@@ -5,6 +5,7 @@ import bigDream2 from '@/assets/images/big-dream-2.jpg';
 import bigDream3 from '@/assets/images/big-dream-3.jpg';
 import logo from '@/assets/images/logo.png';
 import onlineTuition from '@/assets/images/online-tuition.png';
+import cta from '@/assets/images/serious-man.jpg';
 import testimonials from '@/assets/images/testimonials.jpg';
 import whyUs from '@/assets/images/why-ripples.jpg';
 
@@ -19,4 +20,5 @@ export const assets = {
   testimonials,
   whyUs,
   hero: '/videos/hero-video.mp4',
+  cta,
 };

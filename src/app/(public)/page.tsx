@@ -3,6 +3,7 @@
 import { assets } from '@/assets';
 import { Footer } from '@/components/public/common/footer';
 import ConfidenceSection from '@/components/public/landing/confidence-section';
+import CTASuccessSection from '@/components/public/landing/cta-success-section';
 import DirectorTestimonialSection from '@/components/public/landing/director-testimonial-section';
 import Dreams from '@/components/public/landing/dreams';
 import EducationalFeatures from '@/components/public/landing/educational-features';
@@ -99,22 +100,7 @@ export default function HomePage() {
           </div>
         </div>
       )}
-      <section className='py-20 bg-gray-100'>
-        <div>
-          <div className='container mx-auto py-10 px-4 text-center'>
-            <h2 className='text-4xl font-bold mb-6 text-gray-800'>
-              Welcome to Our School
-            </h2>
-            <p className='text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-              At Our School, we are committed to providing a nurturing and
-              stimulating environment where students can excel academically and
-              personally. Our dedicated faculty and staff work tirelessly to
-              ensure that every student has the opportunity to reach their full
-              potential.
-            </p>
-          </div>
-        </div>
-      </section>
+
       <Dreams />
       <ConfidenceSection />
       <EducationalFeatures />
@@ -122,6 +108,7 @@ export default function HomePage() {
       <PopularCoursesSection />
       <DirectorTestimonialSection />
       <ParentTestimonialsSection />
+      <CTASuccessSection />
       <Footer />
     </div>
   );
