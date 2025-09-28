@@ -165,15 +165,15 @@ export default function PopularCoursesSection() {
   const visibleCourses = getVisibleCourses();
 
   return (
-    <section className='py-16 bg-gray-50'>
+    <section className='py-16 bg-gray-50 overflow-hidden'>
       <div className='container mx-auto px-6'>
         <div className='grid lg:grid-cols-2 gap-12 items-start'>
           {/* Left Content */}
           <div className='space-y-6'>
-            <h2 className='text-5xl font-bold text-black leading-tight'>
+            <h2 className='md:text-5xl text-xl font-bold text-black leading-tight'>
               Our Most Popular Online Courses
             </h2>
-            <p className='text-gray-600 text-lg leading-relaxed'>
+            <p className='text-gray-600 md:text-lg text-sm leading-relaxed'>
               Explore our most popular programs designed to help students
               achieve academic excellence.
             </p>
