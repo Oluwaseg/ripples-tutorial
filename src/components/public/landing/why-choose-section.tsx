@@ -1,6 +1,6 @@
 import { assets } from '@/assets';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 const features = [
   'Everything Online',
@@ -46,8 +46,13 @@ export default function WhyChooseSection() {
               {features.map((feature, index) => (
                 <div key={index} className='flex items-center space-x-3 group'>
                   <div className='flex-shrink-0'>
-                    <div className='w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300'>
-                      <Check className='h-4 w-4 text-blue-600' />
+                    <div className='w-6 h-6 rounded-full flex items-center justify-center'>
+                      <Image
+                        src={assets.checkIcon}
+                        alt='icon'
+                        width={26}
+                        height={26}
+                      />
                     </div>
                   </div>
                   <span className='text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-300'>
@@ -57,7 +62,7 @@ export default function WhyChooseSection() {
               ))}
             </div>
 
-            <Button className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-medium'>
+            <Button className='bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 rounded-full text-lg font-medium'>
               LEARN MORE
               <ArrowRight className='ml-2 h-5 w-5' />
             </Button>

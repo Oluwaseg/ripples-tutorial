@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function DirectorTestimonialSection() {
   return (
     <section className='py-20 bg-slate-900'>
-      <div className='container mx-auto px-6'>
+      <div className='container mx-auto px-6 py-10  '>
         <div className='max-w-6xl mx-auto'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
             {/* Left - Director Image */}
@@ -25,13 +25,16 @@ export default function DirectorTestimonialSection() {
 
             {/* Right - Quote Content */}
             <div className='text-white space-y-6'>
-              <Quote className='h-12 w-12 text-blue-400 mb-6' />
-              <blockquote className='text-xl lg:text-2xl leading-relaxed font-light'>
-                "At Ripples Tutorials, education is not just about grades – it's
-                about building confidence and shaping futures. Our goal is to
-                provide an environment where every student feels supported,
-                inspired, and ready to excel."
+              <blockquote className='text-xl lg:text-2xl leading-relaxed font-light flex items-start gap-3'>
+                <Quote className='text-blue-400 flex-shrink-0 mt-1' />
+                <span>
+                  At Ripples Tutorials, education is not just about grades –
+                  it's about building confidence and shaping futures. Our goal
+                  is to provide an environment where every student feels
+                  supported, inspired, and ready to excel.
+                </span>
               </blockquote>
+
               <div className='pt-4'>
                 <p className='text-red-400 font-semibold text-lg tracking-wide'>
                   - MR. T. ABRAHAM, DIRECTOR OF STUDIES
