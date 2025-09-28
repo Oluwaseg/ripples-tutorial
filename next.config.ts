@@ -1,11 +1,7 @@
-import type { NextConfig } from 'next';
-import path from 'path';
+/**@type {import{'next'}.NextConfig} */
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  turbopack: {
-    root: path.resolve(__dirname),
-  },
-};
+const nextConfig ={
 
-export default nextConfig;
+}
+
+export default nextConfig

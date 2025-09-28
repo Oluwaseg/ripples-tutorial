@@ -1,3 +1,6 @@
+
+// import { Footer } from '@/components/public/common/footer';
+import { Navbar } from '@/components/public/common/navbar';
 import React from 'react';
 
 interface PublicLayoutProps {
@@ -7,7 +10,9 @@ interface PublicLayoutProps {
 const PublicLayout = ({ children }: PublicLayoutProps) => {
   return (
     <div>
+      <Navbar />
       {children}
+      {/* <Footer /> */}
     </div>
   );
 };
