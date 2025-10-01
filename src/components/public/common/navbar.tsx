@@ -31,8 +31,8 @@ const navigationItems = [
     href: '/about',
     hasDropdown: true,
     dropdownItems: [
-      { name: 'WELCOME FROM THE PRINCIPAL', href: '/about/principal' },
-      { name: 'INSIDE OUR SCHOOL', href: '/about/inside' },
+      { name: 'WELCOME FROM THE PRINCIPAL', href: '/about' },
+      { name: 'INSIDE OUR SCHOOL', href: '/about' },
     ],
   },
   {

@@ -1,7 +1,6 @@
 'use client';
 
 import { assets } from '@/assets';
-import { Footer } from '@/components/public/common/footer';
 import ConfidenceSection from '@/components/public/landing/confidence-section';
 import CTASuccessSection from '@/components/public/landing/cta-success-section';
 import DirectorTestimonialSection from '@/components/public/landing/director-testimonial-section';
@@ -109,7 +108,6 @@ export default function HomePage() {
       <DirectorTestimonialSection />
       <ParentTestimonialsSection />
       <CTASuccessSection />
-      <Footer />
     </div>
   );
 }

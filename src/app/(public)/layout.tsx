@@ -1,5 +1,5 @@
-
 // import { Footer } from '@/components/public/common/footer';
+import { Footer } from '@/components/public/common/footer';
 import { Navbar } from '@/components/public/common/navbar';
 import React from 'react';
 
@@ -12,7 +12,7 @@ const PublicLayout = ({ children }: PublicLayoutProps) => {
     <div>
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

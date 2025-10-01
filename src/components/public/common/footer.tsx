@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
 import Image from 'next/image';
 export function Footer() {
   return (
-    <footer className='bg-[#1a2332] text-white'>
+    <footer className='bg-[#1a2332]  text-white'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12'>
           {/* Brand Section */}
@@ -15,21 +15,21 @@ export function Footer() {
                 className='h-8 w-auto'
               />
             </div>
-            <p className='text-gray-300 leading-relaxed max-w-sm'>
+            <p className='text-white leading-relaxed max-w-sm'>
               A place where excellence meets opportunity, and where every
               learner is guided to reach their fullest potential.
             </p>
             <div className='flex space-x-4'>
-              <div className='w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
+              <div className='w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
                 <Facebook className='h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors' />
               </div>
-              <div className='w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
+              <div className='w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
                 <Twitter className='h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors' />
               </div>
-              <div className='w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
+              <div className='w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
                 <Linkedin className='h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors' />
               </div>
-              <div className='w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
+              <div className='w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer'>
                 <Instagram className='h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors' />
               </div>
             </div>
@@ -77,7 +77,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className='bg-red-500 py-4'>
+      <div className='bg-accent py-4'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <p className='text-center text-white text-sm'>
             ©2025. ripplestutorials. All Rights Reserved.
