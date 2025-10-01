@@ -33,22 +33,6 @@ const navigationItems = [
     dropdownItems: [
       { name: 'WELCOME FROM THE PRINCIPAL', href: '/about/principal' },
       { name: 'INSIDE OUR SCHOOL', href: '/about/inside' },
-      { name: 'COMMUNITY AND SOCIAL IMPACT', href: '/about/community' },
-      { name: 'OUR TEACHING TEAM', href: '/about/team' },
-      { name: 'TERM DATES', href: '/about/term-dates' },
-      { name: 'PARTNERSHIPS', href: '/about/partnerships' },
-      { name: 'NEWS AND BLOG', href: '/about/news' },
-      { name: 'LIBRARY OF EVENTS', href: '/about/events' },
-    ],
-  },
-  {
-    name: 'FULL SCHOOL',
-    href: '/full-school',
-    hasDropdown: true,
-    dropdownItems: [
-      { name: 'Primary School', href: '/full-school/primary' },
-      { name: 'Secondary School', href: '/full-school/secondary' },
-      { name: 'Sixth Form', href: '/full-school/sixth-form' },
     ],
   },
   {
@@ -56,9 +40,9 @@ const navigationItems = [
     href: '/programmes',
     hasDropdown: true,
     dropdownItems: [
-      { name: 'Summer Programmes', href: '/programmes/summer' },
-      { name: 'Weekend Courses', href: '/programmes/weekend' },
-      { name: 'Holiday Camps', href: '/programmes/camps' },
+      { name: 'One-on-One Tuition', href: '/programmes/one-on-one' },
+      { name: 'Self Tuition', href: '/programmes/self-tuition' },
+      { name: 'Group Based Tuition', href: '/programmes/group-based' },
     ],
   },
   {
