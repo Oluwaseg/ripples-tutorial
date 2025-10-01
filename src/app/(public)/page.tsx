@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <div className='min-h-screen'>
       {/* Hero Section with Video Background */}
-      <section className='relative h-screen overflow-hidden'>
+      <section className='relative h-[50vh] md:h-screen overflow-hidden'>
         {/* Video Background */}
         <video
           autoPlay
@@ -35,42 +35,12 @@ export default function HomePage() {
 
         {/* Dark overlay for better text readability */}
         <div className='absolute inset-0 bg-black/30' />
-
-        {/* Hero Content */}
-        {/* <div className='relative z-10 flex items-center justify-center h-full'>
-          <div className='container mx-auto px-4 text-center text-white'>
-            <h1 className='text-5xl md:text-7xl font-bold mb-6 text-balance'>
-              Excellence in Education
-            </h1>
-            <p className='text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-pretty leading-relaxed'>
-              Discover a world-class learning environment where students thrive
-              academically, socially, and personally in our innovative
-              educational community.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <Button
-                size='lg'
-                className='bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg font-bold tracking-wide'
-              >
-                EXPLORE OUR PROGRAMS
-              </Button>
-              <Button
-                size='lg'
-                variant='outline'
-                className='border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-bold tracking-wide bg-transparent'
-              >
-                BOOK A TOUR
-              </Button>
-            </div>
-          </div>
-        </div> */}
-
         {/* Watch Full Video Button */}
         <Button
           onClick={() => setIsVideoModalOpen(true)}
-          className='absolute bottom-8 right-8 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 shadow-lg transition-all duration-300 hover:scale-105'
+          className='absolute bottom-4 right-4 md:bottom-8 md:right-8 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-wide flex items-center gap-2 shadow-lg transition-all duration-300 hover:scale-105'
         >
-          <Play className='w-4 h-4' />
+          <Play className='w-3 h-3 md:w-4 md:h-4' />
           WATCH FULL VIDEO
         </Button>
       </section>

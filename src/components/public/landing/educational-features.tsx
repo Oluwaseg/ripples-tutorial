@@ -5,10 +5,10 @@ const features = [
   {
     icon: () => (
       <Image
-        src={assets.understandingIcon}
+        src={assets.understandingIcon || '/placeholder.svg'}
         alt='Understand Icon'
-        width={48}
-        height={48}
+        width={56}
+        height={56}
         className='object-contain'
       />
     ),
@@ -19,10 +19,10 @@ const features = [
   {
     icon: () => (
       <Image
-        src={assets.flexibleIcon}
+        src={assets.flexibleIcon || '/placeholder.svg'}
         alt='Flexible Icon'
-        width={48}
-        height={48}
+        width={56}
+        height={56}
         className='object-contain'
       />
     ),
@@ -33,10 +33,10 @@ const features = [
   {
     icon: () => (
       <Image
-        src={assets.supportIcon}
+        src={assets.supportIcon || '/placeholder.svg'}
         alt='Support Icon'
-        width={48}
-        height={48}
+        width={56}
+        height={56}
         className='object-contain'
       />
     ),
@@ -46,10 +46,10 @@ const features = [
   {
     icon: () => (
       <Image
-        src={assets.pcIcon}
+        src={assets.pcIcon || '/placeholder.svg'}
         alt='PC Icon'
-        width={48}
-        height={48}
+        width={56}
+        height={56}
         className='object-contain'
       />
     ),
@@ -60,16 +60,16 @@ const features = [
 
 export default function EducationalFeatures() {
   return (
-    <section className='py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-gray-100'>
+    <section className='py-20 lg:py-32 bg-gradient-to-br from-primary via-white to-primary'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
           {/* Left text section */}
-          <div className='space-y-6 lg:pr-8'>
-            <div className='space-y-4'>
-              <h2 className='text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight'>
+          <div className='space-y-8 lg:pr-12'>
+            <div className='space-y-6'>
+              <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 leading-[1.1] text-balance'>
                 Check Out Our Educational Features
               </h2>
-              <p className='text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg'>
+              <p className='text-lg lg:text-xl text-neutral-800/80 leading-relaxed max-w-xl'>
                 Because we deliver expert tutors, small-group classes, and
                 proven results, all online, flexible, and focused on your
                 child's success.
@@ -78,23 +78,23 @@ export default function EducationalFeatures() {
           </div>
 
           {/* Right grid section */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8'>
             {features.map((feature, index) => (
               <div
                 key={index}
-                className='bg-white rounded-lg p-6 shadow border border-gray-200 flex items-start space-x-4'
+                className='group bg-white rounded-2xl p-8 shadow-sm border border-neutral-200/50 hover:shadow-xl hover:border-[color:var(--brand-blue)]/20 transition-all duration-300 hover:-translate-y-1'
               >
-                {/* Icon inside circle */}
-                <div className='flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center '>
+                {/* Icon */}
+                <div className='mb-6 transform group-hover:scale-110 transition-transform duration-300'>
                   <feature.icon />
                 </div>
 
                 {/* Text */}
-                <div className='flex-1'>
-                  <h3 className='text-base font-semibold text-blue-700 leading-snug'>
+                <div className='space-y-3'>
+                  <h3 className='text-xl font-bold text-[color:var(--brand-blue)] leading-tight'>
                     {feature.title}
                   </h3>
-                  <p className='text-[11px] lg:text-[12px] text-gray-600 leading-[1.3]'>
+                  <p className='text-sm lg:text-base text-neutral-800/70 leading-relaxed'>
                     {feature.description}
                   </p>
                 </div>

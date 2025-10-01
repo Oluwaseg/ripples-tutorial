@@ -38,6 +38,21 @@
   --sidebar-accent-foreground: oklch(0.25 0.02 264);
   --sidebar-border: oklch(0.9 0.005 264);
   --sidebar-ring: oklch(0.42 0.15 264);
+  /* Adding custom design tokens for Ripples Tutorials brand */
+  --brand-blue: oklch(0.55 0.18 250);
+  --brand-blue-dark: oklch(0.45 0.18 250);
+  --brand-accent: oklch(0.6 0.2 25);
+  --brand-cream: oklch(0.96 0.01 85);
+  --brand-blush: oklch(0.95 0.02 25);
+  --brand-green: oklch(0.35 0.12 160);
+  --brand-green-dark: oklch(0.25 0.12 160);
+  --neutral-50: oklch(0.99 0 0);
+  --neutral-100: oklch(0.97 0 0);
+  --neutral-200: oklch(0.93 0 0);
+  --neutral-600: oklch(0.5 0 0);
+  --neutral-700: oklch(0.4 0 0);
+  --neutral-800: oklch(0.3 0 0);
+  --neutral-900: oklch(0.2 0 0);
 }
 
 .dark {
