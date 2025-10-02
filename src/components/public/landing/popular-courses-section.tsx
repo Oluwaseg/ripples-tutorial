@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   BookOpen,
   Brain,
@@ -8,69 +8,69 @@ import {
   CheckCircle,
   ChevronRight,
   Lightbulb,
-} from 'lucide-react';
-import { useEffect, useState } from 'react';
+} from "lucide-react";
+import { useEffect, useState } from "react";
 
 const allCourses = [
   {
     id: 1,
     icon: Brain,
-    title: 'Holiday Booster Courses',
+    title: "Holiday Booster Courses",
     description:
-      'Intensive short-term sessions to revise and stay ahead during school breaks',
-    gradient: 'from-amber-400 to-orange-500',
-    iconBg: 'bg-amber-50',
-    iconColor: 'text-amber-600',
+      "Intensive short-term sessions to revise and stay ahead during school breaks",
+    gradient: "from-amber-400 to-orange-500",
+    iconBg: "bg-amber-50",
+    iconColor: "text-amber-600",
   },
   {
     id: 2,
     icon: BookOpen,
-    title: 'A-Level Excellence Classes',
+    title: "A-Level Excellence Classes",
     description:
-      'Comprehensive courses designed to prepare students for academic and career success',
-    gradient: 'from-blue-400 to-indigo-500',
-    iconBg: 'bg-blue-50',
-    iconColor: 'text-blue-600',
+      "Comprehensive courses designed to prepare students for academic and career success",
+    gradient: "from-blue-400 to-indigo-500",
+    iconBg: "bg-blue-50",
+    iconColor: "text-blue-600",
   },
   {
     id: 3,
     icon: Calculator,
-    title: 'GCSE Success Programme',
+    title: "GCSE Success Programme",
     description:
-      'Master every subject with expert guidance and proven strategies to achieve top grades',
-    gradient: 'from-pink-400 to-rose-500',
-    iconBg: 'bg-pink-50',
-    iconColor: 'text-pink-600',
+      "Master every subject with expert guidance and proven strategies to achieve top grades",
+    gradient: "from-pink-400 to-rose-500",
+    iconBg: "bg-pink-50",
+    iconColor: "text-pink-600",
   },
   {
     id: 4,
     icon: CheckCircle,
-    title: 'Plus Preparation 11',
+    title: "Plus Preparation 11",
     description:
-      'Targeted lessons to boost confidence and ensure grammar school admission',
-    gradient: 'from-emerald-400 to-teal-500',
-    iconBg: 'bg-emerald-50',
-    iconColor: 'text-emerald-600',
+      "Targeted lessons to boost confidence and ensure grammar school admission",
+    gradient: "from-emerald-400 to-teal-500",
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-600",
   },
   {
     id: 5,
     icon: BookOpen,
-    title: 'KS3 Foundation Building',
+    title: "KS3 Foundation Building",
     description:
-      'Strengthen fundamentals in Maths, English, and Science for future academic success',
-    gradient: 'from-purple-400 to-violet-500',
-    iconBg: 'bg-purple-50',
-    iconColor: 'text-purple-600',
+      "Strengthen fundamentals in Maths, English, and Science for future academic success",
+    gradient: "from-purple-400 to-violet-500",
+    iconBg: "bg-purple-50",
+    iconColor: "text-purple-600",
   },
   {
     id: 6,
     icon: Lightbulb,
-    title: 'Advanced Mathematics',
+    title: "Advanced Mathematics",
     description:
-      'Intensive short-term sessions to revise and stay ahead during school breaks',
-    gradient: 'from-cyan-400 to-blue-500',
-    iconBg: 'bg-cyan-50',
-    iconColor: 'text-cyan-600',
+      "Intensive short-term sessions to revise and stay ahead during school breaks",
+    gradient: "from-cyan-400 to-blue-500",
+    iconBg: "bg-cyan-50",
+    iconColor: "text-cyan-600",
   },
 ];
 
@@ -93,8 +93,8 @@ export default function PopularCoursesSection() {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -156,21 +156,21 @@ export default function PopularCoursesSection() {
   const cardWidth = 100 / cardsPerView;
 
   return (
-    <section className='py-16 lg:py-24 bg-gradient-to-br from-accent via-white to-accent overflow-hidden'>
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 lg:mb-16'>
+    <section className="py-16 lg:py-24 bg-gradient-to-tr from-primary via-accent to-primary overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 lg:mb-16">
           {/* Left Content */}
-          <div className='space-y-6 lg:space-y-8'>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[color:var(--brand-blue)] leading-[1.1] text-balance'>
+          <div className="space-y-6 lg:space-y-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] text-balance">
               Our Most Popular Online Courses
             </h2>
-            <p className='text-base sm:text-lg lg:text-xl text-neutral-700 leading-relaxed'>
+            <p className="text-base sm:text-lg lg:text-xl text-white leading-relaxed">
               Explore our most popular programs designed to help students
               achieve academic excellence.
             </p>
-            <Button className='bg-[color:var(--brand-blue)] hover:bg-[color:var(--brand-blue)]/90 text-white px-6 sm:px-8 py-5 sm:py-6 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group'>
+            <Button className="bg-[color:var(--brand-blue)] hover:bg-[color:var(--brand-blue)]/90 text-white px-6 sm:px-8 py-5 sm:py-6 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
               ENROLL NOW
-              <ChevronRight className='ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform' />
+              <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
@@ -197,10 +197,10 @@ export default function PopularCoursesSection() {
         </div>
 
         {/* Course Cards Slider */}
-        <div className='relative'>
-          <div className='overflow-hidden rounded-2xl'>
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
             <div
-              className='flex transition-transform duration-500 ease-out'
+              className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentIndex * cardWidth}%)` }}
             >
               {allCourses.map((course) => {
@@ -209,10 +209,10 @@ export default function PopularCoursesSection() {
                 return (
                   <div
                     key={course.id}
-                    className='flex-shrink-0 px-2 sm:px-3 lg:px-4'
+                    className="flex-shrink-0 px-2 sm:px-3 lg:px-4"
                     style={{ width: `${cardWidth}%` }}
                   >
-                    <div className='group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-neutral-200/50 hover:border-[color:var(--brand-blue)]/30 h-full'>
+                    <div className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-neutral-200/50 hover:border-[color:var(--brand-blue)]/30 h-full">
                       {/* Gradient accent bar */}
                       <div
                         className={`absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl sm:rounded-t-3xl bg-gradient-to-r ${course.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
@@ -228,15 +228,15 @@ export default function PopularCoursesSection() {
                       </div>
 
                       {/* Content */}
-                      <h3 className='text-lg sm:text-xl lg:text-2xl font-bold text-[color:var(--brand-blue)] mb-3 sm:mb-4 leading-tight'>
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[color:var(--brand-blue)] mb-3 sm:mb-4 leading-tight">
                         {course.title}
                       </h3>
-                      <p className='text-sm sm:text-base text-neutral-600 leading-relaxed'>
+                      <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
                         {course.description}
                       </p>
 
                       {/* Hover arrow */}
-                      <div className='mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
+                      <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <ChevronRight
                           className={`h-6 w-6 ${course.iconColor}`}
                         />
@@ -270,7 +270,7 @@ export default function PopularCoursesSection() {
           </div> */}
 
           {/* Progress Dots */}
-          <div className='flex justify-center gap-2 mt-6'>
+          <div className="flex justify-center gap-2 mt-6">
             {Array.from({ length: allCourses.length - cardsPerView + 1 }).map(
               (_, index) => (
                 <button
@@ -284,11 +284,11 @@ export default function PopularCoursesSection() {
                   }}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'w-8 bg-[color:var(--brand-blue)]'
-                      : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                      ? "w-8 bg-[color:var(--brand-blue)]"
+                      : "w-2 bg-neutral-300 hover:bg-neutral-400"
                   }`}
                 />
-              )
+              ),
             )}
           </div>
         </div>
