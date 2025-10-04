@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-export default function HomePage() {
+export default function Dreams() {
   return (
     <div className="bg-[radial-gradient(at_top_left,_#FA61661C_0%,_#FFFFFF_92%)]">
       <main className="container mx-auto px-6 py-16">

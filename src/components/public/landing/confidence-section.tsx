@@ -8,15 +8,14 @@ export default function ConfidenceSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-orange-600 mb-6 text-balance">
             Helping Students Build Confidence
-            <br />- One Class At A Time
+            <br className="hidden sm:block" />
+            <span className="block mt-2 text-primary">One Class At A Time</span>
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
             Our Online tuition classes are tailored for student success. We
             focus on small group learning, enabling tutors to connect with each
             student, provide real-time feedback, and offer materials like notes,
             videos, and PowerPoint summaries for continued learning after class.
-            Parents are kept in the loop through regular communication, making
-            us a trusted online school for exam preparation.
           </p>
         </div>
 

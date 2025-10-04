@@ -89,7 +89,25 @@ const allCourses = [
 export default function PopularCoursesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
+  const [direction, setDirection] = useState(1);
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  // Handle responsive cards per view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -99,27 +117,23 @@ export default function PopularCoursesSection() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [isTransitioning, direction, currentIndex]);
+  }, [isTransitioning, direction, currentIndex, cardsPerView]);
 
   const autoSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
 
-    const maxIndex = allCourses.length - 3; // Since we show 3 cards at once
+    const maxIndex = allCourses.length - cardsPerView;
 
     if (direction === 1) {
-      // Moving forward
       if (currentIndex >= maxIndex) {
-        // Reached the end, reverse direction
         setDirection(-1);
         setCurrentIndex(currentIndex - 1);
       } else {
         setCurrentIndex(currentIndex + 1);
       }
     } else {
-      // Moving backward
       if (currentIndex <= 0) {
-        // Reached the beginning, reverse direction
         setDirection(1);
         setCurrentIndex(currentIndex + 1);
       } else {
@@ -133,7 +147,7 @@ export default function PopularCoursesSection() {
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    const maxIndex = allCourses.length - 3;
+    const maxIndex = allCourses.length - cardsPerView;
     if (currentIndex < maxIndex) {
       setCurrentIndex(currentIndex + 1);
       setDirection(1);
@@ -151,18 +165,7 @@ export default function PopularCoursesSection() {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  const getVisibleCourses = () => {
-    const courses = [];
-    for (let i = 0; i < 3; i++) {
-      const index = currentIndex + i;
-      if (index < allCourses.length) {
-        courses.push({ ...allCourses[index], position: i });
-      }
-    }
-    return courses;
-  };
-
-  const visibleCourses = getVisibleCourses();
+  const cardWidth = 100 / cardsPerView;
 
   return (
     <section className="py-16 bg-gray-50 overflow-hidden">

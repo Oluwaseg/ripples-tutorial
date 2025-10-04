@@ -53,22 +53,40 @@ export default function ParentTestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState(1);
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  // Handle responsive cards per view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isTransitioning) {
         autoSlide();
       }
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [isTransitioning, direction, currentIndex]);
+  }, [isTransitioning, direction, currentIndex, cardsPerView]);
 
   const autoSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
 
-    const maxIndex = parentTestimonials.length - 3; // Show 3 cards at once
+    const maxIndex = parentTestimonials.length - cardsPerView;
 
     if (direction === 1) {
       if (currentIndex >= maxIndex) {
@@ -92,7 +110,7 @@ export default function ParentTestimonialsSection() {
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    const maxIndex = parentTestimonials.length - 3;
+    const maxIndex = parentTestimonials.length - cardsPerView;
     if (currentIndex < maxIndex) {
       setCurrentIndex(currentIndex + 1);
       setDirection(1);
@@ -110,6 +128,8 @@ export default function ParentTestimonialsSection() {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
+  const cardWidth = 100 / cardsPerView;
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -117,6 +137,10 @@ export default function ParentTestimonialsSection() {
           <h2 className="text-4xl font-bold text-black mb-4">
             What Parents Are Saying
           </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+            Hear from parents who have seen their children thrive with our
+            personalized tutoring approach
+          </p>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
@@ -138,6 +162,11 @@ export default function ParentTestimonialsSection() {
                       ))}
                     </div>
 
+                    {/* Content */}
+                    <p className="text-sm sm:text-base lg:text-lg text-neutral-700 leading-relaxed mb-8 relative z-10">
+                      "{testimonial.content}"
+                    </p>
+
                     {/* Profile */}
                     <div className="flex items-center mb-4">
                       <Image
@@ -149,6 +178,9 @@ export default function ParentTestimonialsSection() {
                         <h4 className="font-semibold text-black">
                           {testimonial.name}
                         </h4>
+                        <p className="text-xs sm:text-sm text-neutral-500">
+                          Parent
+                        </p>
                       </div>
                     </div>
 
@@ -175,12 +207,35 @@ export default function ParentTestimonialsSection() {
               onClick={nextSlide}
               disabled={
                 isTransitioning ||
-                currentIndex === parentTestimonials.length - 3
+                currentIndex === parentTestimonials.length - cardsPerView
               }
               className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-200 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
+          </div>
+
+          {/* Progress Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {Array.from({
+              length: parentTestimonials.length - cardsPerView + 1,
+            }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  if (!isTransitioning) {
+                    setIsTransitioning(true);
+                    setCurrentIndex(index);
+                    setTimeout(() => setIsTransitioning(false), 500);
+                  }
+                }}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? "w-8 bg-[color:var(--brand-blue)]"
+                    : "w-2 bg-neutral-300 hover:bg-neutral-400"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
