@@ -1,47 +1,47 @@
-'use client';
+"use client";
 
-import { assets } from '@/assets';
-import { Card } from '@/components/ui/card';
-import { ChevronRight, Star } from 'lucide-react';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { assets } from "@/assets";
+import { Card } from "@/components/ui/card";
+import { ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const parentTestimonials = [
   {
     id: 1,
-    name: 'CHARLSE NEEDLES',
+    name: "CHARLSE NEEDLES",
     content:
-      'Master every subject with expert guidance and proven strategies to achieve top grades',
+      "Master every subject with expert guidance and proven strategies to achieve top grades",
     rating: 5,
     image: assets.testimonials,
   },
   {
     id: 2,
-    name: 'DCN. MUYIWA',
+    name: "DCN. MUYIWA",
     content:
-      'Master every subject with expert guidance and proven strategies to achieve top grades',
+      "Master every subject with expert guidance and proven strategies to achieve top grades",
     rating: 5,
     image: assets.testimonials,
   },
   {
     id: 3,
-    name: 'ENIOLA',
+    name: "ENIOLA",
     content:
-      'Master every subject with expert guidance and proven strategies to achieve top grades',
+      "Master every subject with expert guidance and proven strategies to achieve top grades",
     rating: 5,
     image: assets.testimonials,
   },
   {
     id: 4,
-    name: 'SARAH JOHNSON',
+    name: "SARAH JOHNSON",
     content:
-      'The personalized approach at Ripples Tutorials made all the difference for my daughter. She went from struggling to achieving top grades.',
+      "The personalized approach at Ripples Tutorials made all the difference for my daughter. She went from struggling to achieving top grades.",
     rating: 5,
     image: assets.testimonials,
   },
   {
     id: 5,
-    name: 'MICHAEL CHEN',
+    name: "MICHAEL CHEN",
     content:
       "Exceptional tutoring service that truly cares about each student's success. Highly recommend to all parents.",
     rating: 5,
@@ -111,49 +111,49 @@ export default function ParentTestimonialsSection() {
   };
 
   return (
-    <section className='py-20 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-4xl font-bold text-black mb-4'>
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-black mb-4">
             What Parents Are Saying
           </h2>
         </div>
 
-        <div className='relative max-w-6xl mx-auto'>
-          <div className='overflow-hidden'>
+        <div className="relative max-w-6xl mx-auto">
+          <div className="overflow-hidden">
             <div
-              className='flex transition-transform duration-500 ease-out'
+              className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
             >
               {parentTestimonials.map((testimonial) => (
-                <div key={testimonial.id} className='flex-shrink-0 w-1/3 px-4'>
-                  <Card className='p-6 h-full hover:shadow-xl transition-all duration-300 bg-white border border-gray-200'>
+                <div key={testimonial.id} className="flex-shrink-0 w-1/3 px-4">
+                  <Card className="p-6 h-full hover:shadow-xl transition-all duration-300 bg-white border border-gray-200">
                     {/* Stars */}
-                    <div className='flex mb-4'>
+                    <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className='h-5 w-5 text-yellow-400 fill-current'
+                          className="h-5 w-5 text-orange-400 fill-current"
                         />
                       ))}
                     </div>
 
                     {/* Profile */}
-                    <div className='flex items-center mb-4'>
+                    <div className="flex items-center mb-4">
                       <Image
-                        src={testimonial.image || '/placeholder.svg'}
+                        src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
-                        className='w-12 h-12 rounded-full object-cover mr-4'
+                        className="w-12 h-12 rounded-full object-cover mr-4"
                       />
                       <div>
-                        <h4 className='font-semibold text-black'>
+                        <h4 className="font-semibold text-black">
                           {testimonial.name}
                         </h4>
                       </div>
                     </div>
 
                     {/* Content */}
-                    <p className='text-gray-600 leading-relaxed'>
+                    <p className="text-gray-600 leading-relaxed">
                       {testimonial.content}
                     </p>
                   </Card>
@@ -163,13 +163,13 @@ export default function ParentTestimonialsSection() {
           </div>
 
           {/* Navigation */}
-          <div className='flex justify-center gap-4 mt-12'>
+          <div className="flex justify-center gap-4 mt-12">
             <button
               onClick={prevSlide}
               disabled={isTransitioning || currentIndex === 0}
-              className='w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-200 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed'
+              className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-200 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed"
             >
-              <ChevronRight className='h-5 w-5 rotate-180' />
+              <ChevronRight className="h-5 w-5 rotate-180" />
             </button>
             <button
               onClick={nextSlide}
@@ -177,9 +177,9 @@ export default function ParentTestimonialsSection() {
                 isTransitioning ||
                 currentIndex === parentTestimonials.length - 3
               }
-              className='w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-200 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed'
+              className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-200 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed"
             >
-              <ChevronRight className='h-5 w-5' />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>

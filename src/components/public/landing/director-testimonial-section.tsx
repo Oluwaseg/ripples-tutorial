@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
-import { assets } from '@/assets';
-import { Quote } from 'lucide-react';
-import Image from 'next/image';
+import { assets } from "@/assets";
+import { Quote } from "lucide-react";
+import Image from "next/image";
 
 export default function DirectorTestimonialSection() {
   return (
-    <section className='py-20 bg-slate-900'>
-      <div className='container mx-auto px-6 py-10  '>
-        <div className='max-w-6xl mx-auto'>
-          <div className='grid lg:grid-cols-2 gap-12 items-center'>
+    <section className="py-20 bg-slate-900">
+      <div className="container mx-auto px-6 py-10  ">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Director Image */}
-            <div className='relative'>
-              <div className='w-80 h-80 mx-auto lg:mx-0 rounded-full overflow-hidden '>
+            <div className="relative">
+              <div className="w-80 h-80 mx-auto lg:mx-0 rounded-full overflow-hidden ">
                 <Image
                   src={assets.author}
-                  alt='MR. T. ABRAHAM'
+                  alt="MR. T. ABRAHAM"
                   width={320}
                   height={320}
-                  className='w-full h-full object-cover'
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
 
             {/* Right - Quote Content */}
-            <div className='text-white space-y-6'>
-              <blockquote className='text-xl lg:text-2xl leading-relaxed font-light flex items-start gap-3'>
-                <Quote className='text-blue-400 flex-shrink-0 mt-1' />
+            <div className="text-white space-y-6">
+              <blockquote className="text-xl lg:text-2xl leading-relaxed font-light flex items-start gap-3">
+                <Quote className="text-orange-400 flex-shrink-0 mt-1" />
                 <span>
                   At Ripples Tutorials, education is not just about grades –
                   it's about building confidence and shaping futures. Our goal
@@ -35,8 +35,8 @@ export default function DirectorTestimonialSection() {
                 </span>
               </blockquote>
 
-              <div className='pt-4'>
-                <p className='text-red-400 font-semibold text-lg tracking-wide'>
+              <div className="pt-4">
+                <p className="text-orange-400 font-semibold text-lg tracking-wide">
                   - MR. T. ABRAHAM, DIRECTOR OF STUDIES
                 </p>
               </div>
