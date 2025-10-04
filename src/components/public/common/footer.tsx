@@ -1,85 +1,94 @@
 import { assets } from "@/assets";
-import { Facebook, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Send } from "lucide-react";
 import Image from "next/image";
+
 export function Footer() {
   return (
-    <footer className="bg-[#1a2332]  text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {/* Brand Section */}
-          <div className="space-y-6">
+    <footer className="bg-primary text-primary-foreground relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-accent/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary-foreground/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+      <div className="container relative z-10 py-12 md:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-16">
+          <div className="lg:col-span-5 space-y-5 md:space-y-6">
             <div className="flex items-center">
               <Image
-                src={assets.logo}
+                src={assets.logo || "/placeholder.svg"}
                 alt="Ripples Tutorials"
-                className="h-8 w-auto"
+                className="h-8 sm:h-10 w-auto"
+                width={200}
+                height={40}
               />
             </div>
-            <p className="text-white leading-relaxed max-w-sm">
+            <p className="text-primary-foreground/90 leading-relaxed max-w-sm text-sm sm:text-base">
               A place where excellence meets opportunity, and where every
               learner is guided to reach their fullest potential.
             </p>
-            <div className="flex space-x-4">
-              <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer">
-                <Facebook className="h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors" />
-              </div>
-              <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer">
-                <Twitter className="h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors" />
-              </div>
-              <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer">
-                <Linkedin className="h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors" />
-              </div>
-              <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center hover:border-blue-400 transition-colors cursor-pointer">
-                <Instagram className="h-5 w-5 text-gray-300 hover:text-blue-400 transition-colors" />
-              </div>
+
+            <div className="flex gap-2.5 sm:gap-3">
+              {[
+                { icon: Facebook, label: "Facebook" },
+                { icon: Twitter, label: "Twitter" },
+                { icon: Linkedin, label: "LinkedIn" },
+                { icon: Instagram, label: "Instagram" },
+              ].map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="group relative w-10 h-10 sm:w-11 sm:h-11 border-2 border-primary-foreground/30 rounded-full flex items-center justify-center hover:border-accent transition-all duration-300 cursor-pointer hover:scale-110"
+                >
+                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/20 rounded-full transition-colors duration-300" />
+                  <Icon className="relative h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground/80 group-hover:text-accent transition-colors duration-300" />
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Useful Links Section */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-white">Useful Links</h4>
-            <ul className="space-y-4 text-gray-300">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  How it Works
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Contact Us
-                </a>
-              </li>
+          <div className="lg:col-span-3 space-y-5 md:space-y-6">
+            <h4 className="text-lg sm:text-xl font-bold text-primary-foreground relative inline-block">
+              Useful Links
+              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-accent rounded-full" />
+            </h4>
+            <ul className="space-y-3 sm:space-y-4 text-primary-foreground/80 text-sm sm:text-base">
+              {["About Us", "How it Works", "Contact Us"].map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Subscribe Section */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-white">Subscribe Now</h4>
-            <p className="text-gray-300 leading-relaxed">
+          <div className="md:col-span-2 lg:col-span-4 space-y-5 md:space-y-6">
+            <h4 className="text-lg sm:text-xl font-bold text-primary-foreground relative inline-block">
+              Subscribe Now
+              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-accent rounded-full" />
+            </h4>
+            <p className="text-primary-foreground/80 leading-relaxed text-sm sm:text-base">
               Don't miss our future updates! Get Subscribed Today!
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col gap-3">
               <input
                 type="email"
-                placeholder="Your mail here"
-                className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"
+                placeholder="Your email here"
+                className="w-full px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground placeholder-primary-foreground/50 border-2 border-primary-foreground/20 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all duration-300 text-sm sm:text-base"
               />
-              <button className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg flex items-center justify-center transition-colors">
-                <Mail className="h-5 w-5" />
+              <button className="w-full px-5 sm:px-6 py-3 sm:py-3.5 bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-accent/50 font-semibold text-sm sm:text-base">
+                <Send className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>Subscribe</span>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="py-4">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-white text-sm font-semibold">
-            ©2025. ripplestutorials. All Rights Reserved.
+
+      <div className="border-t border-primary-foreground/20">
+        <div className="container py-5 sm:py-6 px-4 sm:px-6">
+          <p className="text-center text-primary-foreground/90 text-xs sm:text-sm font-medium">
+            ©2025 ripplestutorials. All Rights Reserved.
           </p>
         </div>
       </div>

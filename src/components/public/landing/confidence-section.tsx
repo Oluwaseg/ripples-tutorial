@@ -26,11 +26,16 @@ export default function ConfidenceSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[color:var(--neutral-900)] mb-6 sm:mb-8 text-balance leading-[1.1] max-w-5xl mx-auto">
-            Helping Students Build Confidence
-            <br className="hidden sm:block" />
-            <span className="block mt-2 text-primary">One Class At A Time</span>
+          <h2
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold
+            mb-4 sm:mb-6 text-center leading-tight max-w-4xl mx-auto break-words"
+          >
+            <span className="inline-block text-balance">
+              Helping Students Build Confidence
+            </span>
+            <span className="block mt-2 text-accent">One Class At A Time</span>
           </h2>
+
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-[color:var(--neutral-700)] leading-relaxed max-w-4xl mx-auto px-4">
             Our Online tuition classes are tailored for student success. We
             focus on small group learning, enabling tutors to connect with each
@@ -52,18 +57,37 @@ export default function ConfidenceSection() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[color:var(--neutral-200)]"
+              className="group relative bg-white dark:bg-[var(--background)] rounded-xl sm:rounded-2xl
+              p-5 sm:p-6 md:p-8 lg:p-10 text-center shadow-sm hover:shadow-xl
+              transition-all duration-300 hover:-translate-y-1 border border-border"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--brand-blue)]/5 to-[color:var(--brand-green)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl sm:rounded-2xl" />
+              {/* gradient hover overlay */}
+              <div
+                className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100
+                transition-opacity duration-300 bg-gradient-to-br
+                from-primary/10 via-accent/10 to-transparent
+                dark:from-primary/20 dark:via-accent/20"
+              />
+
               <div className="relative z-10">
-                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold bg-primary bg-clip-text text-transparent mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                {/* Value */}
+                <div
+                  className="text-2xl sm:text-3xl lg:text-4xl font-bold
+                  bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent
+                  mb-2 sm:mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300"
+                >
                   {stat.value}
                 </div>
-                <div className="text-accent font-semibold text-xs sm:text-sm lg:text-base tracking-wide uppercase">
+
+                {/* Label */}
+                <div
+                  className="font-semibold text-xs sm:text-sm lg:text-base tracking-wide uppercase
+                  text-muted-foreground dark:text-secondary-foreground"
+                >
                   {stat.label}
                 </div>
               </div>
