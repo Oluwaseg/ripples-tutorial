@@ -1017,8 +1017,10 @@ export default function AdmissionsPage() {
           <div className="absolute top-10 left-10 h-64 w-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-10 right-10 h-80 w-80 bg-primary-foreground/10 rounded-full blur-3xl animate-pulse [animation-delay:1000ms]" />
         </div>
-        <div className="absolute inset-0 bg-[url('/education-success-pattern.jpg')] bg-cover bg-center opacity-5" />
-
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: `url(${assets.educationSuccess.src})` }}
+        />
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center px-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-balance">

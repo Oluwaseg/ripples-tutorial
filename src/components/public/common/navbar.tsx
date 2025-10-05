@@ -1,6 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
   ChevronDown,
   Facebook,
   Instagram,
@@ -54,11 +60,13 @@ const navigationItems = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(
     null,
   );
   const pathname = usePathname();
+
+  const isHomePage = pathname === "/";
+  const shouldBeTransparent = isHomePage && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,18 +86,23 @@ export function Navbar() {
     return pathname.startsWith(href);
   };
 
+  const textColorClass = shouldBeTransparent ? "text-white" : "text-gray-700";
+  const hoverTextColorClass = shouldBeTransparent
+    ? "hover:text-accent"
+    : "hover:text-accent";
+
   return (
     <header
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white shadow-lg"
-          : "lg:bg-transparent lg:backdrop-blur-none bg-white lg:shadow-none shadow-sm"
+        shouldBeTransparent
+          ? "lg:bg-transparent lg:backdrop-blur-none bg-white lg:shadow-none shadow-sm"
+          : "bg-white shadow-lg"
       }`}
     >
       <div className="container mx-auto px-4">
-        {!isScrolled ? (
+        {shouldBeTransparent ? (
           <>
-            {/* DESKTOP - Non-scrolled */}
+            {/* DESKTOP - Transparent (Homepage, Not Scrolled) */}
             <div className="hidden lg:flex items-center justify-between py-2">
               <Link href="/" className="flex items-center">
                 <Image
@@ -127,7 +140,7 @@ export function Navbar() {
               </div>
             </div>
 
-            {/* MOBILE - Non-scrolled */}
+            {/* MOBILE - Transparent (Homepage, Not Scrolled) */}
             <div className="flex lg:hidden items-center justify-between py-2">
               <Link href="/" className="flex items-center flex-shrink-0">
                 <Image
@@ -146,19 +159,19 @@ export function Navbar() {
                   size="icon"
                   className="hover:bg-white/10 h-12 w-12 flex items-center justify-center flex-shrink-0 text-white"
                   onClick={() => setIsOpen(!isOpen)}
+                  aria-label="Toggle menu"
                 >
                   {isOpen ? (
                     <X className="h-8 w-8 text-primary animate-spin duration-300" />
                   ) : (
                     <Menu className="h-8 w-8 text-accent animate-pulse duration-700" />
                   )}
-                  <span className="sr-only">Toggle menu</span>
                 </Button>
               </div>
 
               {/* Mobile Menu Dropdown */}
               {isOpen && (
-                <div className="fixed inset-0 top-13.5 bg-white z-50 shadow-xl transform transition-transform duration-300">
+                <div className="fixed inset-0 top-[3.375rem] bg-white z-50 shadow-xl transform transition-transform duration-300">
                   <div className="flex flex-col space-y-0 p-0">
                     <nav className="flex flex-col">
                       {navigationItems.map((item) => (
@@ -186,6 +199,7 @@ export function Navbar() {
                                 size="icon"
                                 onClick={() => toggleMobileItem(item.name)}
                                 className="text-gray-400 hover:text-accent ml-2"
+                                aria-label={`Toggle ${item.name} submenu`}
                               >
                                 <ChevronDown
                                   className={`h-4 w-4 transition-transform ${
@@ -225,49 +239,46 @@ export function Navbar() {
               )}
             </div>
 
-            {/* DESKTOP - Navigation Menu */}
+            {/* DESKTOP - Navigation Menu (Transparent) */}
             <div className="hidden lg:block">
               <nav className="flex items-center justify-end py-3">
                 <div className="flex items-center space-x-6">
                   {navigationItems.map((item) => (
                     <div key={item.name} className="relative">
                       {item.hasDropdown ? (
-                        <div
-                          className="relative"
-                          onMouseEnter={() => setHoveredItem(item.name)}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
-                          <button
-                            className={`flex items-center gap-1 font-semibold text-sm tracking-wide transition-colors uppercase relative pb-1 ${
-                              isActive(item.href)
-                                ? "text-accent"
-                                : "text-white hover:text-accent"
-                            }`}
-                          >
-                            {item.name}
-                            <ChevronDown className="h-3 w-3" />
-                            {isActive(item.href) && (
-                              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent rounded-full" />
-                            )}
-                          </button>
-                          {hoveredItem === item.name && (
-                            <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
-                              {item.dropdownItems?.map((dropdownItem) => (
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <button
+                              className={`flex items-center gap-1 font-semibold text-sm tracking-wide transition-colors uppercase relative pb-1 ${
+                                isActive(item.href)
+                                  ? "text-accent"
+                                  : "text-white hover:text-accent"
+                              }`}
+                            >
+                              {item.name}
+                              <ChevronDown className="h-3 w-3" />
+                              {isActive(item.href) && (
+                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent rounded-full" />
+                              )}
+                            </button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent className="w-56 bg-white">
+                            {item.dropdownItems?.map((dropdownItem) => (
+                              <DropdownMenuItem key={dropdownItem.name} asChild>
                                 <Link
-                                  key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className={`block px-4 py-3 text-sm transition-colors ${
+                                  className={`w-full cursor-pointer ${
                                     isActive(dropdownItem.href)
-                                      ? "text-accent font-semibold bg-accent/10 border-l-2 border-accent"
-                                      : "text-gray-700 hover:bg-accent/5 hover:text-accent"
+                                      ? "text-accent font-semibold bg-accent/10"
+                                      : "text-gray-700"
                                   }`}
                                 >
                                   {dropdownItem.name}
                                 </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
+                              </DropdownMenuItem>
+                            ))}
+                          </DropdownMenuContent>
+                        </DropdownMenu>
                       ) : (
                         <Link
                           href={item.href}
@@ -291,7 +302,7 @@ export function Navbar() {
           </>
         ) : (
           <>
-            {/* DESKTOP - Scrolled */}
+            {/* DESKTOP - White Background (Other Pages or Scrolled) */}
             <div className="hidden lg:flex items-center justify-between py-3">
               <Link href="/" className="flex items-center">
                 <Image
@@ -309,42 +320,39 @@ export function Navbar() {
                   {navigationItems.map((item) => (
                     <div key={item.name} className="relative">
                       {item.hasDropdown ? (
-                        <div
-                          className="relative"
-                          onMouseEnter={() => setHoveredItem(item.name)}
-                          onMouseLeave={() => setHoveredItem(null)}
-                        >
-                          <button
-                            className={`flex items-center gap-1 font-semibold text-sm tracking-wide transition-colors uppercase relative pb-1 ${
-                              isActive(item.href)
-                                ? "text-accent"
-                                : "text-gray-700 hover:text-accent"
-                            }`}
-                          >
-                            {item.name}
-                            <ChevronDown className="h-3 w-3" />
-                            {isActive(item.href) && (
-                              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent rounded-full" />
-                            )}
-                          </button>
-                          {hoveredItem === item.name && (
-                            <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
-                              {item.dropdownItems?.map((dropdownItem) => (
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <button
+                              className={`flex items-center gap-1 font-semibold text-sm tracking-wide transition-colors uppercase relative pb-1 ${
+                                isActive(item.href)
+                                  ? "text-accent"
+                                  : "text-gray-700 hover:text-accent"
+                              }`}
+                            >
+                              {item.name}
+                              <ChevronDown className="h-3 w-3" />
+                              {isActive(item.href) && (
+                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent rounded-full" />
+                              )}
+                            </button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent className="w-56 bg-white">
+                            {item.dropdownItems?.map((dropdownItem) => (
+                              <DropdownMenuItem key={dropdownItem.name} asChild>
                                 <Link
-                                  key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className={`block px-4 py-3 text-sm transition-colors ${
+                                  className={`w-full cursor-pointer ${
                                     isActive(dropdownItem.href)
-                                      ? "text-accent font-semibold bg-accent/10 border-l-2 border-accent"
-                                      : "text-gray-700 hover:bg-accent/5 hover:text-accent"
+                                      ? "text-accent font-semibold bg-accent/10"
+                                      : "text-gray-700"
                                   }`}
                                 >
                                   {dropdownItem.name}
                                 </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
+                              </DropdownMenuItem>
+                            ))}
+                          </DropdownMenuContent>
+                        </DropdownMenu>
                       ) : (
                         <Link
                           href={item.href}
@@ -366,7 +374,7 @@ export function Navbar() {
               </div>
             </div>
 
-            {/* MOBILE - Scrolled */}
+            {/* MOBILE - White Background (Other Pages or Scrolled) */}
             <div className="flex lg:hidden items-center justify-between py-3">
               <Link href="/" className="flex items-center flex-shrink-0">
                 <Image
@@ -385,13 +393,13 @@ export function Navbar() {
                   size="icon"
                   className="text-gray-700 hover:bg-gray-100 h-9 w-9 flex items-center justify-center flex-shrink-0"
                   onClick={() => setIsOpen(!isOpen)}
+                  aria-label="Toggle menu"
                 >
                   {isOpen ? (
                     <X className="h-5 w-5 text-primary" />
                   ) : (
                     <Menu className="h-8 w-8 text-accent" />
                   )}
-                  <span className="sr-only">Toggle menu</span>
                 </Button>
               </div>
 
@@ -425,6 +433,7 @@ export function Navbar() {
                                 size="icon"
                                 onClick={() => toggleMobileItem(item.name)}
                                 className="text-gray-400 hover:text-accent ml-2"
+                                aria-label={`Toggle ${item.name} submenu`}
                               >
                                 <ChevronDown
                                   className={`h-4 w-4 transition-transform ${

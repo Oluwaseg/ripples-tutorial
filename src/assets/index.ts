@@ -32,6 +32,7 @@ import successFull from "@/assets/images/successful-student-admission-celebratio
 import selfStudying from "@/assets/images/self-study-independent-learning.jpg";
 import groupStudy from "@/assets/images/group-learning-collaborative-classroom.jpg";
 import oneOnOne from "@/assets/images/one-on-one-private-tutoring.jpg";
+import educationSuccess from "@/assets/images/education-success-pattern.jpg";
 
 export const assets = {
   author,
@@ -65,4 +66,5 @@ export const assets = {
   selfStudying,
   groupStudy,
   oneOnOne,
+  educationSuccess,
 };
