@@ -38,12 +38,14 @@ export default function AdmissionsPage() {
         <div className="container relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
-              <Badge className="mb-6 bg-accent/20 backdrop-blur-sm text-primary-foreground border-2 border-accent hover:bg-accent hover:scale-105 transition-all px-6 py-2.5 text-sm font-semibold shadow-2xl animate-bounce [animation-duration:3s]">
-                <Sparkles className="h-4 w-4 mr-2 inline animate-pulse" />
-                Admissions Open for 2025/26 Academic Year
+              <Badge className="mb-6 bg-accent/20 backdrop-blur-sm text-primary-foreground border-2 border-accent hover:bg-accent hover:scale-105 transition-all px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 text-xs sm:text-sm font-semibold shadow-2xl animate-bounce [animation-duration:3s]">
+                <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 sm:mr-2 inline animate-pulse" />
+                <span className="whitespace-nowrap">
+                  Admissions Open 2025/26
+                </span>
               </Badge>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 text-balance leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight tracking-tight px-4">
                 Begin Your Journey to
                 <span className="block text-accent mt-2 drop-shadow-lg">
                   Academic Excellence
