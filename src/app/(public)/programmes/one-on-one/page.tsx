@@ -762,21 +762,21 @@ export default function OneOnOneTuitionPage() {
       </section>
 
       {/* CTA Section - Bold Gradient */}
-      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-primary via-primary to-accent text-white relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <section className="py-16 md:py-24 lg:py-28 bg-white relative overflow-hidden">
+        {/*<div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute top-1/4 left-1/4 h-96 w-96 bg-accent/30 rounded-full blur-3xl animate-pulse" />
           <div
             className="absolute bottom-1/4 right-1/4 h-96 w-96 bg-primary/30 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: "1.5s" }}
           />
-        </div>
+        </div>*/}
         <div className="container relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 md:mb-8 text-balance leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 md:mb-8 text-balance leading-tight">
               Ready for Personalised Learning{" "}
               <span className="text-accent">Excellence?</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/95 mb-8 md:mb-10 lg:mb-12 text-pretty leading-relaxed max-w-4xl mx-auto font-medium">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl  mb-8 md:mb-10 lg:mb-12 text-pretty leading-relaxed max-w-4xl mx-auto font-medium">
               Book your first one-on-one session today and experience the
               difference that personalised attention can make to your academic
               success.
@@ -796,7 +796,7 @@ export default function OneOnOneTuitionPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 md:border-3 border-white text-white hover:bg-white hover:text-primary transition-all hover:scale-105 shadow-2xl text-sm md:text-base lg:text-lg xl:text-xl px-8 py-5 md:px-10 md:py-6 lg:px-12 lg:py-7 xl:px-14 xl:py-8 h-auto bg-white/10 backdrop-blur-sm font-bold"
+                className="border-2 md:border-3 border-white text-accent hover:bg-white hover:text-primary transition-all hover:scale-105 shadow-2xl text-sm md:text-base lg:text-lg xl:text-xl px-8 py-5 md:px-10 md:py-6 lg:px-12 lg:py-7 xl:px-14 xl:py-8 h-auto bg-white/10 backdrop-blur-sm font-bold"
                 aria-label="Speak to an advisor about tuition options"
               >
                 Speak to an Advisor

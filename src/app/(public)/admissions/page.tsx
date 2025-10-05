@@ -22,86 +22,107 @@ export default function AdmissionsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-accent text-primary-foreground py-20 md:py-32 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 h-72 w-72 bg-accent/30 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 h-96 w-96 bg-secondary/30 rounded-full blur-3xl animate-pulse [animation-delay:700ms]" />
-          <div className="absolute top-1/2 left-1/4 h-64 w-64 bg-primary-foreground/10 rounded-full blur-3xl animate-pulse [animation-delay:1400ms]" />
-          <div className="absolute bottom-1/3 right-1/4 h-80 w-80 bg-accent/20 rounded-full blur-3xl animate-pulse [animation-delay:2100ms]" />
+      <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 h-96 w-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 left-1/4 h-96 w-96 bg-accent/5 rounded-full blur-3xl" />
         </div>
 
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-5"
-          style={{ backgroundImage: `url(${assets.admissionsHero.src})` }}
-        />
-
         <div className="container relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <Badge className="mb-6 bg-accent/20 backdrop-blur-sm text-primary-foreground border-2 border-accent hover:bg-accent hover:scale-105 transition-all px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 text-xs sm:text-sm font-semibold shadow-2xl animate-bounce [animation-duration:3s]">
-                <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 sm:mr-2 inline animate-pulse" />
-                <span className="whitespace-nowrap">
-                  Admissions Open 2025/26
-                </span>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
+            {/* Left Content */}
+            <div className="px-4 lg:px-0">
+              <Badge className="mb-4 md:mb-6 bg-accent/10 backdrop-blur-sm text-accent border border-accent/20 hover:bg-accent/20 transition-all px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold">
+                <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 inline" />
+                Admissions Open 2025/26
               </Badge>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight tracking-tight px-4">
-                Begin Your Journey to
-                <span className="block text-accent mt-2 drop-shadow-lg">
-                  Academic Excellence
-                </span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-balance leading-tight">
+                Begin Your Journey to{" "}
+                <span className="text-primary">Academic Excellence</span>
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-8 md:mb-12 max-w-4xl mx-auto text-pretty leading-relaxed px-4">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 text-pretty leading-relaxed">
                 Join hundreds of successful students who have achieved
                 outstanding results through our structured, comprehensive
                 tutorial programmes across 11+, GCSE, and A-Level
                 qualifications.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-10">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 text-base md:text-lg px-6 md:px-8 py-5 md:py-6 h-auto hover:scale-105 transition-all shadow-2xl hover:shadow-accent/50 group"
+                  className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 text-sm md:text-base px-6 md:px-8 py-5 md:py-6 h-auto hover:scale-105 transition-all shadow-lg group"
                 >
                   Start Your Application
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto text-base md:text-lg px-6 md:px-8 py-5 md:py-6 h-auto bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all hover:scale-105 shadow-2xl"
+                  className="w-full sm:w-auto text-sm md:text-base px-6 md:px-8 py-5 md:py-6 h-auto border-2 hover:bg-muted transition-all hover:scale-105 bg-transparent"
                 >
                   Download Prospectus
                 </Button>
               </div>
+
+              {/* Stats - Horizontal on desktop, grid on mobile */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                {[
+                  { value: "98%", label: "Success Rate", icon: Award },
+                  { value: "500+", label: "Students", icon: Users },
+                  { value: "15+", label: "Years", icon: GraduationCap },
+                  { value: "A*-B", label: "Avg Grade", icon: TrendingUp },
+                ].map((stat, index) => (
+                  <div
+                    key={index}
+                    className="text-center p-3 md:p-4 rounded-xl bg-background/80 backdrop-blur-sm border border-border hover:border-primary/50 hover:shadow-md transition-all group"
+                  >
+                    <stat.icon className="h-6 w-6 md:h-8 md:w-8 mx-auto mb-2 text-primary group-hover:scale-110 transition-transform" />
+                    <div className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs md:text-sm text-muted-foreground font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-12 md:mt-16 px-4">
-              {[
-                { value: "98%", label: "Success Rate", icon: Award },
-                { value: "500+", label: "Students Enrolled", icon: Users },
-                {
-                  value: "15+",
-                  label: "Years Experience",
-                  icon: GraduationCap,
-                },
-                { value: "A*-B", label: "Average Grade", icon: TrendingUp },
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 md:p-6 rounded-2xl bg-primary-foreground/10 backdrop-blur-md border-2 border-primary-foreground/20 hover:bg-primary-foreground/20 hover:border-accent transition-all hover:scale-105 hover:shadow-2xl group"
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
-                  <stat.icon className="h-8 w-8 md:h-10 md:w-10 mx-auto mb-3 md:mb-4 text-accent group-hover:scale-110 transition-transform" />
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs md:text-sm text-primary-foreground/80 font-medium">
-                    {stat.label}
+            {/* Right Image */}
+            <div className="relative px-4 lg:px-0">
+              <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={assets.admissionsHero || "/placeholder.svg"}
+                  width={800}
+                  height={600}
+                  alt="Students achieving academic excellence"
+                  className="w-full h-full object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
+
+                {/* Floating badge on image */}
+                <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                  <div className="bg-background/95 backdrop-blur-md rounded-xl p-3 md:p-4 border border-border shadow-xl">
+                    <div className="flex items-center gap-3">
+                      <div className="flex-shrink-0 h-10 w-10 md:h-12 md:w-12 rounded-full bg-accent/10 flex items-center justify-center">
+                        <Award className="h-5 w-5 md:h-6 md:w-6 text-accent" />
+                      </div>
+                      <div>
+                        <p className="text-xs md:text-sm font-semibold text-foreground">
+                          Outstanding Results
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Proven track record of success
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
