@@ -38,7 +38,7 @@ const navigationItems = [
   },
   {
     name: "BESPOKE PROGRAMMES",
-    href: "/programmes",
+    href: "/#",
     hasDropdown: true,
     dropdownItems: [
       { name: "One-on-One Tuition", href: "/programmes/one-on-one" },
