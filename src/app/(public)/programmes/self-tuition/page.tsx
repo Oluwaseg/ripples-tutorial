@@ -37,7 +37,7 @@ export default function SelfTuitionsPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-10 md:mt-0">
       {/* Hero Section - Diagonal Split Design */}
       <section className="relative min-h-[85vh] md:min-h-screen overflow-hidden">
         {/* Diagonal Background Split */}
@@ -229,7 +229,7 @@ export default function SelfTuitionsPage() {
                   description:
                     "High-quality recorded lessons covering every topic in detail, available 24/7 for unlimited viewing.",
                   image:
-                    "https://images.pexels.com/photos/4560076/pexels-photo-4560076.jpeg",
+                    "https://images.pexels.com/photos/8499501/pexels-photo-8499501.jpeg",
                   reverse: false,
                 },
                 {
@@ -238,7 +238,7 @@ export default function SelfTuitionsPage() {
                   description:
                     "Regular quizzes and mock exams with instant feedback to track your progress and identify areas for improvement.",
                   image:
-                    "https://images.pexels.com/photos/3808060/pexels-photo-3808060.jpeg",
+                    "https://images.pexels.com/photos/7105593/pexels-photo-7105593.jpeg",
                   reverse: true,
                 },
                 {
@@ -247,7 +247,7 @@ export default function SelfTuitionsPage() {
                   description:
                     "Comprehensive slide decks summarising key concepts, perfect for revision and quick reference.",
                   image:
-                    "https://images.pexels.com/photos/249360/pexels-photo-249360.jpeg",
+                    "https://images.pexels.com/photos/8926556/pexels-photo-8926556.jpeg",
                   reverse: false,
                 },
                 {
@@ -256,7 +256,7 @@ export default function SelfTuitionsPage() {
                   description:
                     "Printable practice exercises, past papers, and revision guides to reinforce your learning.",
                   image:
-                    "https://images.pexels.com/photos/4560076/pexels-photo-4560076.jpeg",
+                    "https://images.pexels.com/photos/4143798/pexels-photo-4143798.jpeg",
                   reverse: true,
                 },
               ].map((material, index) => (

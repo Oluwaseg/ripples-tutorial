@@ -25,11 +25,11 @@ import {
 
 export default function GroupBasedTuitionPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen mt-8 md:mt-0">
       {/* Hero Section - Dynamic with Floating Stats */}
       <section className="relative min-h-screen bg-gradient-to-br from-secondary via-primary to-accent text-primary-foreground py-12 md:py-20 lg:py-24 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/7092548/pexels-photo-7092548.jpeg')] bg-cover bg-center opacity-50" />
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/8613319/pexels-photo-8613319.jpeg')] bg-cover bg-center opacity-50" />
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-6rem)]">
@@ -76,7 +76,7 @@ export default function GroupBasedTuitionPage() {
             <div className="relative">
               <div className="relative h-[350px] md:h-[450px] lg:h-[500px] rounded-2xl lg:rounded-3xl overflow-hidden bg-muted shadow-2xl hover:shadow-3xl transition-all hover:scale-[1.02] group">
                 <img
-                  src="https://images.pexels.com/photos/7092339/pexels-photo-7092339.jpeg"
+                  src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg"
                   alt="Students learning together in group-based tuition"
                   className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
                 />
@@ -282,7 +282,7 @@ export default function GroupBasedTuitionPage() {
               <div className="relative">
                 <div className="relative h-[300px] md:h-[450px] lg:h-[500px] rounded-2xl lg:rounded-3xl overflow-hidden bg-muted shadow-2xl hover:shadow-3xl transition-all hover:scale-[1.02] group">
                   <img
-                    src="https://images.pexels.com/photos/5538630/pexels-photo-5538630.jpeg"
+                    src="https://images.pexels.com/photos/5212695/pexels-photo-5212695.jpeg"
                     alt="Students collaborating in group learning environment"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
                   />
@@ -657,17 +657,17 @@ export default function GroupBasedTuitionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-accent via-primary/40 to-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-24 text-primary bg-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute top-20 left-10 h-72 w-72 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 h-96 w-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
+          <div className="absolute bottom-20 right-10 h-96 w-96 bg-primary/20 rounded-full blur-xl animate-pulse delay-700" />
         </div>
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 text-balance">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 md:mb-6 text-balance">
               Ready to Join Our Group-Based Programme?
             </h2>
-            <p className="text-sm md:text-base lg:text-lg text-primary-foreground/90 mb-6 md:mb-8 text-pretty">
+            <p className="text-sm md:text-base lg:text-lg text-accent mb-6 md:mb-8 text-pretty">
               Experience the benefits of collaborative learning with expert
               tutors and motivated peers. Enrol today and start your journey to
               grades 8 and 9.
@@ -675,8 +675,7 @@ export default function GroupBasedTuitionPage() {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button
                 size="lg"
-                variant="secondary"
-                className="hover:scale-105 transition-all shadow-xl group text-sm md:text-base lg:text-lg px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-7 h-auto font-bold"
+                className="hover:scale-105 transition-all shadow-xl group text-sm md:text-base lg:text-lg px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-7 h-auto font-bold bg-primary text-white hover:bg-white hover:text-accent"
                 aria-label="Enrol in group tuition programme"
               >
                 Enrol in Group Tuition
@@ -687,8 +686,7 @@ export default function GroupBasedTuitionPage() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all hover:scale-105 shadow-xl text-sm md:text-base lg:text-lg px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-7 h-auto font-bold"
+                className="bg-transparent text-accent border-2 border-primary-foreground hover:bg-primary hover:text-white transition-all hover:scale-105 shadow-xl text-sm md:text-base lg:text-lg px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-7 h-auto font-bold"
                 aria-label="View class schedule"
               >
                 View Class Schedule

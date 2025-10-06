@@ -31,7 +31,7 @@ import supportIcon from "@/assets/svg/support.svg";
 import understandingIcon from "@/assets/svg/understand.svg";
 
 // Admissions
-import admissionsHero from "@/assets/images/abstract-education-pattern.png";
+import admissionsHero from "@/assets/images/admission.jpeg";
 import showingInterest from "@/assets/images/student-showing-interest-in-education.jpg";
 import registration from "@/assets/images/student-registration-process.jpg";
 import induction from "@/assets/images/student-induction-and-assessment.jpg";

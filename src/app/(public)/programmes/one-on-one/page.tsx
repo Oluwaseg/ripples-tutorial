@@ -102,7 +102,7 @@ export default function OneOnOneTuitionPage() {
             {/* Right Image */}
             <div className="relative h-[400px] md:h-[500px] lg:h-[700px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl group">
               <img
-                src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg"
+                src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg"
                 alt="Student receiving personalized one-on-one tutoring"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -257,7 +257,7 @@ export default function OneOnOneTuitionPage() {
                 />
                 <div className="relative h-[300px] md:h-[450px] lg:h-[600px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/1181371/pexels-photo-1181371.jpeg"
+                    src="https://images.pexels.com/photos/8364068/pexels-photo-8364068.jpeg"
                     alt="Young student preparing for 11+ exam"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -457,7 +457,7 @@ export default function OneOnOneTuitionPage() {
                 />
                 <div className="relative h-[300px] md:h-[450px] lg:h-[600px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/5905522/pexels-photo-5905522.jpeg"
+                    src="https://images.pexels.com/photos/8613059/pexels-photo-8613059.jpeg"
                     alt="GCSE student studying with personalized tutor"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -476,7 +476,7 @@ export default function OneOnOneTuitionPage() {
                 />
                 <div className="relative h-[300px] md:h-[450px] lg:h-[600px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/6958563/pexels-photo-6958563.jpeg"
+                    src="https://images.pexels.com/photos/5212695/pexels-photo-5212695.jpeg"
                     alt="A-Level student receiving advanced tutoring"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -749,7 +749,7 @@ export default function OneOnOneTuitionPage() {
                 />
                 <div className="relative h-[400px] md:h-[550px] lg:h-[700px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all hover:scale-[1.02] group">
                   <img
-                    src="https://images.pexels.com/photos/1164572/pexels-photo-1164572.jpeg"
+                    src="https://images.pexels.com/photos/5088174/pexels-photo-5088174.jpeg"
                     alt="Expert tutor providing personalized instruction"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-700"
                   />
