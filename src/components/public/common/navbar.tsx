@@ -195,8 +195,6 @@ export function Navbar() {
                             </Link>
                             {item.hasDropdown && (
                               <Button
-                                variant="ghost"
-                                size="icon"
                                 onClick={() => toggleMobileItem(item.name)}
                                 className="text-gray-400 hover:text-accent ml-2"
                                 aria-label={`Toggle ${item.name} submenu`}

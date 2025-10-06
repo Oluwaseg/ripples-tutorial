@@ -34,10 +34,10 @@ const Motivation = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[#121a21]">
+    <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-4">
             Our Motivational Quotes
           </h2>
         </div>
@@ -48,17 +48,15 @@ const Motivation = () => {
             {quotes.slice(0, 3).map((quote) => (
               <div
                 key={quote.id}
-                className="bg-slate-700 border border-slate-600 rounded-2xl p-6 relative"
+                className="bg-primary border border-slate-600 rounded-2xl p-6 relative"
               >
                 {/* Quotation mark icon */}
-                <div className=" text-red-500 text-4xl font-bold">
-                  "
-                </div>
+                <div className=" text-accent text-4xl font-bold">"</div>
                 <div className="">
                   <p className="text-white text-sm leading-relaxed mb-3">
                     {quote.quote}
                   </p>
-                  <p className="text-red-500 font-medium">{quote.author}</p>
+                  <p className="text-accent font-medium">{quote.author}</p>
                 </div>
               </div>
             ))}
@@ -72,14 +70,12 @@ const Motivation = () => {
                 className="bg-slate-700 border border-slate-600 rounded-2xl p-6 relative"
               >
                 {/* Quotation mark icon */}
-                <div className=" text-red-500 text-4xl font-bold">
-                  "
-                </div>
+                <div className=" text-accent text-4xl font-bold">"</div>
                 <div className="">
                   <p className="text-white text-sm leading-relaxed mb-3">
                     {quote.quote}
                   </p>
-                  <p className="text-red-500 font-medium">{quote.author}</p>
+                  <p className="text-accent font-medium">{quote.author}</p>
                 </div>
               </div>
             ))}
