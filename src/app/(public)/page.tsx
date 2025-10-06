@@ -6,8 +6,11 @@ import CTASuccessSection from "@/components/public/landing/cta-success-section";
 import DirectorTestimonialSection from "@/components/public/landing/director-testimonial-section";
 import Dreams from "@/components/public/landing/dreams";
 import EducationalFeatures from "@/components/public/landing/educational-features";
+import Excellence from "@/components/public/landing/excellence";
 import ParentTestimonialsSection from "@/components/public/landing/parent-testimonials-section";
 import PopularCoursesSection from "@/components/public/landing/popular-courses-section";
+import Tutor from "@/components/public/landing/tutor";
+import Vision from "@/components/public/landing/vision";
 import WhyChooseSection from "@/components/public/landing/why-choose-section";
 import { Button } from "@/components/ui/button";
 import { Play, X } from "lucide-react";
@@ -30,7 +33,7 @@ export default function HomePage() {
         >
           <source src={assets.hero} type="video/mp4" />
           {/* Fallback image if video doesn't load */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary" />
         </video>
 
         {/* Dark overlay for better text readability */}
@@ -106,7 +109,10 @@ export default function HomePage() {
 
       <Dreams />
       <ConfidenceSection />
+      <Vision />
       <EducationalFeatures />
+      <Excellence />
+      <Tutor />
       <WhyChooseSection />
       <PopularCoursesSection />
       <DirectorTestimonialSection />

@@ -42,7 +42,8 @@ export default function WhyChooseSection() {
                 alt="Students collaborating in classroom"
                 width={600}
                 height={700}
-                className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full object-cover object-top group-hover:scale-110 transition-transform duration-700
+                           max-h-[300px] sm:max-h-[400px] md:max-h-[450px]"
               />
             </div>
 

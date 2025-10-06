@@ -1,98 +1,126 @@
-import { assets } from "@/assets";
 import Image from "next/image";
+import { assets } from "@/assets";
 
-const stats = [
+const features = [
   {
-    value: "4,000+",
-    label: "Active Learners",
+    backgroundColor: "bg-primary/20",
+    iconImage: assets.onlineTuition1,
+    alt: "Notes and materials",
   },
   {
-    value: "96%",
-    label: "User Satisfaction",
+    backgroundColor: "bg-accent/20",
+    iconImage: assets.onlineTuition2,
+    alt: "Video lessons",
   },
   {
-    value: "3,679+",
-    label: "Registration",
+    backgroundColor: "bg-primary/25",
+    iconImage: assets.onlineTuition3,
+    alt: "PowerPoint summaries",
   },
   {
-    value: "10+",
-    label: "Course Category",
+    backgroundColor: "bg-accent/25",
+    iconImage: assets.onlineTuition4,
+    alt: "Scheduled classes",
   },
 ];
 
 export default function ConfidenceSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-white">
+    <section className="py-16 sm:py-20 lg:py-26 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-center mb-7 sm:mb-7 lg:mb-6">
           <h2
             className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold
             mb-4 sm:mb-6 text-center leading-tight max-w-4xl mx-auto break-words"
           >
-            <span className="inline-block text-balance">
+            <span className="inline-block text-balance text-primary">
               Helping Students Build Confidence
             </span>
             <span className="block mt-2 text-accent">One Class At A Time</span>
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-[color:var(--neutral-700)] leading-relaxed max-w-4xl mx-auto px-4">
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto px-4">
             Our Online tuition classes are tailored for student success. We
             focus on small group learning, enabling tutors to connect with each
             student, provide real-time feedback, and offer materials like notes,
             videos, and PowerPoint summaries for continued learning after class.
+            Parents are kept in the loop through regular communication, making
+            us a trusted online school for exam preparation.
           </p>
         </div>
 
-        {/* Image */}
-        <div className="mb-12 sm:mb-16 lg:mb-20">
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 max-w-4xl mx-auto group">
-            <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--brand-blue)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-            <Image
-              src={assets.onlineTuition || "/placeholder.svg"}
-              alt="Online tuition teacher with student"
-              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="group relative bg-white dark:bg-[var(--background)] rounded-xl sm:rounded-2xl
-              p-5 sm:p-6 md:p-8 lg:p-10 text-center shadow-sm hover:shadow-xl
-              transition-all duration-300 hover:-translate-y-1 border border-border"
-            >
-              {/* gradient hover overlay */}
-              <div
-                className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100
-                transition-opacity duration-300 bg-gradient-to-br
-                from-primary/10 via-accent/10 to-transparent
-                dark:from-primary/20 dark:via-accent/20"
+        <div className="hidden md:grid max-w-5xl mx-auto">
+          <div className="relative max-w-5xl mx-auto">
+            {/* Image layer */}
+            <div className="flex items-center justify-center">
+              <Image
+                src={assets.onlineTuition || "/placeholder.svg"}
+                alt="Online tuition teacher with headphones"
+                className="w-full h-auto object-contain"
               />
+            </div>
 
-              <div className="relative z-10">
-                {/* Value */}
-                <div
-                  className="text-2xl sm:text-3xl lg:text-4xl font-bold
-                  bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent
-                  mb-2 sm:mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300"
-                >
-                  {stat.value}
-                </div>
-
-                {/* Label */}
-                <div
-                  className="font-semibold text-xs sm:text-sm lg:text-base tracking-wide uppercase
-                  text-muted-foreground dark:text-secondary-foreground"
-                >
-                  {stat.label}
-                </div>
+            {/* Feature cards layer */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-30%] w-full px-4">
+              <div className="grid grid-cols-4 gap-3 lg:gap-4 max-w-4xl w-full mx-auto">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`
+                      ${feature.backgroundColor} rounded-lg lg:rounded-xl
+                      shadow-md border border-border/50
+                      h-24 lg:h-28 flex items-center justify-center p-3 lg:p-4
+                    `}
+                  >
+                    <div className="relative w-12 h-12 lg:w-20 lg:h-20">
+                      <Image
+                        src={feature.iconImage || "/placeholder.svg"}
+                        alt={feature.alt}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+        {/* Mobile Version */}
+        <div className="md:hidden relative max-w-5xl mx-auto">
+          {/* Image layer */}
+          <div className="flex items-center justify-center">
+            <Image
+              src={assets.onlineTuition || "/placeholder.svg"}
+              alt="Online tuition teacher with headphones"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* Feature cards layer */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-20%] w-full px-4">
+            <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`
+                         ${feature.backgroundColor} rounded-lg shadow-md border border-border/50
+                         h-20 flex items-center justify-center p-3
+                       `}
+                >
+                  <div className="relative w-10 h-10">
+                    <Image
+                      src={feature.iconImage || "/placeholder.svg"}
+                      alt={feature.alt}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

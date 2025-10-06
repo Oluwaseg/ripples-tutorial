@@ -1,17 +1,24 @@
 import girl from "@/assets/images/african-girl.jpg";
 import author from "@/assets/images/author.png";
 import bigDream from "@/assets/images/big-dream-1.jpg";
-import bigDream2 from "@/assets/images/big-dream-2.jpg";
-import bigDream3 from "@/assets/images/big-dream-3.jpg";
+import bigDream2 from "@/assets/images/big-dream-2.png";
+import bigDream3 from "@/assets/images/big-dream-3.png";
 import boy from "@/assets/images/boy.png";
 import computer from "@/assets/images/computer.png";
 import logo from "@/assets/images/logo.png";
 import nature from "@/assets/images/nature.png";
 import onlineTuition from "@/assets/images/online-tuition.png";
+import onlineTuition1 from "@/assets/images/online-tuition-1.png";
+import onlineTuition2 from "@/assets/images/online-tuition-2.png";
+import onlineTuition3 from "@/assets/images/online-tuition-3.png";
+import onlineTuition4 from "@/assets/images/online-tuition-4.png";
 import cta from "@/assets/images/serious-man.jpg";
 import testimonials from "@/assets/images/testimonials.jpg";
-import whyUs from "@/assets/images/why-ripples.jpg";
+import whyUs from "@/assets/images/why-ripples.png";
 import woman from "@/assets/images/woman_on_system.png";
+import tutor from "@/assets/images/tutor.png";
+import vision from "@/assets/images/vision.png";
+import excellence from "@/assets/images/excellence.png";
 
 // SVGs
 import calculatorIcon from "@/assets/svg/calculator.svg";
@@ -42,8 +49,15 @@ export const assets = {
   bigDream3,
   logo,
   onlineTuition,
+  onlineTuition1,
+  onlineTuition2,
+  onlineTuition3,
+  onlineTuition4,
   testimonials,
   whyUs,
+  tutor,
+  excellence,
+  vision,
   hero: "/videos/hero-video.mp4",
   cta,
   understandingIcon,
