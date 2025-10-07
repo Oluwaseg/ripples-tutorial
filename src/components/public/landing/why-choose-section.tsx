@@ -2,7 +2,6 @@ import { assets } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-
 const features = [
   "Everything Online",
   "Real Results",
@@ -21,7 +20,10 @@ export default function WhyChooseSection() {
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="relative order-2 lg:order-1 lg:col-span-5 pb-12">
+          <div
+            className="relative order-2 lg:order-1 lg:col-span-5 pb-12"
+            data-aos="fade-right"
+          >
             {/* Decorative gradient blobs */}
             <div className="absolute -bottom-10 -left-10 w-40 h-40 lg:w-48 lg:h-48 bg-primary/20 rounded-full blur-3xl animate-pulse" />
             <div className="absolute -top-10 -right-10 w-32 h-32 lg:w-40 lg:h-40 bg-accent/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
@@ -56,9 +58,16 @@ export default function WhyChooseSection() {
             </div>
           </div>
 
-          <div className="space-y-10 order-1 lg:order-2 lg:col-span-7">
+          <div
+            className="space-y-10 order-1 lg:order-2 lg:col-span-7"
+            data-aos="fade-left"
+          >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-primary">
                 Why Choose Us
@@ -66,7 +75,11 @@ export default function WhyChooseSection() {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] text-balance">
+              <h2
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] text-balance"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 Why Choose{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10">Ripples</span>
@@ -74,7 +87,11 @@ export default function WhyChooseSection() {
                 </span>{" "}
                 Tutorials?
               </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+              <p
+                className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
                 At Ripples, we focus on what truly helps students succeed –
                 clear teaching, real support, and flexible learning designed for
                 your pace. Here's what makes us different:
@@ -87,6 +104,8 @@ export default function WhyChooseSection() {
                   key={index}
                   className="group relative flex items-center gap-4 p-5 rounded-2xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   style={{ animationDelay: `${index * 100}ms` }}
+                  data-aos="fade-up"
+                  data-aos-delay={`${index * 100 + 200}`}
                 >
                   {/* Gradient glow on hover */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -112,7 +131,11 @@ export default function WhyChooseSection() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div
+              className="flex flex-wrap gap-4 pt-4"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 rounded-full text-base lg:text-lg font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 hover:scale-105 group relative overflow-hidden">
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <span className="relative">LEARN MORE</span>

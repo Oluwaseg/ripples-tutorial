@@ -29,7 +29,7 @@ export default function ConfidenceSection() {
     <section className="py-16 sm:py-20 lg:py-26 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-7 sm:mb-7 lg:mb-6">
+        <div className="text-center mb-7 sm:mb-7 lg:mb-6" data-aos='fade-left'>
           <h2
             className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold
             mb-4 sm:mb-6 text-center leading-tight max-w-4xl mx-auto break-words"
@@ -50,7 +50,7 @@ export default function ConfidenceSection() {
           </p>
         </div>
 
-        <div className="hidden md:grid max-w-5xl mx-auto">
+        <div className="hidden md:grid max-w-5xl mx-auto" data-aos='fade-up'>
           <div className="relative max-w-5xl mx-auto">
             {/* Image layer */}
             <div className="flex items-center justify-center">
@@ -62,7 +62,7 @@ export default function ConfidenceSection() {
             </div>
 
             {/* Feature cards layer */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-30%] w-full px-4">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-30%] w-full px-4"  data-aos='fade-right' data-aos-delay='400'>
               <div className="grid grid-cols-4 gap-3 lg:gap-4 max-w-4xl w-full mx-auto">
                 {features.map((feature, index) => (
                   <div
@@ -100,7 +100,7 @@ export default function ConfidenceSection() {
 
           {/* Feature cards layer */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-20%] w-full px-4">
-            <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
+            <div className="grid grid-cols-2 gap-3 max-w-md mx-auto" >
               {features.map((feature, index) => (
                 <div
                   key={index}

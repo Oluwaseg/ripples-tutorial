@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function Dreams() {
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="bg-primary">
       <main className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos='fade-right'>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Big Dreams
             </h1>
@@ -42,9 +42,9 @@ export default function Dreams() {
           </div>
 
           {/* Right Images Grid */}
-          <div className=" rounded-3xl p-3 md:p-4 bg-accent shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div className=" rounded-3xl p-3 md:p-4 bg-accent shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos='fade-left'>
             <div className="space-y-3 md:space-y-4">
-              <div className="rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="rounded-2xl overflow-hidden group cursor-pointer" data-aos='fade-up'>
                 <Image
                   src={assets.bigDream || "/placeholder.svg"}
                   alt="Child with goggles looking at holographic display"
@@ -54,7 +54,7 @@ export default function Dreams() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
+              <div className="grid grid-cols-2 gap-3 md:gap-4" data-aos='flip-right'>
                 <div className="rounded-2xl overflow-hidden group cursor-pointer">
                   <Image
                     src={assets.bigDream2 || "/placeholder.svg"}
@@ -64,7 +64,7 @@ export default function Dreams() {
                     height={300}
                   />
                 </div>
-                <div className="rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="rounded-2xl overflow-hidden group cursor-pointer" data-aos='flip-left'>
                   <Image
                     src={assets.bigDream3 || "/placeholder.svg"}
                     alt="Student reading at home"

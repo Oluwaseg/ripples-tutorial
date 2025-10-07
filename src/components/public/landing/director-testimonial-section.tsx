@@ -19,7 +19,11 @@ export default function DirectorTestimonialSection() {
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section badge */}
-          <div className="flex justify-center mb-8 sm:mb-12">
+          <div
+            className="flex justify-center mb-8 sm:mb-12"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3">
               <Award className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
               <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">
@@ -30,7 +34,11 @@ export default function DirectorTestimonialSection() {
 
           <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Left - Director Image */}
-            <div className="lg:col-span-5 relative">
+            <div
+              className="lg:col-span-5 relative"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <div className="relative max-w-md mx-auto lg:mx-0">
                 {/* Decorative elements behind image */}
                 <div className="absolute -inset-4 bg-gradient-to-br from-accent to-white/20 rounded-full blur-2xl opacity-30" />
@@ -67,7 +75,11 @@ export default function DirectorTestimonialSection() {
             </div>
 
             {/* Right - Quote Content */}
-            <div className="lg:col-span-7 text-white space-y-6 sm:space-y-8">
+            <div
+              className="lg:col-span-7 text-white space-y-6 sm:space-y-8"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
               {/* Large decorative quote mark */}
               <div className="relative">
                 <Quote className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-accent/30 absolute -top-4 -left-2 sm:-left-4" />

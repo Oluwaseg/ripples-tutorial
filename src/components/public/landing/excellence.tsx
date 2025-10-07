@@ -16,6 +16,7 @@ export default function Excellence() {
             className="relative order-1 lg:order-1 animate-slide-in-left"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            data-aos="fade-down"
           >
             {/* Decorative accent circle */}
             <div className="absolute -bottom-8 -left-8 w-32 h-32 md:w-48 md:h-48 bg-accent/20 rounded-full blur-3xl animate-glow-pulse" />
@@ -60,9 +61,16 @@ export default function Excellence() {
           </div>
 
           {/* Content Section - Right on desktop, bottom on mobile */}
-          <div className="order-2 lg:order-2 space-y-6 animate-slide-in-right">
+          <div
+            className="order-2 lg:order-2 space-y-6 animate-slide-in-right"
+            data-aos="fade-left"
+          >
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-fade-in-up">
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-fade-in-up"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 A place where excellence{" "}
                 <span className="text-primary">meets opportunity</span>
               </h2>
@@ -70,6 +78,8 @@ export default function Excellence() {
               <div
                 className="w-20 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
+                data-aos="fade-up"
+                data-aos-delay="100"
               />
             </div>
 
@@ -77,28 +87,48 @@ export default function Excellence() {
               className="space-y-4 text-muted-foreground leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              <p className="text-base md:text-lg">
+              <p
+                className="text-base md:text-lg"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 A place where excellence meets opportunity, and where every
                 learner is guided to reach their fullest potential.
               </p>
 
-              <p className="text-base md:text-lg">
+              <p
+                className="text-base md:text-lg"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 Since our founding in 2015, Ripples Tutorials has been dedicated
                 to one mission: bringing out the best in you.
               </p>
 
-              <p className="text-base md:text-lg">
+              <p
+                className="text-base md:text-lg"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 What began as a passion for helping students succeed has grown
                 into an online school that supports learners across various
                 stages – preparing them for
               </p>
 
               <ul className="space-y-2 ml-4">
-                <li className="flex items-start gap-2">
+                <li
+                  className="flex items-start gap-2"
+                  data-aos="fade-up"
+                  data-aos-delay="450"
+                >
                   <span className="text-accent mt-1">•</span>
                   <span>the 11+ exams, GCSEs, A Levels</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li
+                  className="flex items-start gap-2"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
                   <span className="text-accent mt-1">•</span>
                   <span>
                     and other academic milestones with confidence and skill.
@@ -106,11 +136,19 @@ export default function Excellence() {
                 </li>
               </ul>
 
-              <p className="text-base md:text-lg font-medium text-foreground">
+              <p
+                className="text-base md:text-lg font-medium text-foreground"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
                 At Ripples Tutorials,
               </p>
 
-              <p className="text-base md:text-lg italic">
+              <p
+                className="text-base md:text-lg italic"
+                data-aos="fade-up"
+                data-aos-delay="700"
+              >
                 we don't just teach – we coach, inspire, and mentor.
               </p>
             </div>
@@ -119,6 +157,8 @@ export default function Excellence() {
             <div
               className="flex gap-2 pt-4 animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
+              aria-hidden="true"
+              data-aos="fade-up"
             >
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <div

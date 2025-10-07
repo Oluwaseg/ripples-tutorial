@@ -12,9 +12,16 @@ export default function Tutor() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content Section - Left on desktop, top on mobile */}
-          <div className="order-2 lg:order-1 space-y-6 animate-slide-in-left">
+          <div
+            className="order-2 lg:order-1 space-y-6 animate-slide-in-left"
+            data-aos="fade-left"
+          >
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-fade-in-up">
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-fade-in-up"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 Our experienced tutors{" "}
                 <span className="text-accent">are here for you</span>
               </h2>
@@ -22,6 +29,8 @@ export default function Tutor() {
               <div
                 className="w-20 h-1 bg-gradient-to-r from-accent via-primary to-accent rounded-full animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
+                data-aos="fade-up"
+                data-aos-delay="100"
               />
             </div>
 
@@ -29,17 +38,29 @@ export default function Tutor() {
               className="space-y-4 text-muted-foreground leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              <p className="text-base md:text-lg">
+              <p
+                className="text-base md:text-lg"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Our experienced tutors are committed to providing structured,
                 engaging, and effective learning tailored to each student's
                 needs.
               </p>
 
-              <p className="text-base md:text-lg">
+              <p
+                className="text-base md:text-lg"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 We believe that academic success should never be out of reach,
               </p>
 
-              <p className="text-base md:text-lg">
+              <p
+                className="text-base md:text-lg"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 which is why we aim to deliver quality, results-driven education
                 at an affordable cost.
               </p>
@@ -49,6 +70,8 @@ export default function Tutor() {
             <div
               className="grid grid-cols-2 gap-4 pt-4 animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
+              data-aos="fade-up"
+              data-aos-delay="500"
             >
               <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors duration-300">
                 <div className="text-2xl md:text-3xl font-bold text-primary">
@@ -74,6 +97,7 @@ export default function Tutor() {
             className="relative order-1 lg:order-2 animate-slide-in-right"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            data-aos="fade-right"
           >
             {/* Decorative accent circle */}
             <div
@@ -124,7 +148,11 @@ export default function Tutor() {
                   bg-accent text-accent-foreground font-semibold text-sm
                   shadow-lg backdrop-blur-sm
                   transition-all duration-500
-                  ${isHovered ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
+                  ${
+                    isHovered
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-4 opacity-0"
+                  }
                 `}
                 >
                   Live Sessions Available

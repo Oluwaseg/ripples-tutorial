@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const parentTestimonials = [
   {
     id: 1,
-    name: "CHARLES NEEDLES",
+    name: "CHARLSE NEEDLES",
     content:
       "Master every subject with expert guidance and proven strategies to achieve top grades",
     rating: 5,
@@ -116,9 +116,17 @@ export default function ParentTestimonialsSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/3 to-accent/3 rounded-full blur-3xl" />
 
       <div className="container relative z-10">
-        <div className="text-center mb-12 lg:mb-20">
+        <div
+          className="text-center mb-12 lg:mb-20"
+          data-aos="fade-up"
+          data-aos-delay="0"
+        >
           {/* Floating badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-accent">
               Trusted by 1000+ Parents
@@ -126,21 +134,33 @@ export default function ParentTestimonialsSection() {
           </div>
 
           {/* Quote icon with decorative ring */}
-          <div className="relative inline-flex items-center justify-center mb-6">
+          <div
+            className="relative inline-flex items-center justify-center mb-6"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
             <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl scale-150" />
             <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border-2 border-primary/30">
               <Quote className="h-10 w-10 text-primary" />
             </div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 text-balance leading-[1.1]">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 text-balance leading-[1.1]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             What Parents Are{" "}
             <span className="relative inline-block">
               Saying
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-accent/0 via-accent to-accent/0 rounded-full" />
             </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p
+            className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
             Hear from parents who have seen their children thrive with our
             personalized tutoring approach
           </p>
@@ -150,15 +170,19 @@ export default function ParentTestimonialsSection() {
           <div className="overflow-hidden rounded-2xl">
             <div
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * cardWidth}%)` }}
+              style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
             >
-              {parentTestimonials.map((testimonial) => (
+              {parentTestimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
                   className="flex-shrink-0 px-2 sm:px-3 lg:px-4"
                   style={{ width: `${cardWidth}%` }}
                 >
-                  <Card className="group relative p-6 sm:p-8 lg:p-10 h-full bg-card hover:bg-gradient-to-br hover:from-card hover:to-muted/50 border-2 border-border hover:border-primary/30 rounded-2xl sm:rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+                  <Card
+                    className="group relative p-6 sm:p-8 lg:p-10 h-full bg-card hover:bg-gradient-to-br hover:from-card hover:to-muted/50 border-2 border-border hover:border-primary/30 rounded-2xl sm:rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
+                    data-aos="fade-up"
+                    data-aos-delay={`${index * 100 + 200}`}
+                  >
                     {/* Decorative corner accent */}
                     <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-accent/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

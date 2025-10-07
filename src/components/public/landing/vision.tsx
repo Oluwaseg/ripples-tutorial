@@ -9,7 +9,7 @@ export default function Vision() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content - Left Side */}
-          <div className="space-y-6 animate-slide-in-left">
+          <div className="space-y-6 animate-slide-in-left"  data-aos='fade-right'>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
               Our vision is bold ...
             </h2>
@@ -48,7 +48,7 @@ export default function Vision() {
           </div>
 
           {/* Image - Right Side */}
-          <div className="relative animate-slide-in-right">
+          <div className="relative animate-slide-in-right"  data-aos='fade-left'>
             {/* Decorative background circle */}
             <div className="absolute -top-8 -right-8 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
 

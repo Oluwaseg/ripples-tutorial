@@ -178,16 +178,27 @@ export default function PopularCoursesSection() {
         {/* Header Section */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 lg:mb-20">
           {/* Left Content */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+          <div
+            className="lg:col-span-7 space-y-6 sm:space-y-8"
+            data-aos="fade-left"
+          >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-5 py-2 sm:py-2.5">
+            <div
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-5 py-2 sm:py-2.5"
+              data-aos="fade-up"
+              data-aos-delay="0"
+            >
               <TrendingUp className="w-4 h-4 text-accent" />
               <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">
                 MOST POPULAR
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] text-balance">
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] text-balance"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Our Most Popular{" "}
               <span className="relative inline-block">
                 <span className="relative z-10">Online Courses</span>
@@ -195,12 +206,20 @@ export default function PopularCoursesSection() {
               </span>
             </h2>
 
-            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl">
+            <p
+              className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
               Explore our most popular programs designed to help students
               achieve academic excellence.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div
+              className="flex flex-col sm:flex-row gap-4 pt-2"
+              data-aos="fade-up"
+              data-aos-delay="350"
+            >
               <Button className="bg-white hover:bg-white/90 text-primary px-6 sm:px-8 py-5 sm:py-6 rounded-full text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
                 ENROLL NOW
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -224,7 +243,11 @@ export default function PopularCoursesSection() {
           </div>
 
           {/* Right - Navigation for desktop */}
-          <div className="hidden lg:flex lg:col-span-5 justify-end items-center gap-4">
+          <div
+            className="hidden lg:flex lg:col-span-5 justify-end items-center gap-4"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             <button
               onClick={prevSlide}
               disabled={isTransitioning || currentIndex === 0}
@@ -365,7 +388,7 @@ export default function PopularCoursesSection() {
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
-              ),
+              )
             )}
           </div>
         </div>
