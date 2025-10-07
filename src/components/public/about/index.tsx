@@ -6,7 +6,7 @@ import Motivation from "./motivation";
 
 const About = () => {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden mt-8 md:mt-0">
       <section className="bg-[radial-gradient(at_top_right,_var(--accent)_0%,_white_92%)]">
         <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-28 flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-10">
           <div className="text-center md:text-left w-full md:w-1/2">
@@ -33,7 +33,7 @@ const About = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src={assets.author}
+              src={assets.author || "/placeholder.svg"}
               alt="Picture of the Author"
               width={500}
               height={500}
@@ -43,23 +43,23 @@ const About = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+      <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="relative w-full order-2 md:order-1">
             <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-accent  opacity-30 z-[-1]" />
             <Image
-              src={assets.girl}
+              src={assets.girl || "/placeholder.svg"}
               alt="Student learning with guidance"
               width={500}
               height={500}
-              className="w-full max-w-[400px] sm:max-w-[520px] h-auto mx-auto rounded-lg"
+              className="w-full max-w-[400px] sm:max-w-[520px] md:max-w-[420px] h-auto mx-auto rounded-lg"
             />
             <div
               aria-hidden
-              className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
+              className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:-right-16 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
             >
               <Image
-                src={assets.author}
+                src={assets.author || "/placeholder.svg"}
                 alt=""
                 width={56}
                 height={56}
@@ -99,7 +99,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 lg:py-20 bg-primary/10">
+      <section className="py-12 md:py-16 lg:py-20 bg-primary/10 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
             <div className="w-full order-1 md:order-1">
@@ -129,18 +129,18 @@ const About = () => {
             <div className="relative w-full order-2 md:order-2">
               <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 -right-0 md:right-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 translate-x-1/2 md:translate-x-1/2 rounded-full bg-primary z-[-1]" />
               <Image
-                src={assets.woman}
+                src={assets.woman || "/placeholder.svg"}
                 alt="Student learning with guidance"
                 width={500}
                 height={500}
-                className="w-full max-w-[400px] sm:max-w-[520px] h-auto mx-auto rounded-lg"
+                className="w-full max-w-[400px] sm:max-w-[520px] md:max-w-[420px] h-auto mx-auto rounded-lg"
               />
               <div
                 aria-hidden
                 className="absolute bottom-3 left-2 sm:bottom-4 sm:left-3 md:bottom-5 md:left-7 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
               >
                 <Image
-                  src={assets.author}
+                  src={assets.author || "/placeholder.svg"}
                   alt=""
                   width={56}
                   height={56}
@@ -151,10 +151,10 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="">
-        <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full">
-            <div className="w-full order-1 md:order-1 px-24">
+      <section className="overflow-hidden">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+            <div className="w-full order-1 md:order-1 px-4 md:px-16 lg:px-24 py-12 md:py-0">
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -167,10 +167,10 @@ const About = () => {
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2 className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left">
                 Our vision is bold ...
               </h2>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
                 "Our vision is bold: to create an online school that stands as a
                 beacon of excellence and hope. We strive to be a trusted
                 learning companion in your child's academic journey – fostering
@@ -186,18 +186,18 @@ const About = () => {
             </div>
             <div className="relative w-full order-2 md:order-2">
               <Image
-                src={assets.boy}
+                src={assets.boy || "/placeholder.svg"}
                 alt="Student learning with guidance"
                 width={500}
                 height={500}
-                className="w-full h-auto mx-auto"
+                className="w-full max-w-full h-auto mx-auto"
               />
               <div
                 aria-hidden
                 className="absolute bottom-3 left-2 sm:bottom-4 sm:left-3 md:bottom-5 md:-left-16 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
               >
                 <Image
-                  src={assets.author}
+                  src={assets.author || "/placeholder.svg"}
                   alt=""
                   width={56}
                   height={56}
@@ -208,23 +208,23 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className=" bg-gray-50">
-        <div className="">
+      <section className="bg-gray-50 overflow-hidden my-4 md:my-0">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
             <div className="relative w-full order-2 md:order-1">
               <Image
-                src={assets.nature}
+                src={assets.nature || "/placeholder.svg"}
                 alt="Student learning with guidance"
                 width={500}
                 height={500}
-                className="w-full h-auto mx-auto"
+                className="w-full max-w-full h-auto mx-auto"
               />
               <div
                 aria-hidden
                 className="absolute bottom-3 right-2 sm:bottom-4 sm:right-3 md:bottom-5 md:-right-16 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
               >
                 <Image
-                  src={assets.author}
+                  src={assets.author || "/placeholder.svg"}
                   alt=""
                   width={56}
                   height={56}
@@ -232,7 +232,7 @@ const About = () => {
                 />
               </div>
             </div>
-            <div className="w-full order-1 md:order-2 px-24">
+            <div className="w-full order-1 md:order-2 px-4 md:px-16 lg:px-24 py-12 md:py-0">
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -245,21 +245,21 @@ const About = () => {
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left">
                 All Year Round
               </h2>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
                 "At Ripples Tutorials, we provide tuition all year round to
                 ensure consistent learning and steady progress. While our
                 sessions run throughout the year, we observe short breaks to
-                allow students and tutors time to refresh:
+                allow students and tutors time to refresh:"
               </p>
-              <ul className="px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-center md:text-left">
+              <ul className="px-6 md:px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
                 <li> Easter Break – 5 Days</li>
                 <li>Summer Break – 10 days</li>
-                <li> Christmas & New Year's Break – 12 days</li>
+                <li>Christmas & New Year's Break – 12 days</li>
               </ul>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
                 Bank Holidays – At our discretion. <br />
                 Our commitment is to prepare you thoroughly so that you excel in
                 your exams with confidence and success."
@@ -269,24 +269,24 @@ const About = () => {
         </div>
       </section>
 
-      <div className="bg-primary/30">
-        <section className="container px-4 py-12 md:py-16 lg:py-20">
+      <div className="bg-primary/30 overflow-hidden">
+        <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
             <div className="relative w-full order-2 md:order-1">
               <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-primary opacity-30 z-[-1]" />
               <Image
-                src={assets.computer}
+                src={assets.computer || "/placeholder.svg"}
                 alt="Student learning with guidance"
                 width={500}
                 height={500}
-                className="w-full max-w-[400px] sm:max-w-[520px] h-auto mx-auto rounded-lg"
+                className="w-full max-w-[400px] sm:max-w-[520px] md:max-w-[420px] h-auto mx-auto rounded-lg"
               />
               <div
                 aria-hidden
                 className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
               >
                 <Image
-                  src={assets.author}
+                  src={assets.author || "/placeholder.svg"}
                   alt=""
                   width={56}
                   height={56}
@@ -313,7 +313,7 @@ const About = () => {
               </h2>
               <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
                 "We provide our students with a wide range of academic
-                resources, including:
+                resources, including:"
               </p>
               <ul className="px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-center md:text-left">
                 <li>Instructional Videos</li>

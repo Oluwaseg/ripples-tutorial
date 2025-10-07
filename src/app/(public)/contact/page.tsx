@@ -52,7 +52,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen my-9 md:my-0">
       {/* Hero Section - Clean Centered Design */}
       <section className="relative py-12 md:py-20 lg:py-32 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">

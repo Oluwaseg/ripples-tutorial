@@ -20,7 +20,7 @@ import Image from "next/image";
 
 export default function AdmissionsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen my-9 md:my-0">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
         {/* Subtle background decoration */}
