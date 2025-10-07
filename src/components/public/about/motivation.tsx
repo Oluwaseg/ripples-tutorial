@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 const Motivation = () => {
   const quotes = [
@@ -34,52 +34,47 @@ const Motivation = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
-      <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-4">
-            Our Motivational Quotes
+    <section className="py-12 md:py-16 lg:py-20 bg-background">
+      <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
+            Our Motivational <span className="text-primary">Quotes</span>
           </h2>
+          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+            Words of wisdom to inspire your learning journey
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 container max-w-4xl">
-          {/* Left column with 3 quotes */}
-          <div className="flex flex-col gap-6">
-            {quotes.slice(0, 3).map((quote) => (
-              <div
-                key={quote.id}
-                className="bg-primary border border-slate-600 rounded-2xl p-6 relative"
-              >
-                {/* Quotation mark icon */}
-                <div className=" text-accent text-4xl font-bold">"</div>
-                <div className="">
-                  <p className="text-white text-sm leading-relaxed mb-3">
-                    {quote.quote}
-                  </p>
-                  <p className="text-accent font-medium">{quote.author}</p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {quotes.map((item, index) => (
+            <div
+              key={item.id}
+              className="group relative bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
+            >
+              {/* Quote mark */}
+              <div className="absolute top-4 right-4 text-5xl font-serif text-primary/10 leading-none select-none">
+                "
               </div>
-            ))}
-          </div>
 
-          {/* Right column with 2 quotes */}
-          <div className="flex flex-col gap-6">
-            {quotes.slice(3, 5).map((quote) => (
-              <div
-                key={quote.id}
-                className="bg-slate-700 border border-slate-600 rounded-2xl p-6 relative"
-              >
-                {/* Quotation mark icon */}
-                <div className=" text-accent text-4xl font-bold">"</div>
-                <div className="">
-                  <p className="text-white text-sm leading-relaxed mb-3">
-                    {quote.quote}
+              <div className="relative space-y-4">
+                {/* Quote text */}
+                <p className="text-foreground text-sm md:text-base leading-relaxed min-h-[100px] text-balance">
+                  {item.quote}
+                </p>
+
+                {/* Author */}
+                <div className="pt-3 border-t border-border/50">
+                  <p className="text-primary font-semibold text-sm">
+                    — {item.author}
                   </p>
-                  <p className="text-accent font-medium">{quote.author}</p>
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Hover accent line */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
+            </div>
+          ))}
         </div>
       </div>
     </section>

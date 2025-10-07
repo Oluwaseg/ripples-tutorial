@@ -48,7 +48,7 @@ const About = () => {
           <div className="relative w-full order-2 md:order-1">
             <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-accent  opacity-30 z-[-1]" />
             <Image
-              src={assets.girl || "/placeholder.svg"}
+              src={assets.excellence || "/placeholder.svg"}
               alt="Student learning with guidance"
               width={500}
               height={500}
@@ -129,7 +129,7 @@ const About = () => {
             <div className="relative w-full order-2 md:order-2">
               <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 -right-0 md:right-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 translate-x-1/2 md:translate-x-1/2 rounded-full bg-primary z-[-1]" />
               <Image
-                src={assets.woman || "/placeholder.svg"}
+                src={assets.tutor || "/placeholder.svg"}
                 alt="Student learning with guidance"
                 width={500}
                 height={500}
@@ -186,7 +186,7 @@ const About = () => {
             </div>
             <div className="relative w-full order-2 md:order-2">
               <Image
-                src={assets.boy || "/placeholder.svg"}
+                src={assets.vision || "/placeholder.svg"}
                 alt="Student learning with guidance"
                 width={500}
                 height={500}
