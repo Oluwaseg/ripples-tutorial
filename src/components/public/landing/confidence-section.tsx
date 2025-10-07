@@ -1,68 +1,124 @@
-import { assets } from "@/assets";
 import Image from "next/image";
+import { assets } from "@/assets";
+
+const features = [
+  {
+    backgroundColor: "bg-primary/20",
+    iconImage: assets.onlineTuition1,
+    alt: "Notes and materials",
+  },
+  {
+    backgroundColor: "bg-accent/20",
+    iconImage: assets.onlineTuition2,
+    alt: "Video lessons",
+  },
+  {
+    backgroundColor: "bg-primary/25",
+    iconImage: assets.onlineTuition3,
+    alt: "PowerPoint summaries",
+  },
+  {
+    backgroundColor: "bg-accent/25",
+    iconImage: assets.onlineTuition4,
+    alt: "Scheduled classes",
+  },
+];
+
 export default function ConfidenceSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-16 sm:py-20 lg:py-26 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-orange-600 mb-6 text-balance">
-            Helping Students Build Confidence
-            <br className="hidden sm:block" />
-            <span className="block mt-2 text-primary">One Class At A Time</span>
+        <div className="text-center mb-7 sm:mb-7 lg:mb-6" data-aos='fade-left'>
+          <h2
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold
+            mb-4 sm:mb-6 text-center leading-tight max-w-4xl mx-auto break-words"
+          >
+            <span className="inline-block text-balance text-primary">
+              Helping Students Build Confidence
+            </span>
+            <span className="block mt-2 text-accent">One Class At A Time</span>
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
+
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto px-4">
             Our Online tuition classes are tailored for student success. We
             focus on small group learning, enabling tutors to connect with each
             student, provide real-time feedback, and offer materials like notes,
             videos, and PowerPoint summaries for continued learning after class.
+            Parents are kept in the loop through regular communication, making
+            us a trusted online school for exam preparation.
           </p>
         </div>
 
-        <div className="mb-20">
-          <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 max-w-4xl mx-auto group cursor-pointer">
-            <Image
-              src={assets.onlineTuition}
-              alt="Online tuition teacher with student"
-              className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500"
-            />
+        <div className="hidden md:grid max-w-5xl mx-auto" data-aos='fade-up'>
+          <div className="relative max-w-5xl mx-auto">
+            {/* Image layer */}
+            <div className="flex items-center justify-center">
+              <Image
+                src={assets.onlineTuition || "/placeholder.svg"}
+                alt="Online tuition teacher with headphones"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            {/* Feature cards layer */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-30%] w-full px-4"  data-aos='fade-right' data-aos-delay='400'>
+              <div className="grid grid-cols-4 gap-3 lg:gap-4 max-w-4xl w-full mx-auto">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`
+                      ${feature.backgroundColor} rounded-lg lg:rounded-xl
+                      shadow-md border border-border/50
+                      h-24 lg:h-28 flex items-center justify-center p-3 lg:p-4
+                    `}
+                  >
+                    <div className="relative w-12 h-12 lg:w-20 lg:h-20">
+                      <Image
+                        src={feature.iconImage || "/placeholder.svg"}
+                        alt={feature.alt}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-          <div className="bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300">
-            <div className="text-4xl md:text-4xl font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors duration-300">
-              4,000+
-            </div>
-            <div className="text-orange-500 font-semibold text-sm tracking-wider group-hover:text-orange-600 transition-colors duration-300">
-              ACTIVE LEARNERS
-            </div>
+        {/* Mobile Version */}
+        <div className="md:hidden relative max-w-5xl mx-auto">
+          {/* Image layer */}
+          <div className="flex items-center justify-center">
+            <Image
+              src={assets.onlineTuition || "/placeholder.svg"}
+              alt="Online tuition teacher with headphones"
+              className="w-full h-auto object-contain"
+            />
           </div>
 
-          <div className="bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300">
-            <div className="text-4xl md:text-4xl font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors duration-300">
-              96%
-            </div>
-            <div className="text-orange-500 font-semibold text-sm tracking-wider group-hover:text-orange-600 transition-colors duration-300">
-              USER SATISFACTION
-            </div>
-          </div>
-
-          <div className="bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300">
-            <div className="text-4xl md:text-4xl font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors duration-300">
-              3,679+
-            </div>
-            <div className="text-orange-500 font-semibold text-sm tracking-wider group-hover:text-orange-600 transition-colors duration-300">
-              REGISTRATION
-            </div>
-          </div>
-
-          <div className="bg-gray-50 rounded-xl p-6 text-center group cursor-pointer hover:bg-gray-100 transition-colors duration-300">
-            <div className="text-4xl md:text-4xl font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors duration-300">
-              10+
-            </div>
-            <div className="text-orange-500 font-semibold text-sm tracking-wider group-hover:text-orange-600 transition-colors duration-300">
-              COURSE CATEGORY
+          {/* Feature cards layer */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-20%] w-full px-4">
+            <div className="grid grid-cols-2 gap-3 max-w-md mx-auto" >
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`
+                         ${feature.backgroundColor} rounded-lg shadow-md border border-border/50
+                         h-20 flex items-center justify-center p-3
+                       `}
+                >
+                  <div className="relative w-10 h-10">
+                    <Image
+                      src={feature.iconImage || "/placeholder.svg"}
+                      alt={feature.alt}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

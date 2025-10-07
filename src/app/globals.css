@@ -3,92 +3,113 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Professional education-focused color theme with deep blue primary, teal accent, and warm neutrals */
 :root {
-    /* Professional school theme with deep blue primary and teal accents */
-    --background: oklch(0.99 0.002 264);
-    --foreground: oklch(0.15 0.01 264);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.15 0.01 264);
+    /* Base colors - Clean white background with warm gray text */
+    --background: oklch(0.99 0 0); /* Soft white */
+    --foreground: oklch(0.25 0 0); /* Deep charcoal for text */
+
+    /* Card colors - Slightly elevated from background */
+    --card: oklch(1 0 0); /* Pure white for cards */
+    --card-foreground: oklch(0.25 0 0);
+
+    /* Popover colors */
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.15 0.01 264);
-    --primary: oklch(0.42 0.15 264);
-    --primary-foreground: oklch(0.99 0.002 264);
-    --secondary: oklch(0.94 0.01 264);
-    --secondary-foreground: oklch(0.25 0.02 264);
-    --muted: oklch(0.96 0.005 264);
-    --muted-foreground: oklch(0.5 0.02 264);
-    --accent: oklch(0.65 0.14 200);
-    --accent-foreground: oklch(0.99 0.002 200);
+    --popover-foreground: oklch(0.25 0 0);
+
+    /* Primary - Deep professional blue for CTAs and important actions */
+    --primary: oklch(0.45 0.15 250); /* Rich blue */
+    --primary-foreground: oklch(0.99 0 0); /* White text on blue */
+
+    /* Secondary - Soft gray for secondary actions */
+    --secondary: oklch(0.94 0.005 250); /* Light blue-gray */
+    --secondary-foreground: oklch(0.25 0 0);
+
+    /* Muted - For backgrounds and subtle elements */
+    --muted: oklch(0.96 0.005 250); /* Very light blue-gray */
+    --muted-foreground: oklch(
+        0.5 0.01 250
+    ); /* Medium gray for secondary text */
+
+    /* Accent - Vibrant teal for highlights and interactive elements */
+    --accent: oklch(0.65 0.14 195); /* Bright teal */
+    --accent-foreground: oklch(0.99 0 0); /* White text on teal */
+
+    /* Destructive - Warm red for errors and destructive actions */
     --destructive: oklch(0.55 0.22 25);
-    --destructive-foreground: oklch(0.99 0.002 25);
-    --border: oklch(0.9 0.005 264);
-    --input: oklch(0.9 0.005 264);
-    --ring: oklch(0.42 0.15 264);
-    --chart-1: oklch(0.42 0.15 264);
-    --chart-2: oklch(0.65 0.14 200);
-    --chart-3: oklch(0.6 0.12 150);
-    --chart-4: oklch(0.7 0.1 280);
-    --chart-5: oklch(0.55 0.18 340);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.98 0.005 264);
-    --sidebar-foreground: oklch(0.2 0.02 264);
-    --sidebar-primary: oklch(0.42 0.15 264);
-    --sidebar-primary-foreground: oklch(0.99 0.002 264);
-    --sidebar-accent: oklch(0.94 0.01 264);
-    --sidebar-accent-foreground: oklch(0.25 0.02 264);
-    --sidebar-border: oklch(0.9 0.005 264);
-    --sidebar-ring: oklch(0.42 0.15 264);
-    /* Adding custom design tokens for Ripples Tutorials brand */
-    --brand-blue: oklch(0.55 0.18 250);
-    --brand-blue-dark: oklch(0.45 0.18 250);
-    --brand-accent: oklch(0.6 0.2 25);
-    --brand-cream: oklch(0.96 0.01 85);
-    --brand-blush: oklch(0.95 0.02 25);
-    --brand-green: oklch(0.35 0.12 160);
-    --brand-green-dark: oklch(0.25 0.12 160);
-    --neutral-50: oklch(0.99 0 0);
-    --neutral-100: oklch(0.97 0 0);
-    --neutral-200: oklch(0.93 0 0);
-    --neutral-600: oklch(0.5 0 0);
-    --neutral-700: oklch(0.4 0 0);
-    --neutral-800: oklch(0.3 0 0);
-    --neutral-900: oklch(0.2 0 0);
+    --destructive-foreground: oklch(0.99 0 0);
+
+    /* Borders and inputs */
+    --border: oklch(0.88 0.005 250); /* Subtle blue-gray border */
+    --input: oklch(0.88 0.005 250);
+    --ring: oklch(0.45 0.15 250); /* Matches primary for focus rings */
+
+    /* Chart colors - Harmonious palette for data visualization */
+    --chart-1: oklch(0.45 0.15 250); /* Primary blue */
+    --chart-2: oklch(0.65 0.14 195); /* Teal */
+    --chart-3: oklch(0.6 0.18 160); /* Green */
+    --chart-4: oklch(0.7 0.15 85); /* Warm yellow */
+    --chart-5: oklch(0.55 0.2 310); /* Purple */
+
+    --radius: 0.5rem;
+
+    /* Sidebar - Slightly darker for visual hierarchy */
+    --sidebar: oklch(0.97 0.005 250);
+    --sidebar-foreground: oklch(0.25 0 0);
+    --sidebar-primary: oklch(0.45 0.15 250);
+    --sidebar-primary-foreground: oklch(0.99 0 0);
+    --sidebar-accent: oklch(0.94 0.005 250);
+    --sidebar-accent-foreground: oklch(0.25 0 0);
+    --sidebar-border: oklch(0.88 0.005 250);
+    --sidebar-ring: oklch(0.45 0.15 250);
 }
 
+/* Dark mode with deep navy background and bright accents for comfortable night reading */
 .dark {
-    /* Dark mode with proper contrast and vibrant accents */
-    --background: oklch(0.12 0.01 264);
-    --foreground: oklch(0.95 0.005 264);
-    --card: oklch(0.16 0.01 264);
-    --card-foreground: oklch(0.95 0.005 264);
-    --popover: oklch(0.16 0.01 264);
-    --popover-foreground: oklch(0.95 0.005 264);
-    --primary: oklch(0.65 0.18 264);
-    --primary-foreground: oklch(0.12 0.01 264);
-    --secondary: oklch(0.22 0.02 264);
-    --secondary-foreground: oklch(0.95 0.005 264);
-    --muted: oklch(0.2 0.015 264);
-    --muted-foreground: oklch(0.65 0.02 264);
-    --accent: oklch(0.7 0.16 200);
-    --accent-foreground: oklch(0.12 0.01 200);
+    --background: oklch(0.15 0.02 250); /* Deep navy blue */
+    --foreground: oklch(0.95 0.01 250); /* Soft white */
+
+    --card: oklch(0.2 0.02 250); /* Slightly elevated navy */
+    --card-foreground: oklch(0.95 0.01 250);
+
+    --popover: oklch(0.2 0.02 250);
+    --popover-foreground: oklch(0.95 0.01 250);
+
+    /* Primary - Brighter blue for dark mode visibility */
+    --primary: oklch(0.65 0.18 250); /* Bright blue */
+    --primary-foreground: oklch(0.15 0.02 250); /* Dark text on bright blue */
+
+    --secondary: oklch(0.28 0.03 250); /* Medium navy */
+    --secondary-foreground: oklch(0.95 0.01 250);
+
+    --muted: oklch(0.25 0.02 250);
+    --muted-foreground: oklch(0.65 0.01 250); /* Lighter gray for readability */
+
+    /* Accent - Vibrant teal stands out in dark mode */
+    --accent: oklch(0.7 0.16 195); /* Bright teal */
+    --accent-foreground: oklch(0.15 0.02 250);
+
     --destructive: oklch(0.6 0.24 25);
-    --destructive-foreground: oklch(0.95 0.005 25);
-    --border: oklch(0.25 0.015 264);
-    --input: oklch(0.25 0.015 264);
-    --ring: oklch(0.65 0.18 264);
-    --chart-1: oklch(0.65 0.18 264);
-    --chart-2: oklch(0.7 0.16 200);
-    --chart-3: oklch(0.65 0.14 150);
-    --chart-4: oklch(0.75 0.12 280);
-    --chart-5: oklch(0.65 0.2 340);
-    --sidebar: oklch(0.14 0.01 264);
-    --sidebar-foreground: oklch(0.9 0.005 264);
-    --sidebar-primary: oklch(0.65 0.18 264);
-    --sidebar-primary-foreground: oklch(0.12 0.01 264);
-    --sidebar-accent: oklch(0.22 0.02 264);
-    --sidebar-accent-foreground: oklch(0.95 0.005 264);
-    --sidebar-border: oklch(0.25 0.015 264);
-    --sidebar-ring: oklch(0.65 0.18 264);
+    --destructive-foreground: oklch(0.95 0.01 250);
+
+    --border: oklch(0.3 0.03 250);
+    --input: oklch(0.3 0.03 250);
+    --ring: oklch(0.65 0.18 250);
+
+    --chart-1: oklch(0.65 0.18 250);
+    --chart-2: oklch(0.7 0.16 195);
+    --chart-3: oklch(0.65 0.2 160);
+    --chart-4: oklch(0.75 0.17 85);
+    --chart-5: oklch(0.65 0.22 310);
+
+    --sidebar: oklch(0.18 0.02 250);
+    --sidebar-foreground: oklch(0.95 0.01 250);
+    --sidebar-primary: oklch(0.65 0.18 250);
+    --sidebar-primary-foreground: oklch(0.15 0.02 250);
+    --sidebar-accent: oklch(0.28 0.03 250);
+    --sidebar-accent-foreground: oklch(0.95 0.01 250);
+    --sidebar-border: oklch(0.3 0.03 250);
+    --sidebar-ring: oklch(0.65 0.18 250);
 }
 
 @theme inline {

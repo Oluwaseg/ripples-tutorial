@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
+import AOSInitializer from "@/lib/aos-initializer";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${montserrat.variable} antialiased`}
       >
+        <AOSInitializer />
         {children}
       </body>
     </html>

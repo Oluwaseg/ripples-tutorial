@@ -7,7 +7,7 @@ import Motivation from "./motivation";
 const About = () => {
   return (
     <main className="relative">
-      <section className="bg-[radial-gradient(at_top_left,_#FA61661C_0%,_#FFFFFF_92%)]">
+      <section className="bg-[radial-gradient(at_top_right,_var(--accent)_0%,_white_92%)]">
         <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-28 flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-10">
           <div className="text-center md:text-left w-full md:w-1/2">
             <span
@@ -17,12 +17,12 @@ const About = () => {
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 sm:w-8 sm:h-8 text-purple-500 opacity-70"
+                className="w-6 h-6 sm:w-8 sm:h-8 text-primary opacity-70"
               >
                 <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
               </svg>
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[57px] font-bold uppercase leading-tight sm:leading-12 md:leading-16">
+            <h1 className="text-3xl text-primary sm:text-4xl md:text-5xl lg:text-[57px] font-bold uppercase leading-tight sm:leading-12 md:leading-16">
               Welcome to <br />
               ripples tutorials
             </h1>
@@ -46,7 +46,7 @@ const About = () => {
       <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="relative w-full order-2 md:order-1">
-            <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-purple-500 opacity-30 z-[-1]" />
+            <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-accent  opacity-30 z-[-1]" />
             <Image
               src={assets.girl}
               alt="Student learning with guidance"
@@ -76,12 +76,12 @@ const About = () => {
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 sm:w-7 sm:h-7 text-purple-500 opacity-70"
+                className="w-6 h-6 sm:w-7 sm:h-7 text-accent opacity-70"
               >
                 <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
               </svg>
             </span>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+            <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
               A place where excellence …
             </h2>
             <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
@@ -99,7 +99,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 lg:py-20 bg-[#e2e2e262]">
+      <section className="py-12 md:py-16 lg:py-20 bg-primary/10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
             <div className="w-full order-1 md:order-1">
@@ -110,12 +110,12 @@ const About = () => {
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-purple-500 opacity-70"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-accent opacity-70"
                 >
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
                 Our experienced tutors …
               </h2>
               <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
@@ -127,7 +127,7 @@ const About = () => {
               </p>
             </div>
             <div className="relative w-full order-2 md:order-2">
-              <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 -right-0 md:right-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 translate-x-1/2 md:translate-x-1/2 rounded-full bg-[#F8D2D3] z-[-1]" />
+              <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 -right-0 md:right-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 translate-x-1/2 md:translate-x-1/2 rounded-full bg-primary z-[-1]" />
               <Image
                 src={assets.woman}
                 alt="Student learning with guidance"
@@ -162,12 +162,12 @@ const About = () => {
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-purple-500 opacity-70"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-primary opacity-70"
                 >
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2 className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
                 Our vision is bold ...
               </h2>
               <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
@@ -240,12 +240,12 @@ const About = () => {
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-purple-500 opacity-70"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-accent opacity-70"
                 >
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
                 All Year Round
               </h2>
               <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
@@ -269,11 +269,11 @@ const About = () => {
         </div>
       </section>
 
-      <div className="bg-[#e2e2e262]">
+      <div className="bg-primary/30">
         <section className="container px-4 py-12 md:py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
             <div className="relative w-full order-2 md:order-1">
-              <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-purple-500 opacity-30 z-[-1]" />
+              <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-primary opacity-30 z-[-1]" />
               <Image
                 src={assets.computer}
                 alt="Student learning with guidance"
@@ -303,12 +303,12 @@ const About = () => {
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-6 h-6 sm:w-7 sm:h-7 text-purple-500 opacity-70"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-primary opacity-70"
                 >
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2 className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
                 Academic Resources
               </h2>
               <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
