@@ -26,10 +26,6 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { useState } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-
-Aos.init();
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
