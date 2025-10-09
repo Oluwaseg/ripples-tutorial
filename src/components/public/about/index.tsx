@@ -7,9 +7,20 @@ import Motivation from "./motivation";
 const About = () => {
   return (
     <main className="relative overflow-x-hidden mt-8 md:mt-0">
-      <section className="bg-[radial-gradient(at_top_right,_var(--accent)_0%,_white_92%)]">
-        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-28 flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-10">
-          <div className="text-center md:text-left w-full md:w-1/2">
+      <section
+        className="bg-[radial-gradient(at_top_right,_var(--accent)_0%,_white_92%)]"
+        data-aos="fade-up"
+      >
+        <div
+          className="container mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-28 flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-10"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
+          <div
+            className="text-center md:text-left w-full md:w-1/2"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <span
               aria-hidden
               className="inline-flex items-center justify-center mb-4"
@@ -22,16 +33,28 @@ const About = () => {
                 <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
               </svg>
             </span>
-            <h1 className="text-3xl text-primary sm:text-4xl md:text-5xl lg:text-[57px] font-bold uppercase leading-tight sm:leading-12 md:leading-16">
+            <h1
+              className="text-3xl text-primary sm:text-4xl md:text-5xl lg:text-[57px] font-bold uppercase leading-tight sm:leading-12 md:leading-16"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Welcome to <br />
               ripples tutorials
             </h1>
-            <p className="mt-4 text-sm sm:text-base md:text-[17px] leading-6 sm:leading-7  max-w-2xl mx-auto md:mx-0">
+            <p
+              className="mt-4 text-sm sm:text-base md:text-[17px] leading-6 sm:leading-7  max-w-2xl mx-auto md:mx-0"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               It is with great joy and a deep sense of purpose that I welcome
               you to Ripples.
             </p>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div
+            className="w-full md:w-1/2 flex justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
             <Image
               src={assets.author || "/placeholder.svg"}
               alt="Picture of the Author"
@@ -43,9 +66,20 @@ const About = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
-          <div className="relative w-full order-2 md:order-1">
+      <section
+        className="container mx-auto px-4 py-12 md:py-16 lg:py-20 overflow-hidden"
+        data-aos="fade-up"
+      >
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
+          <div
+            className="relative w-full order-2 md:order-1"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-accent  opacity-30 z-[-1]" />
             <Image
               src={assets.excellence || "/placeholder.svg"}
@@ -68,7 +102,11 @@ const About = () => {
             </div>
           </div>
 
-          <div className="w-full order-1 md:order-2">
+          <div
+            className="w-full order-1 md:order-2"
+            data-aos="fade-left"
+            data-aos-delay="150"
+          >
             <span
               aria-hidden
               className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -81,10 +119,18 @@ const About = () => {
                 <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
               </svg>
             </span>
-            <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+            <h2
+              className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               A place where excellence …
             </h2>
-            <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+            <p
+              className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
               "A place where excellence meets opportunity, and where every
               learner is guided to reach their fullest potential. Since our
               founding in 2015, Ripples Tutorials has been dedicated to one
@@ -99,10 +145,21 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 lg:py-20 bg-primary/10 overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section
+        className="py-12 md:py-16 lg:py-20 bg-primary/10 overflow-hidden"
+        data-aos="fade-up"
+      >
+        <div
+          className="container mx-auto px-4"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
-            <div className="w-full order-1 md:order-1">
+            <div
+              className="w-full order-1 md:order-1"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -115,10 +172,18 @@ const About = () => {
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2
+                className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
                 Our experienced tutors …
               </h2>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+              <p
+                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 "Our experienced tutors are committed to providing structured,
                 engaging, and effective learning tailored to each student's
                 needs. <br /> We believe that academic success should never be
@@ -126,7 +191,11 @@ const About = () => {
                 results-driven education at an affordable cost."
               </p>
             </div>
-            <div className="relative w-full order-2 md:order-2">
+            <div
+              className="relative w-full order-2 md:order-2"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
               <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 -right-0 md:right-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 translate-x-1/2 md:translate-x-1/2 rounded-full bg-primary z-[-1]" />
               <Image
                 src={assets.tutor || "/placeholder.svg"}
@@ -151,10 +220,18 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden">
-        <div className="container mx-auto">
+      <section className="overflow-hidden" data-aos="fade-up">
+        <div
+          className="container mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-            <div className="w-full order-1 md:order-1 px-4 md:px-16 lg:px-24 py-12 md:py-0">
+            <div
+              className="w-full order-1 md:order-1 px-4 md:px-16 lg:px-24 py-12 md:py-0"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -167,10 +244,18 @@ const About = () => {
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left">
+              <h2
+                className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
                 Our vision is bold ...
               </h2>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
+              <p
+                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 "Our vision is bold: to create an online school that stands as a
                 beacon of excellence and hope. We strive to be a trusted
                 learning companion in your child's academic journey – fostering
@@ -184,7 +269,11 @@ const About = () => {
                 Together, let's ripple out excellence – one student at a time."
               </p>
             </div>
-            <div className="relative w-full order-2 md:order-2">
+            <div
+              className="relative w-full order-2 md:order-2"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
               <Image
                 src={assets.vision || "/placeholder.svg"}
                 alt="Student learning with guidance"
@@ -208,10 +297,21 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 overflow-hidden my-4 md:my-0">
-        <div className="container mx-auto">
+      <section
+        className="bg-gray-50 overflow-hidden my-4 md:my-0"
+        data-aos="fade-up"
+      >
+        <div
+          className="container mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-            <div className="relative w-full order-2 md:order-1">
+            <div
+              className="relative w-full order-2 md:order-1"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <Image
                 src={assets.nature || "/placeholder.svg"}
                 alt="Student learning with guidance"
@@ -232,7 +332,11 @@ const About = () => {
                 />
               </div>
             </div>
-            <div className="w-full order-1 md:order-2 px-4 md:px-16 lg:px-24 py-12 md:py-0">
+            <div
+              className="w-full order-1 md:order-2 px-4 md:px-16 lg:px-24 py-12 md:py-0"
+              data-aos="fade-left"
+              data-aos-delay="150"
+            >
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -245,21 +349,37 @@ const About = () => {
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left">
+              <h2
+                className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 All Year Round
               </h2>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
+              <p
+                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                data-aos="fade-up"
+                data-aos-delay="250"
+              >
                 "At Ripples Tutorials, we provide tuition all year round to
                 ensure consistent learning and steady progress. While our
                 sessions run throughout the year, we observe short breaks to
                 allow students and tutors time to refresh:"
               </p>
-              <ul className="px-6 md:px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
+              <ul
+                className="px-6 md:px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 <li> Easter Break – 5 Days</li>
                 <li>Summer Break – 10 days</li>
                 <li>Christmas & New Year's Break – 12 days</li>
               </ul>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left">
+              <p
+                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                data-aos="fade-up"
+                data-aos-delay="350"
+              >
                 Bank Holidays – At our discretion. <br />
                 Our commitment is to prepare you thoroughly so that you excel in
                 your exams with confidence and success."
@@ -270,9 +390,20 @@ const About = () => {
       </section>
 
       <div className="bg-primary/30 overflow-hidden">
-        <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
-            <div className="relative w-full order-2 md:order-1">
+        <section
+          className="container mx-auto px-4 py-12 md:py-16 lg:py-20"
+          data-aos="fade-up"
+        >
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <div
+              className="relative w-full order-2 md:order-1"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <span className="pointer-events-none absolute -bottom-6 sm:-bottom-8 md:-bottom-14 left-1/2 md:left-30 h-32 w-32 sm:h-44 sm:w-44 md:h-64 md:w-64 -translate-x-1/2 rounded-full bg-primary opacity-30 z-[-1]" />
               <Image
                 src={assets.computer || "/placeholder.svg"}
@@ -295,7 +426,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="w-full order-1 md:order-2">
+            <div
+              className="w-full order-1 md:order-2"
+              data-aos="fade-left"
+              data-aos-delay="150"
+            >
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center mb-3 md:mb-4"
@@ -308,21 +443,37 @@ const About = () => {
                   <path d="M7.17 6C5.42 6 4 7.43 4 9.2c0 1.64 1.2 2.8 2.76 2.8-.1 1.46-.86 2.78-2.26 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.1-3.05 5.1-6.12C10.1 7.5 8.87 6 7.17 6Zm9.66 0C15.08 6 13.66 7.43 13.66 9.2c0 1.64 1.19 2.8 2.75 2.8-.09 1.46-.86 2.78-2.25 3.94-.2.16-.26.44-.14.67.12.23.39.35.64.28 3.13-.83 5.09-3.05 5.09-6.12 0-3.25-1.22-4.77-2.92-4.77Z" />
                 </svg>
               </span>
-              <h2 className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left">
+              <h2
+                className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Academic Resources
               </h2>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+              <p
+                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+                data-aos="fade-up"
+                data-aos-delay="250"
+              >
                 "We provide our students with a wide range of academic
                 resources, including:"
               </p>
-              <ul className="px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-center md:text-left">
+              <ul
+                className="px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-center md:text-left"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 <li>Instructional Videos</li>
                 <li>Powerpoint Presentations</li>
                 <li>Class Notes, Periodic Tests,</li>
                 <li>Weekly Online Assessments</li>
                 <li>and PDF Worksheets.</li>
               </ul>
-              <p className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left">
+              <p
+                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+                data-aos="fade-up"
+                data-aos-delay="350"
+              >
                 These learning tools are accessible year-round, ensuring that
                 students can continue their education seamlessly from any
                 location in the world. Our approach has consistently proven

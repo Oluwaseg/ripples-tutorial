@@ -20,37 +20,60 @@ import Image from "next/image";
 
 export default function AdmissionsPage() {
   return (
-    <div className="min-h-screen my-9 md:my-0">
+    <div className="min-h-screen my-9 md:my-0" data-aos="fade-up">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      <section
+        className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
+        data-aos="fade-up"
+      >
         {/* Subtle background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 right-1/4 h-96 w-96 bg-primary/5 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 left-1/4 h-96 w-96 bg-accent/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="container relative z-10">
+        <div
+          className="container relative z-10"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
             {/* Left Content */}
-            <div className="px-4 lg:px-0">
+            <div
+              className="px-4 lg:px-0"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <Badge className="mb-4 md:mb-6 bg-accent/10 backdrop-blur-sm text-accent border border-accent/20 hover:bg-accent/20 transition-all px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold">
                 <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 inline" />
                 Admissions Open 2025/26
               </Badge>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-balance leading-tight">
+              <h1
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-balance leading-tight"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
                 Begin Your Journey to{" "}
                 <span className="text-primary">Academic Excellence</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 text-pretty leading-relaxed">
+              <p
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 text-pretty leading-relaxed"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Join hundreds of successful students who have achieved
                 outstanding results through our structured, comprehensive
                 tutorial programmes across 11+, GCSE, and A-Level
                 qualifications.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-10">
+              <div
+                className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-10"
+                data-aos="fade-up"
+                data-aos-delay="250"
+              >
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 text-sm md:text-base px-6 md:px-8 py-5 md:py-6 h-auto hover:scale-105 transition-all shadow-lg group"
@@ -68,7 +91,11 @@ export default function AdmissionsPage() {
               </div>
 
               {/* Stats - Horizontal on desktop, grid on mobile */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              <div
+                className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 {[
                   { value: "98%", label: "Success Rate", icon: Award },
                   { value: "500+", label: "Students", icon: Users },
@@ -92,7 +119,11 @@ export default function AdmissionsPage() {
             </div>
 
             {/* Right Image */}
-            <div className="relative px-4 lg:px-0">
+            <div
+              className="relative px-4 lg:px-0"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src={assets.admissionsHero || "/placeholder.svg"}
@@ -129,26 +160,45 @@ export default function AdmissionsPage() {
       </section>
 
       {/* The 4 Stages Process */}
-      <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/30 to-background">
+      <section
+        className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/30 to-background"
+        data-aos="fade-up"
+      >
         <div className="container">
-          <div className="text-center mb-12 md:mb-16 px-4">
+          <div
+            className="text-center mb-12 md:mb-16 px-4"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             <Badge
               className="mb-4 hover:scale-105 transition-transform bg-primary/10 text-primary border-primary/20"
               variant="outline"
             >
               Our Admissions Process
             </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               Four Simple Steps to Success
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            <p
+              className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Our streamlined admissions process ensures every student receives
               personalised attention and is placed in the most suitable
               programme for their academic goals.
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto px-4">
+          <div
+            className="max-w-6xl mx-auto px-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {/* Stage 1 */}
             <div className="relative mb-12 md:mb-20 group">
               <div className="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-primary rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -210,14 +260,22 @@ export default function AdmissionsPage() {
               </div>
             </div>
 
-            <div className="hidden md:flex items-center justify-center gap-2 mb-12 md:mb-20">
+            <div
+              className="hidden md:flex items-center justify-center gap-2 mb-12 md:mb-20"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
               <div className="w-1 h-8 bg-border" />
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <div className="w-1 h-8 bg-border" />
             </div>
 
             {/* Stage 2 */}
-            <div className="relative mb-12 md:mb-20 group">
+            <div
+              className="relative mb-12 md:mb-20 group"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-accent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
@@ -282,14 +340,22 @@ export default function AdmissionsPage() {
               </div>
             </div>
 
-            <div className="hidden md:flex items-center justify-center gap-2 mb-12 md:mb-20">
+            <div
+              className="hidden md:flex items-center justify-center gap-2 mb-12 md:mb-20"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
               <div className="w-1 h-8 bg-border" />
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:500ms]" />
               <div className="w-1 h-8 bg-border" />
             </div>
 
             {/* Stage 3 */}
-            <div className="relative mb-12 md:mb-20 group">
+            <div
+              className="relative mb-12 md:mb-20 group"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-primary rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
@@ -362,14 +428,22 @@ export default function AdmissionsPage() {
               </div>
             </div>
 
-            <div className="hidden md:flex items-center justify-center gap-2 mb-12 md:mb-20">
+            <div
+              className="hidden md:flex items-center justify-center gap-2 mb-12 md:mb-20"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
               <div className="w-1 h-8 bg-border" />
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse [animation-delay:1000ms]" />
               <div className="w-1 h-8 bg-border" />
             </div>
 
             {/* Stage 4 */}
-            <div className="relative group">
+            <div
+              className="relative group"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-accent rounded-br-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
@@ -466,28 +540,51 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Tuition Types Section */}
-      <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
+      <section
+        className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/20 to-background"
+        data-aos="fade-up"
+      >
         <div className="container">
-          <div className="text-center mb-12 md:mb-16 px-4">
+          <div
+            className="text-center mb-12 md:mb-16 px-4"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             <Badge
               className="mb-4 hover:scale-105 transition-transform bg-accent/10 text-accent border-accent/20"
               variant="outline"
             >
               Choose Your Learning Style
             </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               Three Flexible Tuition Options
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            <p
+              className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Whether you prefer independent study, collaborative group
               learning, or personalised one-on-one attention, we have the
               perfect programme to match your learning style and academic goals.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-4">
+          <div
+            className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {/* Self-Tuition */}
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-primary group">
+            <Card
+              className="relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-primary group"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:scale-150 transition-transform duration-500" />
               <CardHeader className="relative">
                 <div className="h-40 md:h-48 -mx-6 -mt-6 mb-6 relative overflow-hidden rounded-t-lg">
@@ -599,7 +696,11 @@ export default function AdmissionsPage() {
             </Card>
 
             {/* Group-Based Tuition */}
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-accent group lg:scale-105 lg:z-10">
+            <Card
+              className="relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-accent group lg:scale-105 lg:z-10"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accent via-primary to-accent" />
               <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground z-10 hover:scale-110 transition-transform shadow-xl animate-pulse [animation-duration:2s]">
                 Most Popular
@@ -709,7 +810,11 @@ export default function AdmissionsPage() {
             </Card>
 
             {/* One-on-One Tuition */}
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-primary group">
+            <Card
+              className="relative overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-primary group"
+              data-aos="fade-up"
+              data-aos-delay="350"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:scale-150 transition-transform duration-500" />
               <CardHeader className="relative">
                 <div className="h-40 md:h-48 -mx-6 -mt-6 mb-6 relative overflow-hidden rounded-t-lg">
@@ -818,7 +923,11 @@ export default function AdmissionsPage() {
             </Card>
           </div>
 
-          <div className="mt-12 md:mt-16 max-w-5xl mx-auto px-4">
+          <div
+            className="mt-12 md:mt-16 max-w-5xl mx-auto px-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">
               Quick Comparison
             </h3>
@@ -923,25 +1032,44 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Entry Requirements */}
-      <section className="py-12 md:py-20 lg:py-24 bg-muted/30">
+      <section
+        className="py-12 md:py-20 lg:py-24 bg-muted/30"
+        data-aos="fade-up"
+      >
         <div className="container">
-          <div className="text-center mb-12 px-4">
+          <div
+            className="text-center mb-12 px-4"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             <Badge
               className="mb-4 bg-primary/10 text-primary border-primary/20"
               variant="outline"
             >
               Entry Requirements
             </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               Entry Requirements
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+            <p
+              className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               We welcome students of all abilities and tailor our programmes to
               individual needs
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4">
+          <div
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Card className="hover:shadow-xl transition-all hover:scale-[1.02] hover:border-primary border-2">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
@@ -1033,7 +1161,10 @@ export default function AdmissionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground relative overflow-hidden">
+      <section
+        className="py-16 md:py-24 bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground relative overflow-hidden"
+        data-aos="fade-up"
+      >
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-10 left-10 h-64 w-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-10 right-10 h-80 w-80 bg-primary-foreground/10 rounded-full blur-3xl animate-pulse [animation-delay:1000ms]" />
@@ -1043,16 +1174,32 @@ export default function AdmissionsPage() {
           style={{ backgroundImage: `url(${assets.educationSuccess.src})` }}
         />
         <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-balance">
+          <div
+            className="max-w-4xl mx-auto text-center px-4"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-balance"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               Ready to Start Your Application?
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-primary-foreground/90 mb-8 md:mb-10 text-pretty leading-relaxed">
+            <p
+              className="text-base md:text-lg lg:text-xl text-primary-foreground/90 mb-8 md:mb-10 text-pretty leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Don't miss out on securing your place for the upcoming academic
               year. Our programmes fill up quickly, so express your interest
               today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-all shadow-2xl group"
@@ -1074,9 +1221,16 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-12 md:py-16 border-t bg-muted/20">
+      <section
+        className="py-12 md:py-16 border-t bg-muted/20"
+        data-aos="fade-up"
+      >
         <div className="container">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto px-4">
+          <div
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto px-4"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             <div className="text-center group hover:scale-105 transition-transform p-6 rounded-2xl hover:bg-muted/50">
               <div className="inline-flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-primary/10 text-primary mb-3 md:mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110 shadow-lg">
                 <Phone className="h-5 w-5 md:h-6 md:w-6" />

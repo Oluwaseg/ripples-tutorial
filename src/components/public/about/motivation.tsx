@@ -34,14 +34,33 @@ const Motivation = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background">
-      <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+    <section
+      className="py-12 md:py-16 lg:py-20 bg-background"
+      data-aos="fade-up"
+    >
+      <div
+        className="container px-4 md:px-6 max-w-6xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         {/* Section header */}
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
+        <div
+          className="text-center mb-8 md:mb-12"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Our Motivational <span className="text-primary">Quotes</span>
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+          <p
+            className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
             Words of wisdom to inspire your learning journey
           </p>
         </div>
@@ -51,6 +70,8 @@ const Motivation = () => {
             <div
               key={item.id}
               className="group relative bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay={`${index * 100}`}
             >
               {/* Quote mark */}
               <div className="absolute top-4 right-4 text-5xl font-serif text-primary/10 leading-none select-none">
