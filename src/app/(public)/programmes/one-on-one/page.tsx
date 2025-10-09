@@ -27,7 +27,11 @@ export default function OneOnOneTuitionPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-12 lg:py-20">
             {/* Left Content */}
-            <div className="space-y-6 lg:space-y-10 max-w-2xl">
+            <div
+              className="space-y-6 lg:space-y-10 max-w-2xl"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <Badge className="bg-primary text-primary-foreground hover:bg-primary/90 px-3 py-1.5 md:px-6 md:py-3 text-sm md:text-base font-bold inline-flex items-center gap-2">
                 <Sparkles
                   className="h-4 w-4 md:h-5 md:w-5"
@@ -100,7 +104,11 @@ export default function OneOnOneTuitionPage() {
             </div>
 
             {/* Right Image */}
-            <div className="relative h-[400px] md:h-[500px] lg:h-[700px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl group">
+            <div
+              className="relative h-[400px] md:h-[500px] lg:h-[700px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl group"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <img
                 src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg"
                 alt="Student receiving personalized one-on-one tutoring"
@@ -121,7 +129,11 @@ export default function OneOnOneTuitionPage() {
         />
 
         <div className="container">
-          <header className="text-center mb-12 md:mb-16 lg:mb-20 max-w-4xl mx-auto">
+          <header
+            className="text-center mb-12 md:mb-16 lg:mb-20 max-w-4xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
             <Badge className="mb-4 md:mb-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform px-3 py-1.5 md:px-6 md:py-3 text-sm md:text-base font-bold">
               Why Choose One-on-One?
             </Badge>
@@ -139,7 +151,11 @@ export default function OneOnOneTuitionPage() {
           {/* Asymmetric Bento Grid */}
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
             {/* Large Feature Card - Spans 4 columns */}
-            <Card className="md:col-span-4 border-2 hover:border-primary transition-all hover:shadow-2xl group overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
+            <Card
+              className="md:col-span-4 border-2 hover:border-primary transition-all hover:shadow-2xl group overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5"
+              data-aos="flip-up"
+              data-aos-duration="800"
+            >
               <CardHeader className="p-5 md:p-8 lg:p-10">
                 <div className="flex items-start gap-4 md:gap-6 lg:gap-8">
                   <div className="h-14 w-14 md:h-20 md:w-20 lg:h-24 lg:w-24 rounded-2xl md:rounded-3xl bg-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all shadow-xl">
@@ -164,7 +180,12 @@ export default function OneOnOneTuitionPage() {
             </Card>
 
             {/* Tall Card - Spans 2 columns */}
-            <Card className="md:col-span-2 md:row-span-2 border-2 hover:border-accent transition-all hover:shadow-2xl group bg-gradient-to-br from-accent/5 to-primary/5">
+            <Card
+              className="md:col-span-2 md:row-span-2 border-2 hover:border-accent transition-all hover:shadow-2xl group bg-gradient-to-br from-accent/5 to-primary/5"
+              data-aos="flip-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               <CardHeader className="p-5 md:p-6 lg:p-8 h-full flex flex-col justify-center">
                 <div className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 rounded-xl md:rounded-2xl bg-accent flex items-center justify-center mb-4 md:mb-5 lg:mb-6 group-hover:scale-110 transition-all shadow-xl mx-auto">
                   <Target
@@ -184,7 +205,12 @@ export default function OneOnOneTuitionPage() {
             </Card>
 
             {/* Medium Card */}
-            <Card className="md:col-span-2 border-2 hover:border-primary transition-all hover:shadow-2xl group">
+            <Card
+              className="md:col-span-2 border-2 hover:border-primary transition-all hover:shadow-2xl group"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-aos-duration="700"
+            >
               <CardHeader className="p-5 md:p-6 lg:p-8">
                 <div className="h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center mb-3 md:mb-4 lg:mb-5 group-hover:bg-primary group-hover:scale-110 transition-all">
                   <Clock
@@ -203,7 +229,12 @@ export default function OneOnOneTuitionPage() {
             </Card>
 
             {/* Medium Card */}
-            <Card className="md:col-span-2 border-2 hover:border-accent transition-all hover:shadow-2xl group">
+            <Card
+              className="md:col-span-2 border-2 hover:border-accent transition-all hover:shadow-2xl group"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              data-aos-duration="700"
+            >
               <CardHeader className="p-5 md:p-6 lg:p-8">
                 <div className="h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-lg md:rounded-xl bg-accent/10 flex items-center justify-center mb-3 md:mb-4 lg:mb-5 group-hover:bg-accent group-hover:scale-110 transition-all">
                   <Shield
@@ -232,7 +263,11 @@ export default function OneOnOneTuitionPage() {
         />
 
         <div className="container">
-          <header className="text-center mb-12 md:mb-16 lg:mb-20 max-w-4xl mx-auto">
+          <header
+            className="text-center mb-12 md:mb-16 lg:mb-20 max-w-4xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
             <Badge className="mb-4 md:mb-6 bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-transform px-3 py-1.5 md:px-6 md:py-3 text-sm md:text-base font-bold">
               Available Programmes
             </Badge>
@@ -250,7 +285,11 @@ export default function OneOnOneTuitionPage() {
             {/* 11Plus Programme - IMAGE LEFT (Zig) */}
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
               {/* Image */}
-              <div className="relative group">
+              <div
+                className="relative group"
+                data-aos="slide-right"
+                data-aos-duration="1000"
+              >
                 <div
                   className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"
                   aria-hidden="true"
@@ -277,7 +316,11 @@ export default function OneOnOneTuitionPage() {
               </div>
 
               {/* Content */}
-              <div className="space-y-6 md:space-y-8">
+              <div
+                className="space-y-6 md:space-y-8"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 <div>
                   <h4 className="font-bold text-lg md:text-xl lg:text-2xl mb-4 md:mb-5 lg:mb-6 flex items-center gap-2 md:gap-3">
                     <BookOpen
@@ -362,7 +405,11 @@ export default function OneOnOneTuitionPage() {
             {/* GCSE Programme - IMAGE RIGHT (Zag) */}
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
               {/* Content */}
-              <div className="space-y-6 md:space-y-8 lg:order-1">
+              <div
+                className="space-y-6 md:space-y-8 lg:order-1"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
                 <div>
                   <Badge className="mb-3 md:mb-4 lg:mb-5 bg-accent text-accent-foreground hover:scale-105 transition-transform text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2">
                     Years 10-11
@@ -450,7 +497,11 @@ export default function OneOnOneTuitionPage() {
               </div>
 
               {/* Image */}
-              <div className="relative group lg:order-2">
+              <div
+                className="relative group lg:order-2"
+                data-aos="slide-left"
+                data-aos-duration="1000"
+              >
                 <div
                   className="absolute -inset-4 bg-gradient-to-l from-accent to-primary rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"
                   aria-hidden="true"
@@ -469,7 +520,11 @@ export default function OneOnOneTuitionPage() {
             {/* A-Level Programme - IMAGE LEFT (Zig) */}
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
               {/* Image */}
-              <div className="relative group">
+              <div
+                className="relative group"
+                data-aos="slide-right"
+                data-aos-duration="1000"
+              >
                 <div
                   className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"
                   aria-hidden="true"
@@ -496,7 +551,11 @@ export default function OneOnOneTuitionPage() {
               </div>
 
               {/* Content */}
-              <div className="space-y-6 md:space-y-8">
+              <div
+                className="space-y-6 md:space-y-8"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 <div>
                   <h4 className="font-bold text-lg md:text-xl lg:text-2xl mb-4 md:mb-5 lg:mb-6 flex items-center gap-2 md:gap-3">
                     <GraduationCap
@@ -578,7 +637,11 @@ export default function OneOnOneTuitionPage() {
         />
 
         <div className="container">
-          <header className="text-center mb-12 md:mb-16 lg:mb-20 max-w-4xl mx-auto">
+          <header
+            className="text-center mb-12 md:mb-16 lg:mb-20 max-w-4xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
             <Badge className="mb-4 md:mb-6 bg-primary text-primary-foreground hover:scale-105 transition-transform px-3 py-1.5 md:px-6 md:py-3 text-sm md:text-base font-bold">
               Simple Process
             </Badge>
@@ -626,7 +689,13 @@ export default function OneOnOneTuitionPage() {
                 color: "accent",
               },
             ].map((item, index) => (
-              <div key={index} className="relative group">
+              <div
+                key={index}
+                className="relative group"
+                data-aos="zoom-in"
+                data-aos-delay={index * 150}
+                data-aos-duration="700"
+              >
                 <Card className="text-center hover:shadow-2xl transition-all hover:scale-105 border-2 hover:border-primary h-full relative overflow-hidden">
                   {/* Large Background Number */}
                   <div
@@ -675,7 +744,11 @@ export default function OneOnOneTuitionPage() {
         <div className="container">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
-              <div className="space-y-6 md:space-y-8 lg:space-y-10">
+              <div
+                className="space-y-6 md:space-y-8 lg:space-y-10"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
                 <div>
                   <Badge
                     className="mb-4 md:mb-6 hover:scale-105 transition-transform px-3 py-1.5 md:px-6 md:py-3 text-sm md:text-base font-bold"
@@ -720,6 +793,9 @@ export default function OneOnOneTuitionPage() {
                     <div
                       key={index}
                       className="flex gap-4 md:gap-5 lg:gap-6 p-4 md:p-5 lg:p-7 rounded-xl md:rounded-2xl bg-card hover:bg-card/80 transition-all hover:shadow-xl hover:scale-[1.02] group border-2 border-transparent hover:border-primary/30"
+                      data-aos="slide-right"
+                      data-aos-delay={index * 100}
+                      data-aos-duration="600"
                     >
                       <div className="flex-shrink-0">
                         <div className="h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-lg md:rounded-xl bg-primary flex items-center justify-center group-hover:scale-110 transition-all shadow-lg">
@@ -742,7 +818,11 @@ export default function OneOnOneTuitionPage() {
                 </div>
               </div>
 
-              <div className="relative">
+              <div
+                className="relative"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 <div
                   className="absolute -inset-6 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-3xl animate-pulse"
                   aria-hidden="true"
@@ -763,15 +843,12 @@ export default function OneOnOneTuitionPage() {
 
       {/* CTA Section - Bold Gradient */}
       <section className="py-16 md:py-24 lg:py-28 bg-white relative overflow-hidden">
-        {/*<div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute top-1/4 left-1/4 h-96 w-96 bg-accent/30 rounded-full blur-3xl animate-pulse" />
-          <div
-            className="absolute bottom-1/4 right-1/4 h-96 w-96 bg-primary/30 rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "1.5s" }}
-          />
-        </div>*/}
         <div className="container relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+          <div
+            className="max-w-5xl mx-auto text-center"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 md:mb-8 text-balance leading-tight">
               Ready for Personalised Learning{" "}
               <span className="text-accent">Excellence?</span>

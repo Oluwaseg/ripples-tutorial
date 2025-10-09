@@ -61,7 +61,11 @@ export default function SelfTuitionsPage() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 h-full min-h-[85vh] md:min-h-screen flex items-center">
           <div className="max-w-7xl mx-auto w-full py-12 md:py-20">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="text-primary-foreground">
+              <div
+                className="text-primary-foreground"
+                data-aos="fade-right"
+                data-aos-duration="800"
+              >
                 <Badge className="mb-4 md:mb-6 bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all hover:scale-105 px-3 md:px-6 py-1.5 md:py-2 text-xs md:text-sm font-medium shadow-lg">
                   <Zap className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2 inline" />
                   Flexible Learning Solutions
@@ -102,7 +106,12 @@ export default function SelfTuitionsPage() {
 
                 {/* Stats Row */}
                 <div className="grid grid-cols-2 gap-3 md:gap-6 mt-8 md:mt-12">
-                  <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all hover:scale-105">
+                  <div
+                    className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all hover:scale-105"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                    data-aos-duration="600"
+                  >
                     <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-1">
                       98%
                     </div>
@@ -110,7 +119,12 @@ export default function SelfTuitionsPage() {
                       Success Rate
                     </div>
                   </div>
-                  <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all hover:scale-105">
+                  <div
+                    className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all hover:scale-105"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                    data-aos-duration="600"
+                  >
                     <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-1">
                       24/7
                     </div>
@@ -128,7 +142,7 @@ export default function SelfTuitionsPage() {
       {/* Key Benefits - Horizontal Cards with Icons */}
       <section className="py-12 md:py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
             <Badge
               className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
               variant="outline"
@@ -179,6 +193,9 @@ export default function SelfTuitionsPage() {
               <Card
                 key={index}
                 className="border-2 hover:border-primary transition-all hover:shadow-2xl hover:scale-[1.03] group"
+                data-aos="flip-up"
+                data-aos-delay={index * 100}
+                data-aos-duration="700"
               >
                 <CardHeader className="p-4 md:p-6">
                   <div className="h-10 w-10 md:h-14 md:w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
@@ -203,7 +220,7 @@ export default function SelfTuitionsPage() {
       <section className="py-12 md:py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
+            <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
               <Badge
                 className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
                 variant="outline"
@@ -266,7 +283,11 @@ export default function SelfTuitionsPage() {
                     material.reverse ? "md:flex-row-reverse" : ""
                   }`}
                 >
-                  <div className={material.reverse ? "md:order-2" : ""}>
+                  <div
+                    className={material.reverse ? "md:order-2" : ""}
+                    data-aos={material.reverse ? "slide-right" : "slide-left"}
+                    data-aos-duration="800"
+                  >
                     <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                       <div className="flex-shrink-0 h-10 w-10 md:h-14 md:w-14 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all group">
                         <material.icon className="h-5 w-5 md:h-7 md:w-7 text-primary group-hover:text-primary-foreground transition-colors" />
@@ -281,7 +302,11 @@ export default function SelfTuitionsPage() {
                       </div>
                     </div>
                   </div>
-                  <div className={material.reverse ? "md:order-1" : ""}>
+                  <div
+                    className={material.reverse ? "md:order-1" : ""}
+                    data-aos={material.reverse ? "slide-left" : "slide-right"}
+                    data-aos-duration="800"
+                  >
                     <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 rounded-2xl md:rounded-3xl overflow-hidden bg-muted shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02] group">
                       <img
                         src={material.image || "/placeholder.svg"}
@@ -301,7 +326,7 @@ export default function SelfTuitionsPage() {
       {/* Programmes Offered - Enhanced Tabs */}
       <section className="py-12 md:py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
             <Badge
               className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
               variant="outline"
@@ -318,7 +343,11 @@ export default function SelfTuitionsPage() {
           </div>
 
           <Tabs defaultValue="11plus" className="max-w-7xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 mb-6 md:mb-8 h-auto p-1">
+            <TabsList
+              className="grid w-full grid-cols-3 mb-6 md:mb-8 h-auto p-1"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <TabsTrigger
                 value="11plus"
                 className="text-xs sm:text-sm md:text-base py-2 md:py-3 hover:scale-105 transition-all data-[state=active]:shadow-lg"
@@ -340,7 +369,12 @@ export default function SelfTuitionsPage() {
             </TabsList>
 
             {/* 11 Plus Content */}
-            <TabsContent value="11plus" className="space-y-6 md:space-y-8">
+            <TabsContent
+              value="11plus"
+              className="space-y-6 md:space-y-8"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <Card className="hover:shadow-2xl transition-all">
                 <CardHeader className="p-4 md:p-6">
                   <CardTitle className="text-xl md:text-2xl">
@@ -497,7 +531,12 @@ export default function SelfTuitionsPage() {
             </TabsContent>
 
             {/* GCSE Content */}
-            <TabsContent value="gcse" className="space-y-6 md:space-y-8">
+            <TabsContent
+              value="gcse"
+              className="space-y-6 md:space-y-8"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <Card className="hover:shadow-2xl transition-all">
                 <CardHeader className="p-4 md:p-6">
                   <CardTitle className="text-xl md:text-2xl">
@@ -655,7 +694,12 @@ export default function SelfTuitionsPage() {
             </TabsContent>
 
             {/* A-Level Content */}
-            <TabsContent value="alevel" className="space-y-6 md:space-y-8">
+            <TabsContent
+              value="alevel"
+              className="space-y-6 md:space-y-8"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <Card className="hover:shadow-2xl transition-all">
                 <CardHeader className="p-4 md:p-6">
                   <CardTitle className="text-xl md:text-2xl">
@@ -786,7 +830,7 @@ export default function SelfTuitionsPage() {
       <section className="py-12 md:py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
+            <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
               <Badge
                 className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
                 variant="outline"
@@ -799,7 +843,12 @@ export default function SelfTuitionsPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              <Card className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-primary">
+              <Card
+                className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-primary"
+                data-aos="zoom-in"
+                data-aos-delay="0"
+                data-aos-duration="700"
+              >
                 <CardHeader className="p-4 md:p-6">
                   <div className="mx-auto h-12 w-12 md:h-16 md:w-16 rounded-full bg-primary/10 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
                     <Laptop className="h-6 w-6 md:h-8 md:w-8 text-primary group-hover:text-primary-foreground transition-colors" />
@@ -817,7 +866,12 @@ export default function SelfTuitionsPage() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-accent">
+              <Card
+                className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-accent"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+                data-aos-duration="700"
+              >
                 <CardHeader className="p-4 md:p-6">
                   <div className="mx-auto h-12 w-12 md:h-16 md:w-16 rounded-full bg-accent/10 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-accent group-hover:scale-110 transition-all">
                     <BookOpen className="h-6 w-6 md:h-8 md:w-8 text-accent group-hover:text-accent-foreground transition-colors" />
@@ -834,7 +888,12 @@ export default function SelfTuitionsPage() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-secondary">
+              <Card
+                className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-secondary"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                data-aos-duration="700"
+              >
                 <CardHeader className="p-4 md:p-6">
                   <div className="mx-auto h-12 w-12 md:h-16 md:w-16 rounded-full bg-secondary/10 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all">
                     <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-secondary-foreground group-hover:text-secondary-foreground transition-colors" />
@@ -859,7 +918,7 @@ export default function SelfTuitionsPage() {
       {/* Testimonials - Card Style with Avatars */}
       <section className="py-12 md:py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
             <Badge
               className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
               variant="outline"
@@ -898,6 +957,9 @@ export default function SelfTuitionsPage() {
               <Card
                 key={index}
                 className="hover:shadow-2xl transition-all hover:scale-[1.03] group border-2 hover:border-primary"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                data-aos-duration="700"
               >
                 <CardHeader className="p-4 md:p-6">
                   <div className="flex items-center gap-3 mb-3">
@@ -935,7 +997,11 @@ export default function SelfTuitionsPage() {
       </section>
 
       {/* CTA Section - Unique Gradient with Overlay */}
-      <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-primary via-accent to-secondary text-primary-foreground relative overflow-hidden">
+      <section
+        className="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-primary via-accent to-secondary text-primary-foreground relative overflow-hidden"
+        data-aos="zoom-in"
+        data-aos-duration="800"
+      >
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-10 md:top-20 left-5 md:left-10 h-48 w-48 md:h-72 md:w-72 bg-secondary/20 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-10 md:bottom-20 right-5 md:right-10 h-64 w-64 md:h-96 md:w-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-700" />
@@ -974,7 +1040,7 @@ export default function SelfTuitionsPage() {
       <section className="py-12 md:py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
+            <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
               <Badge
                 className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
                 variant="outline"
@@ -1009,6 +1075,9 @@ export default function SelfTuitionsPage() {
                   key={index}
                   className="hover:shadow-xl transition-all group border-2 hover:border-primary cursor-pointer"
                   onClick={() => toggleFaq(index)}
+                  data-aos="slide-up"
+                  data-aos-delay={index * 100}
+                  data-aos-duration="600"
                 >
                   <CardHeader className="p-4 md:p-6">
                     <div className="flex items-center justify-between gap-4">

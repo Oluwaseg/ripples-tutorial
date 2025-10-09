@@ -26,6 +26,10 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+Aos.init();
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -59,7 +63,11 @@ export default function ContactPage() {
           <div className="absolute top-10 right-10 h-48 w-48 md:h-96 md:w-96 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 h-64 w-64 md:h-[32rem] md:w-[32rem] bg-accent/10 rounded-full blur-3xl" />
         </div>
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div
+          className="container mx-auto px-4 md:px-6 relative z-10"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-4 md:mb-6 hover:scale-105 transition-transform text-xs md:text-sm">
               <MessageSquare className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2 inline" />
@@ -115,6 +123,9 @@ export default function ContactPage() {
               <Card
                 key={index}
                 className="bg-card border-2 hover:border-primary transition-all hover:shadow-2xl hover:scale-105 group"
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+                data-aos-duration="700"
               >
                 <CardHeader className="p-4 md:p-6 text-center">
                   <div className="mx-auto h-12 w-12 md:h-16 md:w-16 rounded-full bg-primary/10 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
@@ -144,7 +155,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
               {/* Contact Form */}
-              <div>
+              <div data-aos="fade-right" data-aos-duration="800">
                 <div className="mb-6 md:mb-8">
                   <Badge
                     className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
@@ -263,7 +274,11 @@ export default function ContactPage() {
               </div>
 
               {/* Right Side - Info Cards */}
-              <div className="space-y-6 md:space-y-8">
+              <div
+                className="space-y-6 md:space-y-8"
+                data-aos="fade-left"
+                data-aos-duration="800"
+              >
                 <div>
                   <Badge
                     className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
@@ -276,7 +291,12 @@ export default function ContactPage() {
                   </h2>
                 </div>
 
-                <Card className="border-2 hover:border-primary transition-all hover:shadow-xl group">
+                <Card
+                  className="border-2 hover:border-primary transition-all hover:shadow-xl group"
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                  data-aos-duration="700"
+                >
                   <CardHeader className="p-4 md:p-6">
                     <div className="flex items-start gap-3 md:gap-4">
                       <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all">
@@ -295,7 +315,12 @@ export default function ContactPage() {
                   </CardHeader>
                 </Card>
 
-                <Card className="border-2 hover:border-accent transition-all hover:shadow-xl group">
+                <Card
+                  className="border-2 hover:border-accent transition-all hover:shadow-xl group"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                  data-aos-duration="700"
+                >
                   <CardHeader className="p-4 md:p-6">
                     <div className="flex items-start gap-3 md:gap-4">
                       <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent group-hover:scale-110 transition-all">
@@ -314,7 +339,12 @@ export default function ContactPage() {
                   </CardHeader>
                 </Card>
 
-                <Card className="border-2 hover:border-secondary transition-all hover:shadow-xl group">
+                <Card
+                  className="border-2 hover:border-secondary transition-all hover:shadow-xl group"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                  data-aos-duration="700"
+                >
                   <CardHeader className="p-4 md:p-6">
                     <div className="flex items-start gap-3 md:gap-4">
                       <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:scale-110 transition-all">
@@ -334,7 +364,12 @@ export default function ContactPage() {
                 </Card>
 
                 {/* Map Placeholder */}
-                <Card className="overflow-hidden border-2 hover:shadow-xl transition-all">
+                <Card
+                  className="overflow-hidden border-2 hover:shadow-xl transition-all"
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                  data-aos-duration="700"
+                >
                   <div className="relative h-48 md:h-64 bg-muted">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
@@ -359,7 +394,7 @@ export default function ContactPage() {
       <section className="py-12 md:py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
+            <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
               <Badge
                 className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm"
                 variant="outline"
@@ -396,6 +431,9 @@ export default function ContactPage() {
                 <Card
                   key={index}
                   className="border-2 hover:border-primary transition-all hover:shadow-2xl hover:scale-105 group cursor-pointer"
+                  data-aos="slide-up"
+                  data-aos-delay={index * 100}
+                  data-aos-duration="700"
                 >
                   <CardHeader className="p-4 md:p-6">
                     <CardTitle className="text-base md:text-lg group-hover:text-primary transition-colors">

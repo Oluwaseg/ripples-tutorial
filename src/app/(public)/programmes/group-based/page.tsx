@@ -33,7 +33,11 @@ export default function GroupBasedTuitionPage() {
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-6rem)]">
-            <div className="space-y-6 lg:space-y-8">
+            <div
+              className="space-y-6 lg:space-y-8"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <Badge className="bg-accent text-accent-foreground hover:bg-accent/90 transition-all hover:scale-105 px-3 py-1.5 md:px-6 md:py-3 text-xs md:text-sm font-bold inline-flex items-center gap-2">
                 <Users className="h-3 w-3 md:h-4 md:w-4" aria-hidden="true" />
                 Collaborative Learning Excellence
@@ -73,7 +77,11 @@ export default function GroupBasedTuitionPage() {
               </div>
             </div>
 
-            <div className="relative">
+            <div
+              className="relative"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <div className="relative h-[350px] md:h-[450px] lg:h-[500px] rounded-2xl lg:rounded-3xl overflow-hidden bg-muted shadow-2xl hover:shadow-3xl transition-all hover:scale-[1.02] group">
                 <img
                   src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg"
@@ -83,7 +91,12 @@ export default function GroupBasedTuitionPage() {
               </div>
 
               {/* Floating stat cards - Repositioned for mobile */}
-              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-card border-2 border-border rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl max-w-[200px] md:max-w-xs hover:scale-105 transition-all hover:shadow-3xl">
+              <div
+                className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-card border-2 border-border rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl max-w-[200px] md:max-w-xs hover:scale-105 transition-all hover:shadow-3xl"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                data-aos-duration="800"
+              >
                 <div className="flex items-center gap-2 md:gap-3 mb-1 md:mb-2">
                   <div className="h-8 w-8 md:h-12 md:w-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
                     <Trophy
@@ -105,7 +118,12 @@ export default function GroupBasedTuitionPage() {
                 </div>
               </div>
 
-              <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 bg-card border-2 border-border rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl hover:scale-105 transition-all hover:shadow-3xl">
+              <div
+                className="absolute -top-4 -right-4 md:-top-6 md:-right-6 bg-card border-2 border-border rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl hover:scale-105 transition-all hover:shadow-3xl"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+                data-aos-duration="800"
+              >
                 <div className="flex items-center gap-2 md:gap-3">
                   <div className="h-8 w-8 md:h-12 md:w-12 rounded-full bg-accent/80 flex items-center justify-center flex-shrink-0">
                     <Users
@@ -131,7 +149,11 @@ export default function GroupBasedTuitionPage() {
       {/* What We Offer - Card Grid with Icons */}
       <section className="py-12 md:py-20 lg:py-24 bg-primary/20">
         <div className="container">
-          <header className="text-center mb-8 md:mb-12 lg:mb-16">
+          <header
+            className="text-center mb-8 md:mb-12 lg:mb-16"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
             <Badge
               className="mb-3 md:mb-4 text-xs md:text-sm bg-accent text-white hover:scale-105 transition-transform px-3 py-1.5 md:px-4 md:py-2"
               variant="outline"
@@ -160,6 +182,9 @@ export default function GroupBasedTuitionPage() {
               <Card
                 key={index}
                 className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-primary"
+                data-aos="flip-up"
+                data-aos-delay={index * 100}
+                data-aos-duration="600"
               >
                 <CardHeader className="p-3 md:p-4 lg:p-6">
                   <div
@@ -177,7 +202,11 @@ export default function GroupBasedTuitionPage() {
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto text-center">
+          <div
+            className="max-w-3xl mx-auto text-center"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
             <div className="bg-accent/10 border-2 border-secondary/30 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 hover:bg-accent/20 transition-all hover:shadow-2xl hover:scale-[1.02]">
               <div className="flex items-center justify-center gap-2 md:gap-3 mb-3 md:mb-4">
                 <Target
@@ -203,7 +232,7 @@ export default function GroupBasedTuitionPage() {
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center mb-12 md:mb-16">
-              <div>
+              <div data-aos="fade-right" data-aos-duration="1000">
                 <Badge
                   className="mb-3 md:mb-4 bg-accent text-xs md:text-sm text-white hover:scale-105 transition-transform px-3 py-1.5 md:px-4 md:py-2"
                   variant="outline"
@@ -226,7 +255,12 @@ export default function GroupBasedTuitionPage() {
                 </p>
 
                 <div className="space-y-2 md:space-y-3">
-                  <div className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-primary/5 rounded-lg border border-primary/20 hover:bg-primary/10 transition-all hover:shadow-md hover:scale-[1.02]">
+                  <div
+                    className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-primary/5 rounded-lg border border-primary/20 hover:bg-primary/10 transition-all hover:shadow-md hover:scale-[1.02]"
+                    data-aos="slide-right"
+                    data-aos-delay="100"
+                    data-aos-duration="600"
+                  >
                     <div className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Users
                         className="h-4 w-4 md:h-5 md:w-5 text-primary"
@@ -243,7 +277,12 @@ export default function GroupBasedTuitionPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-accent/5 rounded-lg border border-accent/20 hover:bg-accent/10 transition-all hover:shadow-md hover:scale-[1.02]">
+                  <div
+                    className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-accent/5 rounded-lg border border-accent/20 hover:bg-accent/10 transition-all hover:shadow-md hover:scale-[1.02]"
+                    data-aos="slide-right"
+                    data-aos-delay="200"
+                    data-aos-duration="600"
+                  >
                     <div className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <Target
                         className="h-4 w-4 md:h-5 md:w-5 text-accent"
@@ -260,7 +299,12 @@ export default function GroupBasedTuitionPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-secondary/10 rounded-lg border border-secondary/30 hover:bg-secondary/20 transition-all hover:shadow-md hover:scale-[1.02]">
+                  <div
+                    className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-secondary/10 rounded-lg border border-secondary/30 hover:bg-secondary/20 transition-all hover:shadow-md hover:scale-[1.02]"
+                    data-aos="slide-right"
+                    data-aos-delay="300"
+                    data-aos-duration="600"
+                  >
                     <div className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
                       <BookOpen
                         className="h-4 w-4 md:h-5 md:w-5 text-secondary-foreground"
@@ -279,7 +323,11 @@ export default function GroupBasedTuitionPage() {
                 </div>
               </div>
 
-              <div className="relative">
+              <div
+                className="relative"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 <div className="relative h-[300px] md:h-[450px] lg:h-[500px] rounded-2xl lg:rounded-3xl overflow-hidden bg-muted shadow-2xl hover:shadow-3xl transition-all hover:scale-[1.02] group">
                   <img
                     src="https://images.pexels.com/photos/5212695/pexels-photo-5212695.jpeg"
@@ -291,7 +339,11 @@ export default function GroupBasedTuitionPage() {
             </div>
 
             {/* Learning Categories */}
-            <div className="text-center mb-6 md:mb-8">
+            <div
+              className="text-center mb-6 md:mb-8"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
               <h3 className="text-xl md:text-2xl lg:text-3xl font-black mb-3 md:mb-4">
                 Learning Categories
               </h3>
@@ -325,6 +377,9 @@ export default function GroupBasedTuitionPage() {
                 <Card
                   key={index}
                   className="text-center hover:shadow-2xl transition-all hover:scale-[1.05] group border-2 hover:border-primary"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 150}
+                  data-aos-duration="700"
                 >
                   <CardHeader className="p-4 md:p-5 lg:p-6">
                     <Badge
@@ -350,7 +405,11 @@ export default function GroupBasedTuitionPage() {
       {/* Advantages Section - Standard Grid (Different from One-on-One's Bento) */}
       <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
         <div className="container">
-          <header className="text-center mb-8 md:mb-12 lg:mb-16">
+          <header
+            className="text-center mb-8 md:mb-12 lg:mb-16"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
             <Badge
               className="mb-3 md:mb-4 text-white text-xs md:text-sm bg-accent hover:scale-105 transition-transform px-3 py-1.5 md:px-4 md:py-2"
               variant="outline"
@@ -414,6 +473,9 @@ export default function GroupBasedTuitionPage() {
               <Card
                 key={index}
                 className="hover:shadow-2xl transition-all hover:scale-[1.03] group border-2 hover:border-primary"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                data-aos-duration="700"
               >
                 <CardHeader className="p-4 md:p-5 lg:p-6">
                   <div className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center mb-3 md:mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
@@ -441,7 +503,11 @@ export default function GroupBasedTuitionPage() {
       <section className="py-12 md:py-20 lg:py-24">
         <div className="container">
           <div className="max-w-6xl mx-auto">
-            <header className="text-center mb-8 md:mb-12">
+            <header
+              className="text-center mb-8 md:mb-12"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
               <Badge
                 className="mb-3 md:mb-4 hover:scale-105 transition-transform text-xs md:text-sm px-3 py-1.5 md:px-4 md:py-2"
                 variant="outline"
@@ -459,7 +525,11 @@ export default function GroupBasedTuitionPage() {
               </p>
             </header>
 
-            <div className="bg-primary/5 border-2 border-primary/20 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 mb-8 md:mb-12 hover:bg-primary/10 transition-all hover:shadow-2xl">
+            <div
+              className="bg-primary/5 border-2 border-primary/20 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 mb-8 md:mb-12 hover:bg-primary/10 transition-all hover:shadow-2xl"
+              data-aos="zoom-in"
+              data-aos-duration="800"
+            >
               <div className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6">
                 <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <GraduationCap
@@ -507,6 +577,9 @@ export default function GroupBasedTuitionPage() {
                   <div
                     key={idx}
                     className="p-3 md:p-4 bg-background rounded-lg border hover:shadow-lg transition-all hover:scale-[1.02] group"
+                    data-aos="slide-up"
+                    data-aos-delay={idx * 100}
+                    data-aos-duration="600"
                   >
                     <div
                       className="text-2xl md:text-3xl mb-2 group-hover:scale-110 transition-transform"
@@ -529,7 +602,11 @@ export default function GroupBasedTuitionPage() {
             {/* School Types Comparison */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {/* Grammar Schools */}
-              <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-primary group">
+              <Card
+                className="overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-primary group"
+                data-aos="fade-right"
+                data-aos-duration="900"
+              >
                 <div className="bg-primary/10 p-4 md:p-5 lg:p-6 border-b group-hover:bg-primary/20 transition-all">
                   <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
                     <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -590,7 +667,11 @@ export default function GroupBasedTuitionPage() {
               </Card>
 
               {/* Independent Schools */}
-              <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-accent group">
+              <Card
+                className="overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] border-2 hover:border-accent group"
+                data-aos="fade-left"
+                data-aos-duration="900"
+              >
                 <div className="bg-accent/10 p-4 md:p-5 lg:p-6 border-b group-hover:bg-accent/20 transition-all">
                   <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
                     <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
@@ -663,7 +744,11 @@ export default function GroupBasedTuitionPage() {
           <div className="absolute bottom-20 right-10 h-96 w-96 bg-primary/20 rounded-full blur-xl animate-pulse delay-700" />
         </div>
         <div className="container relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div
+            className="max-w-3xl mx-auto text-center"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 md:mb-6 text-balance">
               Ready to Join Our Group-Based Programme?
             </h2>
