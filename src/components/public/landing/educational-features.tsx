@@ -67,30 +67,22 @@ export default function EducationalFeatures() {
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container relative z-10" data-aos="fade-right">
+      <div className="container relative z-10"  data-aos='fade-right' >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Left text section - Takes 5 columns on large screens */}
           <div className="lg:col-span-5 space-y-6 md:space-y-8">
             {/* Decorative badge */}
-            <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm"
-              data-aos="flip-right"
-              data-aos-delay="400"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm"  data-aos='flip-right' data-aos-delay='400'>
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-semibold text-accent">
+              <span className="text-sm font-semibold text-accent" >
                 Why Choose Us
               </span>
             </div>
 
             <div className="space-y-5 md:space-y-6">
-              <h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-orange-600 leading-[1.1] text-balance"
-                data-aos="fade-left"
-                data-aos-delay="200"
-              >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-[1.1] text-balance" data-aos='fade-left' data-aos-delay='200'>
                 Check Out Our{" "}
-                <span className="text-orange-600 relative inline-block">
+                <span className="text-primary relative inline-block">
                   Educational
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-accent/30"
@@ -108,11 +100,7 @@ export default function EducationalFeatures() {
                 </span>{" "}
                 Features
               </h2>
-              <p
-                className="text-base sm:text-lg lg:text-xl text-orange-500 leading-relaxed max-w-xl"
-                data-aos="fade-left"
-                data-aos-delay="300"
-              >
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl" data-aos='fade-left' data-aos-delay='300'>
                 Because we deliver expert tutors, small-group classes, and
                 proven results, all online, flexible, and focused on your
                 child's success.
@@ -120,11 +108,7 @@ export default function EducationalFeatures() {
             </div>
 
             {/* Stats row for extra visual interest */}
-            <div
-              className="flex flex-wrap gap-6 pt-4"
-              data-aos="flip-right"
-              data-aos-delay="200"
-            >
+            <div className="flex flex-wrap gap-6 pt-4"  data-aos='flip-right' data-aos-delay='200'>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">4</span>
@@ -156,11 +140,7 @@ export default function EducationalFeatures() {
                   <div className="absolute inset-0 rounded-2xl lg:rounded-3xl bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-transparent group-hover:to-primary/5 transition-all duration-500 pointer-events-none" />
 
                   {/* Content */}
-                  <div
-                    className="relative z-10 flex flex-col h-full"
-                    data-aos="flip-left"
-                    data-aos-delay="400"
-                  >
+                  <div className="relative z-10 flex flex-col h-full"  data-aos='flip-' data-aos-delay='400'>
                     {/* Icon container with enhanced styling */}
                     <div className="mb-5 sm:mb-6 flex items-center justify-start">
                       <div className="relative">
