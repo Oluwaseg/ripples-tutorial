@@ -23,7 +23,7 @@ export default function AdmissionsPage() {
     <div className="min-h-screen my-9 md:my-0" data-aos="fade-up">
       {/* Hero Section */}
       <section
-        className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
+        className="relative bg-gradient-to-br from-background via-primary/30 to-accent/5 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
         data-aos="fade-up"
       >
         {/* Subtle background decoration */}
@@ -84,7 +84,7 @@ export default function AdmissionsPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto text-sm md:text-base px-6 md:px-8 py-5 md:py-6 h-auto border-2 hover:bg-muted transition-all hover:scale-105 bg-transparent"
+                  className="w-full sm:w-auto text-sm md:text-base px-6 md:px-8 py-5 md:py-6 h-auto border-2 hover:text-primary hover:bg-muted transition-all hover:scale-105 bg-transparent"
                 >
                   Download Prospectus
                 </Button>
@@ -161,7 +161,7 @@ export default function AdmissionsPage() {
 
       {/* The 4 Stages Process */}
       <section
-        className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/30 to-background"
+        className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-accent/30 to-background"
         data-aos="fade-up"
       >
         <div className="container">
@@ -1033,7 +1033,7 @@ export default function AdmissionsPage() {
 
       {/* Entry Requirements */}
       <section
-        className="py-12 md:py-20 lg:py-24 bg-muted/30"
+        className="py-12 md:py-20 lg:py-24 bg-accent/30"
         data-aos="fade-up"
       >
         <div className="container">

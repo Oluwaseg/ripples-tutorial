@@ -14,7 +14,7 @@ const features = [
 export default function WhyChooseSection() {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/40 to-background" />
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
 

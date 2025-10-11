@@ -217,7 +217,7 @@ export default function SelfTuitionsPage() {
       </section>
 
       {/* Course Materials Section - Alternating Layout */}
-      <section className="py-12 md:py-16 lg:py-24 bg-muted/30">
+      <section className="py-12 md:py-16 lg:py-24 bg-accent/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
@@ -827,7 +827,7 @@ export default function SelfTuitionsPage() {
       </section>
 
       {/* Learning Approach - Timeline Style */}
-      <section className="py-12 md:py-16 lg:py-24 bg-muted/30">
+      <section className="py-12 md:py-16 lg:py-24 bg-primary/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8 md:mb-12" data-aos="fade-up">

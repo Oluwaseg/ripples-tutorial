@@ -8,7 +8,7 @@ export default function Excellence() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-primary via-muted/30 to-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Image Section - Left on desktop, top on mobile */}

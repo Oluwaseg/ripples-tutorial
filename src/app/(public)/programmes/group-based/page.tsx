@@ -344,7 +344,7 @@ export default function GroupBasedTuitionPage() {
               data-aos="fade-up"
               data-aos-duration="800"
             >
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-black mb-3 md:mb-4">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-accent mb-3 md:mb-4">
                 Learning Categories
               </h3>
               <p className="text-xs md:text-sm lg:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -403,7 +403,7 @@ export default function GroupBasedTuitionPage() {
       </section>
 
       {/* Advantages Section - Standard Grid (Different from One-on-One's Bento) */}
-      <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
+      <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-accent/10 via-primary/20 to-primary">
         <div className="container">
           <header
             className="text-center mb-8 md:mb-12 lg:mb-16"
@@ -416,7 +416,7 @@ export default function GroupBasedTuitionPage() {
             >
               Why Choose Group-Based?
             </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 md:mb-4 text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-3 md:mb-4 text-balance">
               Advantages of Group Based Tuition
             </h2>
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
@@ -738,10 +738,10 @@ export default function GroupBasedTuitionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 lg:py-24 text-primary bg-white relative overflow-hidden">
+      <section className="py-12 md:py-20 lg:py-24 text-primary bg-primary/25 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute top-20 left-10 h-72 w-72 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 h-96 w-96 bg-primary/20 rounded-full blur-xl animate-pulse delay-700" />
+          <div className="absolute top-20 left-10 h-72 w-72 bg-accent/15 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 h-96 w-96 bg-primary/15 rounded-full blur-xl animate-pulse delay-700" />
         </div>
         <div className="container relative z-10">
           <div

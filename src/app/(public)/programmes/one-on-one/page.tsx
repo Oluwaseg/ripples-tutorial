@@ -23,7 +23,7 @@ export default function OneOnOneTuitionPage() {
   return (
     <main className="min-h-screen pt-10">
       {/* Hero Section - Clean Split Screen */}
-      <section className="relative min-h-screen flex items-center bg-background">
+      <section className="relative min-h-screen flex items-center bg-primary/20">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-12 lg:py-20">
             {/* Left Content */}
@@ -68,7 +68,7 @@ export default function OneOnOneTuitionPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-sm md:text-base lg:text-lg px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-7 h-auto border-2 font-bold bg-transparent"
+                  className="text-sm md:text-base lg:text-lg px-6 py-5 md:px-8 md:py-6 lg:px-10 lg:py-7 h-auto border-2 font-bold bg-white"
                   aria-label="View pricing information"
                 >
                   View Pricing
@@ -735,7 +735,7 @@ export default function OneOnOneTuitionPage() {
       </section>
 
       {/* Key Features - Split with Large Image */}
-      <section className="py-16 md:py-24 lg:py-32 bg-muted/30 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 bg-muted/80 relative overflow-hidden">
         <div
           className="absolute bottom-0 left-0 h-96 w-96 bg-primary/5 rounded-full blur-3xl"
           aria-hidden="true"

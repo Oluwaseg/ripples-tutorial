@@ -110,7 +110,7 @@ export default function ParentTestimonialsSection() {
   const cardWidth = 100 / cardsPerView;
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/10 via-primary/20 to-accent/30 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/3 to-accent/3 rounded-full blur-3xl" />

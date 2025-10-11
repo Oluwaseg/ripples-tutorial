@@ -42,7 +42,7 @@ const About = () => {
               ripples tutorials
             </h1>
             <p
-              className="mt-4 text-sm sm:text-base md:text-[17px] leading-6 sm:leading-7  max-w-2xl mx-auto md:mx-0"
+              className="mt-4 font-semibold text-sm sm:text-base md:text-[17px] leading-6 sm:leading-7  max-w-2xl mx-auto md:mx-0"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -90,7 +90,7 @@ const About = () => {
             />
             <div
               aria-hidden
-              className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:-right-16 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
+              className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:-right-9 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full bg-white shadow-lg ring-1 ring-black/5 p-1"
             >
               <Image
                 src={assets.author || "/placeholder.svg"}
@@ -120,14 +120,14 @@ const About = () => {
               </svg>
             </span>
             <h2
-              className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left"
+              className="text-xl text-primary sm:text-2xl md:text-3xl font-bold leading-tight mb-4 text-center md:text-left"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               A place where excellence …
             </h2>
             <p
-              className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+              className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
               data-aos="fade-up"
               data-aos-delay="250"
             >
@@ -173,14 +173,14 @@ const About = () => {
                 </svg>
               </span>
               <h2
-                className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left"
+                className="text-xl text-primary sm:text-2xl md:text-3xl font-bold leading-tight mb-4 text-center md:text-left"
                 data-aos="fade-up"
                 data-aos-delay="150"
               >
                 Our experienced tutors …
               </h2>
               <p
-                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+                className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -245,14 +245,14 @@ const About = () => {
                 </svg>
               </span>
               <h2
-                className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left"
+                className="text-xl text-accent sm:text-2xl md:text-3xl font-bold leading-tight mb-4 text-left"
                 data-aos="fade-up"
                 data-aos-delay="150"
               >
                 Our vision is bold ...
               </h2>
               <p
-                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -298,7 +298,7 @@ const About = () => {
         </div>
       </section>
       <section
-        className="bg-gray-50 overflow-hidden my-4 md:my-0"
+        className="bg-primary/20 p-2 overflow-hidden my-4 md:my-0"
         data-aos="fade-up"
       >
         <div
@@ -350,14 +350,14 @@ const About = () => {
                 </svg>
               </span>
               <h2
-                className="text-xl text-primary sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-left"
+                className="text-xl text-primary sm:text-2xl md:text-3xl font-bold leading-tight mb-4 text-left"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 All Year Round
               </h2>
               <p
-                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
                 data-aos="fade-up"
                 data-aos-delay="250"
               >
@@ -367,7 +367,7 @@ const About = () => {
                 allow students and tutors time to refresh:"
               </p>
               <ul
-                className="px-6 md:px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                className="px-6 md:px-10 list-disc text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
@@ -376,7 +376,7 @@ const About = () => {
                 <li>Christmas & New Year's Break – 12 days</li>
               </ul>
               <p
-                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
+                className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7 text-left"
                 data-aos="fade-up"
                 data-aos-delay="350"
               >
@@ -389,7 +389,7 @@ const About = () => {
         </div>
       </section>
 
-      <div className="bg-primary/30 overflow-hidden">
+      <div className="bg-white overflow-hidden">
         <section
           className="container mx-auto px-4 py-12 md:py-16 lg:py-20"
           data-aos="fade-up"
@@ -444,14 +444,14 @@ const About = () => {
                 </svg>
               </span>
               <h2
-                className="text-xl text-accent sm:text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center md:text-left"
+                className="text-xl text-accent sm:text-2xl md:text-3xl font-bold leading-tight mb-4 text-center md:text-left"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 Academic Resources
               </h2>
               <p
-                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+                className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
                 data-aos="fade-up"
                 data-aos-delay="250"
               >
@@ -459,7 +459,7 @@ const About = () => {
                 resources, including:"
               </p>
               <ul
-                className="px-10 list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-center md:text-left"
+                className="px-10 font-medium list-disc text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7 text-center md:text-left"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
@@ -470,7 +470,7 @@ const About = () => {
                 <li>and PDF Worksheets.</li>
               </ul>
               <p
-                className="text-sm sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
+                className="text-sm font-medium sm:text-base md:text-[16px] leading-6 sm:leading-7  text-center md:text-left"
                 data-aos="fade-up"
                 data-aos-delay="350"
               >
